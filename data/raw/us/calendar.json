@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-03T08:51:52+08:00",
+ "generated_at": "2026-10-04T08:18:02+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -935,6 +935,17 @@
    "previous": "",
    "consensus": "",
    "priority": "低"
+  },
+  {
+   "date": "2026-11-18",
+   "time_bj": "21:30",
+   "category": "宏观",
+   "title": "2026年10月新屋开工",
+   "url": "https://www.census.gov/construction/nrc",
+   "note": "美东 8:30 AM October 2026。原名：New Residential Construction (Building Permits, Housing Starts, and Housing Completions)",
+   "previous": "",
+   "consensus": "",
+   "priority": "中"
   },
   {
    "date": "2026-11-19",
