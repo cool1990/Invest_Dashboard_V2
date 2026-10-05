@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-04T08:18:02+08:00",
+ "generated_at": "2026-10-05T08:21:14+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -461,6 +461,83 @@
    "note": "Federal Register 2026-17183：Comments should be received on or before October 20, 2026。美东日期。原名：Regulation Crypto Assets",
    "previous": "",
    "consensus": "",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-20",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Capital One Financial Corporation（COF）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后",
+   "previous": "$5.95",
+   "consensus": "$5.43",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-20",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Chubb Limited（CB）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后",
+   "previous": "$7.49",
+   "consensus": "$6.26",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-20",
+   "time_bj": "",
+   "category": "财报",
+   "title": "GE Aerospace（GE）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$1.66",
+   "consensus": "$2.01",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-20",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Intuitive Surgical, Inc.（ISRG）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后",
+   "previous": "$1.96",
+   "consensus": "$2.13",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-20",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Netflix, Inc.（NFLX）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后",
+   "previous": "$0.59",
+   "consensus": "$0.82",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-20",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Philip Morris International Inc（PM）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$2.24",
+   "consensus": "$2.33",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-20",
+   "time_bj": "",
+   "category": "财报",
+   "title": "RTX Corporation（RTX）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$1.70",
+   "consensus": "$1.75",
    "priority": "中"
   },
   {
@@ -957,6 +1034,17 @@
    "previous": "",
    "consensus": "",
    "priority": "高"
+  },
+  {
+   "date": "2026-11-19",
+   "time_bj": "23:00",
+   "category": "宏观",
+   "title": "Advance Services Report",
+   "url": "https://www.census.gov/services/index.html",
+   "note": "美东 10:00 AM Third Quarter 2026。原名：Advance Services Report",
+   "previous": "",
+   "consensus": "",
+   "priority": "中"
   },
   {
    "date": "2026-11-20",
