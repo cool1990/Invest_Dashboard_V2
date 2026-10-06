@@ -49,6 +49,9 @@ def main() -> None:
             shutil.copy2(src, DIST / rel)
         else:
             print(f"缺少 {rel}，页面会提示数据还没生成")
+    series = ROOT / "data" / "crypto" / "series"
+    if series.is_dir():
+        shutil.copytree(series, DIST / "data" / "crypto" / "series")
     (DIST / ".nojekyll").write_text("")
     (DIST / "robots.txt").write_text("User-agent: *\nDisallow: /\n")
     print(f"已构建到 {DIST}")

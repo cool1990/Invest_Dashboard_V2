@@ -1,17 +1,4 @@
 {
- "updated_at": "2026-10-04T17:48:34Z",
- "errors": {
-  "coinmetrics_btc": null,
-  "coinmetrics_eth": null,
-  "bgeometrics": null,
-  "coingecko": null,
-  "funding": null,
-  "oi": null,
-  "btc_px": null,
-  "eth_px": null,
-  "etf_btc": null,
-  "etf_eth": null,
-  "stable": null,
-  "fng": null
- }
+ "updated_at": "2026-10-06T12:37:03Z",
+ "errors": {}
 }
