@@ -21,6 +21,8 @@ from .http import FetchError, get_bytes, get_json
 VISION = "https://data.binance.vision/data/futures/um"
 SPOT = "https://data-api.binance.vision/api/v3/klines"
 FAPI = "https://fapi.binance.com"
+# fapi.binance.com 在部分网络回 451。www.binance.com 上的同一路径仍是公开的资金费率。
+FUND_HOSTS = (FAPI, "https://www.binance.com")
 FUND_START = date(2019, 9, 1)
 OI_BACKFILL_DAYS = 180
 WORKERS = 6
@@ -45,21 +47,78 @@ def parse_funding_csv(text: str) -> list[dict]:
     return out
 
 
+def _f(row: dict, key: str) -> float | None:
+    raw = row.get(key)
+    if raw in (None, ""):
+        return None
+    try:
+        return float(raw)
+    except ValueError:
+        return None
+
+
 def parse_metrics_csv(text: str) -> dict | None:
-    """每日 metrics 里取最后一行：当天最晚的未平仓和全账户多空比。"""
+    """每日 metrics 里取最后一行。时间原样留下，不改成收盘日。"""
     rows = list(csv.DictReader(io.StringIO(text)))
     if not rows:
         return None
     last = rows[-1]
     try:
-        return {
+        out = {
             "date": last["create_time"][:10],
+            "time": last["create_time"],
             "oi_btc": float(last["sum_open_interest"]),
             "oi_usd": float(last["sum_open_interest_value"]),
             "ls_ratio": float(last["count_long_short_ratio"]),
         }
     except (KeyError, ValueError):
         return None
+    top_pos = _f(last, "sum_toptrader_long_short_ratio")
+    top_acc = _f(last, "count_toptrader_long_short_ratio")
+    if top_pos is not None:
+        out["ls_top_position"] = top_pos
+    if top_acc is not None:
+        out["ls_top_account"] = top_acc
+    # 同一天第一行，用来算当天持仓变化（不是插值）。
+    first = rows[0]
+    oi0 = _f(first, "sum_open_interest_value")
+    if oi0 is not None:
+        out["oi_usd_open"] = oi0
+        out["time_open"] = first.get("create_time") or ""
+    return out
+
+
+def annualize_funding(rate: float) -> float:
+    """8 小时资金费率（小数，0.0001 = 0.01%）换成年化百分数。一年按 3×365 次。"""
+    return rate * 3 * 365 * 100
+
+
+def funding_annualized(rows: list[dict]) -> tuple[Series, Series]:
+    """每个 UTC 日：当天各次结算的平均年化，以及含当天在内往前 7 个日历日的结算平均年化。
+
+    某一天没有结算就不产这个点，也不用别的天去填。
+    """
+    by_day: dict[date, list[float]] = {}
+    for row in rows:
+        try:
+            stamp = datetime.fromisoformat(row["time"].replace("Z", "+00:00"))
+            by_day.setdefault(stamp.date(), []).append(float(row["rate"]))
+        except (KeyError, ValueError):
+            continue
+    daily: Series = []
+    for d in sorted(by_day):
+        vals = by_day[d]
+        daily.append((d, annualize_funding(sum(vals) / len(vals))))
+    week: Series = []
+    days = sorted(by_day)
+    for d in days:
+        bucket: list[float] = []
+        for prev in days:
+            if d - timedelta(days=6) <= prev <= d:
+                bucket.extend(by_day[prev])
+        if bucket:
+            week.append((d, annualize_funding(sum(bucket) / len(bucket))))
+    return daily, week
 
 
 def parse_klines(payload) -> Series:
@@ -150,61 +209,89 @@ def fetch_funding_vision(today: date, have: set[str] | None = None) -> list[dict
     return rows
 
 
-def fetch_funding_fapi() -> list[dict]:
-    """能访问 fapi 时按 8 小时往回翻。limit 1000，大约 333 天一页。"""
+def _funding_pages(host: str, earliest_ms: int) -> list[dict]:
+    """按 endTime 往回翻。接口有时把 limit=1000 截成 500，所以不用条数判断是否到头。"""
     rows: list[dict] = []
     end = int(datetime.now(timezone.utc).timestamp() * 1000)
-    earliest = int(datetime(2019, 9, 1, tzinfo=timezone.utc).timestamp() * 1000)
-    while end > earliest:
-        payload = get_json(f"{FAPI}/fapi/v1/fundingRate?symbol=BTCUSDT&limit=1000&endTime={end}")
-        if not payload:
+    while end > earliest_ms:
+        payload = get_json(f"{host}/fapi/v1/fundingRate?symbol=BTCUSDT&limit=1000&endTime={end}")
+        if not isinstance(payload, list) or not payload:
             break
-        batch = []
+        times: list[int] = []
+        batch: list[dict] = []
         for row in payload:
             try:
-                stamp = _utc(int(row["fundingTime"])).strftime("%Y-%m-%dT%H:%M:%SZ")
+                ms = int(float(row["fundingTime"]))
+                times.append(ms)
+                if ms < earliest_ms:
+                    continue
+                stamp = _utc(ms).strftime("%Y-%m-%dT%H:%M:%SZ")
                 batch.append({"time": stamp, "rate": f"{float(row['fundingRate']):.8f}"})
             except (KeyError, TypeError, ValueError):
                 continue
-        if not batch:
+        if not times:
             break
         rows.extend(batch)
-        first = min(int(row["fundingTime"]) for row in payload)
-        if first >= end:
+        first = min(times)
+        if first >= end or first <= earliest_ms:
             break
         end = first - 1
-        if len(payload) < 1000:
-            break
     return rows
+
+
+def fetch_funding_since(start: datetime) -> tuple[list[dict], str | None]:
+    """补月包还没覆盖的结算。fapi 被 451 时换 www.binance.com 上的同一接口。"""
+    earliest = int(start.timestamp() * 1000)
+    errors: list[str] = []
+    for host in FUND_HOSTS:
+        try:
+            rows = _funding_pages(host, earliest)
+        except Exception as exc:  # noqa: BLE001
+            errors.append(f"{host}：{exc}")
+            continue
+        if rows:
+            return rows, None
+        errors.append(f"{host}：空")
+    return [], "；".join(errors)
 
 
 def update_funding(path: Path, today: date) -> tuple[list[dict], str | None]:
     note = None
+    have_rows = read_csv(path)
+    have = {r["time"] for r in have_rows if r.get("time")}
     try:
-        fresh = fetch_funding_fapi()
-        if not fresh:
-            raise FetchError("fapi 没有数据")
-    except Exception as exc:  # noqa: BLE001
-        note = f"fapi 不可用（{exc}），改用 data.binance.vision"
-        have = {r["time"] for r in read_csv(path) if r.get("time")}
         fresh = fetch_funding_vision(today, have)
-    merged = merge(read_csv(path), fresh, lambda r: (r["time"],))
-    # 月包要等下月才出，当月改用 BGeometrics 转载的同一本费率（大约滞后 7 天）。
+    except Exception as exc:  # noqa: BLE001
+        fresh = []
+        note = f"vision：{exc}"
+    merged = merge(have_rows, fresh, lambda r: (r["time"],))
     latest = max((r["time"] for r in merged), default="")
-    stale = not latest or latest[:10] < (today - timedelta(days=3)).isoformat()
-    extra_err = None
-    if stale:
-        try:
-            from .bgeometrics import fetch_funding
-            start = latest[:10] if latest else "2024-01-01"
-            extra = fetch_funding(start)
+    # 月包不含当月，日包这个品种也不提供。缺口用公开 fundingRate 补到昨天。
+    cutoff = (today - timedelta(days=1)).isoformat()
+    if not latest or latest[:10] < cutoff:
+        start_s = latest[:10] if latest else FUND_START.isoformat()
+        start = datetime.fromisoformat(start_s).replace(tzinfo=timezone.utc) - timedelta(days=1)
+        extra, err = fetch_funding_since(start)
+        if extra:
             merged = merge(merged, extra, lambda r: (r["time"],))
-        except Exception as exc:  # noqa: BLE001
-            extra_err = f"当月费率没补上：{exc}"
+        else:
+            note = err or note
+            try:
+                from .bgeometrics import fetch_funding
+                bg = fetch_funding(start_s)
+                if bg:
+                    merged = merge(merged, bg, lambda r: (r["time"],))
+            except Exception as exc:  # noqa: BLE001
+                note = f"{note or ''}；当月费率没补上：{exc}".strip("；")
     if not merged:
-        return [], extra_err or note or "没有资金费率"
+        return [], note or "没有资金费率"
+    latest = max(r["time"] for r in merged)
+    if latest[:10] < cutoff:
+        note = note or f"资金费率只到 {latest[:10]}"
+    else:
+        note = None
     write_csv(path, merged, ["time", "rate"])
-    return merged, extra_err
+    return merged, note
 
 
 def _metrics_url(day: date) -> str:
@@ -292,6 +379,112 @@ def load_oi(path: Path) -> tuple[Series, Series]:
         except (KeyError, ValueError):
             continue
     return clean(oi), clean(ls)
+
+
+METRIC_FIELDS = ["date", "time", "oi_btc", "oi_usd", "oi_usd_open", "time_open",
+                 "ls_ratio", "ls_top_position", "ls_top_account"]
+
+
+def _metrics_exists(day: date) -> bool:
+    return _zip_text(_metrics_url(day)) is not None
+
+
+def _first_metrics_day(today: date) -> date | None:
+    """按月二分，找到最早有 metrics 日包的那个月的 1 号附近。"""
+    lo = date(2020, 1, 1)
+    hi = today.replace(day=1)
+    found: date | None = None
+    while lo <= hi:
+        mid_ord = (lo.toordinal() + hi.toordinal()) // 2
+        mid = date.fromordinal(mid_ord).replace(day=1)
+        if _metrics_exists(mid):
+            found = mid
+            hi = mid - timedelta(days=1)
+            hi = hi.replace(day=1)
+        else:
+            nxt = mid + timedelta(days=32)
+            lo = nxt.replace(day=1)
+        if lo > today:
+            break
+    if found is None:
+        return None
+    # 月初那天可能还没有文件（序列从上旬中间开始）。再往前看最多 45 天。
+    d = found
+    for _ in range(45):
+        prev = d - timedelta(days=1)
+        if prev.year < 2019 or not _metrics_exists(prev):
+            break
+        d = prev
+    return d
+
+
+def update_metrics_history(path: Path, today: date) -> tuple[list[dict], str | None]:
+    """币安 BTCUSDT 永续的未平仓和大户多空比。日包能回溯到接口上线的那一天，之后每天只补新的。"""
+    old = read_csv(path)
+    have = {r["date"] for r in old if r.get("date")}
+    if len(have) < 30:
+        start = _first_metrics_day(today)
+        if start is None:
+            start = today - timedelta(days=OI_BACKFILL_DAYS)
+    else:
+        start = today - timedelta(days=5)
+    days = []
+    d = start
+    while d <= today:
+        if d.isoformat() not in have:
+            days.append(d)
+        d += timedelta(days=1)
+    fresh_rows = []
+    if days:
+        print(f"  币安 metrics 补 {len(days)} 天（从 {days[0]}）", flush=True)
+        texts = []
+        with ThreadPoolExecutor(max_workers=WORKERS) as pool:
+            texts = list(pool.map(_zip_text, (_metrics_url(day) for day in days)))
+        for text in texts:
+            if not text:
+                continue
+            row = parse_metrics_csv(text)
+            if not row:
+                continue
+            fresh_rows.append({
+                "date": row["date"],
+                "time": row.get("time") or "",
+                "oi_btc": f"{row['oi_btc']:.4f}",
+                "oi_usd": f"{row['oi_usd']:.4f}",
+                "oi_usd_open": "" if row.get("oi_usd_open") is None else f"{row['oi_usd_open']:.4f}",
+                "time_open": row.get("time_open") or "",
+                "ls_ratio": f"{row['ls_ratio']:.6f}",
+                "ls_top_position": "" if row.get("ls_top_position") is None else f"{row['ls_top_position']:.6f}",
+                "ls_top_account": "" if row.get("ls_top_account") is None else f"{row['ls_top_account']:.6f}",
+            })
+    merged = merge(old, fresh_rows, lambda r: (r["date"],))
+    if not merged:
+        return [], "没有币安未平仓日包"
+    write_csv(path, merged, METRIC_FIELDS)
+    # 今天的包经常还没有，只要历史在就不算失败
+    return merged, None
+
+
+def load_metrics(path: Path) -> dict[str, Series]:
+    keys = ("oi_usd", "ls_ratio", "ls_top_position", "ls_top_account")
+    out: dict[str, list] = {k: [] for k in keys}
+    times: dict[str, str] = {}
+    for row in read_csv(path):
+        try:
+            d = date.fromisoformat(row["date"][:10])
+        except (KeyError, ValueError):
+            continue
+        if row.get("time"):
+            times[row["date"][:10]] = row["time"]
+        for k in keys:
+            raw = row.get(k)
+            if raw in (None, ""):
+                continue
+            try:
+                out[k].append((d, float(raw)))
+            except ValueError:
+                continue
+    return {k: clean(v) for k, v in out.items()} | {"time": times}
 
 
 def load_close(path: Path) -> Series:

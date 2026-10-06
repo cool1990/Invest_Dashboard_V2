@@ -1,0 +1,24 @@
+{
+  "miner_all_in_est": {
+    "label": "矿企全成本",
+    "enabled": true,
+    "value": 130800,
+    "data_quarter": "2026Q2",
+    "note": "估算：把折旧、股权激励、利息都摊进去后，上市矿企挖一枚币的全部成本"
+  },
+  "miner_cash_cost": {
+    "label": "矿企现金成本",
+    "enabled": true,
+    "value": 75500,
+    "data_quarter": "2026Q2",
+    "prev": {"value": 79995, "data_quarter": "2025Q4"},
+    "note": "上市矿企挖一枚币要掏的现金：电费、运维、管理费和利息，不含折旧"
+  },
+  "miner_self_reported_energy": {
+    "label": "矿企自报电费成本",
+    "enabled": true,
+    "value": 43385,
+    "data_quarter": "2026Q2",
+    "note": "几家大矿企自己公布的挖一枚币的成本，基本只算电费"
+  }
+}

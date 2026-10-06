@@ -1,0 +1,27 @@
+{
+  "records": [
+    {
+      "accession": "0001193125-26-403417",
+      "filed": "2026-09-28",
+      "asof": "2026-09-27",
+      "holdings": 847666,
+      "avg_cost": 75437,
+      "acquired": null,
+      "acquired_from": null,
+      "acquired_to": null,
+      "buy_px": null
+    },
+    {
+      "accession": "0001193125-26-413164",
+      "filed": "2026-10-05",
+      "asof": "2026-10-04",
+      "holdings": 848000,
+      "cost_bn": 63.97,
+      "avg_cost": 75440.7,
+      "acquired": 334,
+      "acquired_from": "2026-10-01",
+      "acquired_to": "2026-10-04",
+      "buy_px": 85838.8
+    }
+  ]
+}

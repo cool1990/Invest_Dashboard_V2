@@ -36,8 +36,14 @@ def parse_rows(payload: dict, metrics: tuple[str, ...] = CM_METRICS) -> list[dic
 
 
 def fetch_asset(asset: str, metrics: tuple[str, ...], start: str = "2011-01-01") -> list[dict]:
-    """按页把日频拉完。社区接口大约每 6 秒 10 次，这里一次尽量要满。"""
-    url = f"{ROOT}?assets={asset}&metrics={','.join(metrics)}&frequency=1d&page_size=10000&start_time={start}"
+    """按页把日频拉完。社区接口大约每 6 秒 10 次，这里一次尽量要满。
+
+    paging_from=start 从最早的一天往后翻。不写的话小页会从最近往回给。
+    """
+    url = (
+        f"{ROOT}?assets={asset}&metrics={','.join(metrics)}&frequency=1d"
+        f"&page_size=10000&paging_from=start&start_time={start}"
+    )
     rows: list[dict] = []
     seen: set[str] = set()
     pages = 0
@@ -94,6 +100,44 @@ def load_btc(path: Path) -> dict[str, Series]:
                 except ValueError:
                     continue
     return {m: clean(s) for m, s in out.items()}
+
+
+EX_METRICS = ("PriceUSD", "CapMrktCurUSD", "FlowInExNtv", "FlowOutExNtv", "SplyExNtv")
+EX_FIELDS = ["date", *EX_METRICS]
+
+
+def update_exchange(path: Path) -> tuple[list[dict], str | None]:
+    """交易所净流入和储量。价格、市值一并留下，Coinbase 失败时价格用这里顶。"""
+    try:
+        rows = fetch_asset("btc", EX_METRICS, start="2010-07-01")
+    except Exception as exc:  # noqa: BLE001
+        return [], str(exc)
+    if not rows:
+        return [], "没有数据"
+    write_csv(path, rows, EX_FIELDS)
+    return rows, None
+
+
+def load_exchange(path: Path) -> dict[str, Series]:
+    out: dict[str, list] = {m: [] for m in EX_METRICS}
+    if not path.exists():
+        return {m: [] for m in EX_METRICS}
+    import csv
+    with path.open(encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            try:
+                day = date.fromisoformat(row["date"][:10])
+            except (KeyError, ValueError):
+                continue
+            for m in EX_METRICS:
+                raw = row.get(m)
+                if raw in (None, ""):
+                    continue
+                try:
+                    out[m].append((day, float(raw)))
+                except ValueError:
+                    continue
+    return {m: clean(pts) for m, pts in out.items()}
 
 
 def load_price(path: Path, col: str = "PriceUSD") -> Series:

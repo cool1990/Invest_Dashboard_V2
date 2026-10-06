@@ -1,0 +1,1 @@
+{"id":"oi_ratio","title":"全网未平仓 / 市值","unit":"%","note":"和左图同一次快照。4% 以上这一步算杠杆高。","zero":false,"series":[{"name":"占比","type":"line","dash":false,"step":false,"ref":false,"data":[["2026-10-06",2.51]]}],"last_date":"2026-10-06"}

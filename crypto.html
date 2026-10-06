@@ -18,25 +18,12 @@
     <div class="page-head">
       <div>
         <h1>加密货币</h1>
-        <div class="sub">比特币周期：估值 · 持有者 · 杠杆 · 现货需求，价格只做确认 <span class="muted small" id="asof"></span></div>
+        <div class="sub">比特币：价格相对成本 → 筹码赚了多少 → 谁在买、谁在卖 → 杠杆会不会放大波动 <span class="muted small" id="asof"></span></div>
       </div>
     </div>
 
-    <div class="top">
-      <div class="top-main">
-        <section class="card verdict" id="verdict"></section>
-        <section class="card statelog" id="statelog"></section>
-        <section class="card states" id="states" aria-label="七个维度"></section>
-      </div>
-      <aside class="card side" aria-labelledby="fresh-title">
-        <h2 id="fresh-title">最新读数</h2>
-        <p class="small muted">已经整理进判断的数。标「注意」的偏离了中间带，点开理由看为什么要看它。点名字跳到下面的图。各来源有没有刷新，写在页面底部。</p>
-        <div id="fresh"></div>
-      </aside>
-    </div>
+    <section class="card verdict" id="verdict"></section>
 
-    <h2 class="layer">依据</h2>
-    <p class="layer-sub">每块只列决定上面那句话的几个数：最新值、较上期、对照的锚点。标「参考」的不进顶部判断。点指标名跳到下面的图。持有者成本和长线 SOPR 的免费接口大约滞后 7 天，判断用同一天的价格。</p>
     <div class="section-nav">
       <div class="chips" id="chips"></div>
       <div class="seg" id="range" role="group" aria-label="时间范围"></div>
@@ -46,11 +33,10 @@
     <div class="card notes" id="notes"></div>
     <div class="card health" id="health"></div>
   </main>
-  <footer>数据来源：Coin Metrics 社区数据（CC BY-NC）、BGeometrics、币安公开行情（BTCUSDT 永续资金费率与未平仓、现货日线）、Farside Investors 的 ETF 资金流、DefiLlama 稳定币、alternative.me 恐贪指数。仅供个人参考，不构成投资建议。</footer>
+  <footer>数据来源见页面底部。只使用免费、无需登录的接口。数字是各来源自己的日期，实时快照不写成收盘。仅供个人参考，不构成投资建议。</footer>
   <script src="assets/vendor/chart.umd.min.js"></script>
   <script src="assets/vendor/chartjs-adapter-date-fns.bundle.min.js"></script>
   <script src="assets/js/common.js"></script>
-  <script src="assets/js/board.js"></script>
   <script src="assets/js/crypto.js"></script>
 </body>
 </html>

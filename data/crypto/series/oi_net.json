@@ -1,0 +1,1 @@
+{"id":"oi_net","title":"全网未平仓","unit":"十亿美元","note":"Coinfuty 实时页，每个 UTC 日存一笔。这是快照，不是收盘。自 2026-10-06 起积累，不回补。","zero":false,"series":[{"name":"未平仓","type":"line","dash":false,"step":false,"ref":false,"data":[["2026-10-06",43.4]]}],"last_date":"2026-10-06"}

@@ -96,8 +96,9 @@ function drawChart(canvas, spec, opts = {}) {
   let slot = 0;
   const datasets = spec.series.map((s, i) => {
     const isBar = s.type === "bar";
-    // 堆叠柱上叠加的合计线用正文色，与分项区分
-    const color = stackedBar && !isBar ? P.ink : P.series[slot++ % P.series.length];
+    // 参考线（区间刻度）用灰色，不占数据色
+    const isRef = !!s.ref;
+    const color = isRef ? P.muted : (stackedBar && !isBar ? P.ink : P.series[slot++ % P.series.length]);
     const ds = {
       label: s.name,
       _type: s.type,
@@ -117,8 +118,10 @@ function drawChart(canvas, spec, opts = {}) {
       Object.assign(ds, {
         type: "line", borderWidth: 2, pointRadius: spec.kind === "path" ? 5 : 0, pointHoverRadius: 4,
         pointBackgroundColor: color, pointBorderColor: P.surface, pointBorderWidth: 2,
-        tension: 0, spanGaps: spec.kind === "path", borderDash: s.dash ? [5, 4] : [],
-        stack: stackedArea ? "a" : `l${i}`, order: -1,
+        tension: 0, spanGaps: spec.kind === "path", borderDash: s.dash || isRef ? [5, 4] : [],
+        stepped: s.step ? "after" : false,
+        _step: !!s.step, _ref: isRef,
+        stack: stackedArea ? "a" : `l${i}`, order: isRef ? 1 : -1,
       });
       if (stackedArea) {
         ds.fill = i === 0 ? "origin" : "-1";
@@ -174,7 +177,7 @@ function drawChart(canvas, spec, opts = {}) {
         x,
         y: {
           stacked: stackedArea || stackedBar,
-          beginAtZero: stackedArea || datasets.some((d) => d.type === "bar"),
+          beginAtZero: !!spec.zero || stackedArea || datasets.some((d) => d.type === "bar"),
           grid: { color: P.grid, drawTicks: false }, border: { display: false },
           ticks: { color: P.muted, padding: 6, maxTicksLimit: 6 },
         },
@@ -189,6 +192,23 @@ function drawChart(canvas, spec, opts = {}) {
 // 按起始日期过滤数据后重绘（y 轴随之按可见数据缩放）。
 function applyRange(chart, startMs) {
   for (const ds of chart.data.datasets) {
+    if (ds._ref && ds._full.length) {
+      const y = ds._full[0].y;
+      const end = ds._full[ds._full.length - 1].x;
+      const start = startMs == null ? ds._full[0].x : startMs;
+      ds.data = [{ x: start, y }, { x: end, y }];
+      continue;
+    }
+    if (ds._step && startMs != null) {
+      const visible = ds._full.filter((p) => p.x >= startMs);
+      let prior = null;
+      for (const p of ds._full) {
+        if (p.x < startMs) prior = p;
+        else break;
+      }
+      ds.data = prior && visible.length ? [{ x: startMs, y: prior.y }, ...visible] : visible;
+      continue;
+    }
     ds.data = chart._spec.kind === "path" || startMs === null ? ds._full : ds._full.filter((p) => p.x >= startMs);
   }
   if (chart._spec.kind !== "path") {
@@ -203,6 +223,7 @@ function legendHTML(spec) {
   const P = palette();
   let slot = 0;
   return spec.series.map((s) => {
+    if (s.ref) return "";
     const isBar = s.type === "bar";
     const color = spec.stacked === "bar" && !isBar ? P.ink : P.series[slot++ % P.series.length];
     const cls = isBar || spec.stacked === "area" ? "bar" : s.dash ? "dash" : "";

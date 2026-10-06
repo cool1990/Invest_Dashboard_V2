@@ -50,25 +50,61 @@ def _cell_text(html: str) -> str:
     return unescape(_TAG.sub("", html)).replace("\xa0", " ").strip()
 
 
+def _headers(table_html: str) -> list[str]:
+    """第一行表头。空的、Date 丢掉名字，其余保留（IBIT、Total …）。"""
+    rows = _ROW.findall(table_html)
+    if not rows:
+        return []
+    cells = [_cell_text(c) for c in _CELL.findall(rows[0])]
+    return cells
+
+
 def parse_html(html: str) -> list[dict]:
-    """抽出每日合计。日期不是「11 Jan 2024」这种的行（Fee、Total、Average）丢掉。"""
+    """每日合计，以及各发行商列（有的话）。日期不是「11 Jan 2024」的行丢掉。"""
     found = _TABLE.search(html)
     if not found:
         return []
+    table = found.group(1)
+    headers = _headers(table)
+    total_idx = None
+    for i, name in enumerate(headers):
+        if name.strip().lower() == "total":
+            total_idx = i
     out = []
-    for row_html in _ROW.findall(found.group(1)):
+    for row_html in _ROW.findall(table):
         cells = [_cell_text(c) for c in _CELL.findall(row_html)]
         if not cells or not _DATE.match(cells[0]):
             continue
-        total = _num(cells[-1])
+        idx = total_idx if total_idx is not None and total_idx < len(cells) else len(cells) - 1
+        total = _num(cells[idx])
         if total is None:
             continue
         try:
             day = datetime.strptime(cells[0], "%d %b %Y").date()
         except ValueError:
             continue
-        out.append({"date": day.isoformat(), "total_usd_mn": f"{total:.4f}"})
+        row = {"date": day.isoformat(), "total_usd_mn": f"{total:.4f}"}
+        for i, name in enumerate(headers):
+            if i == 0 or i == idx or i >= len(cells):
+                continue
+            key = name.strip()
+            if not key or key.lower() in {"date", "total", "fee"}:
+                continue
+            val = _num(cells[i])
+            if val is None:
+                continue
+            row[key] = f"{val:.4f}"
+        out.append(row)
     return out
+
+
+def fields_of(rows: list[dict]) -> list[str]:
+    extra: list[str] = []
+    for row in rows:
+        for key in row:
+            if key not in FIELDS and key not in extra:
+                extra.append(key)
+    return [*FIELDS, *extra]
 
 
 def _load(path: Path) -> list[dict]:
@@ -84,7 +120,7 @@ def update(path: Path, url: str) -> tuple[list[dict], str | None]:
     if not rows:
         return _load(path), "页面里没有 ETF 表"
     merged = merge(_load(path), rows, lambda r: (r["date"],))
-    write_csv(path, merged, FIELDS)
+    write_csv(path, merged, fields_of(merged))
     return merged, None
 
 
@@ -105,15 +141,17 @@ def load(path: Path) -> list[tuple]:
 
 
 def apply_manual(series_rows: list[dict], manual: list[dict], key: str) -> list[dict]:
-    """手工行覆盖同一天的合计。value 单位同样是百万美元。"""
-    extra = []
+    """手工行只覆盖同一天的合计，发行商列留着。value 单位同样是百万美元。"""
+    by_date = {r["date"]: dict(r) for r in series_rows if r.get("date")}
     for row in manual:
         if row.get("key") != key or not row.get("date") or row.get("value") in (None, ""):
             continue
         try:
-            extra.append({"date": row["date"][:10], "total_usd_mn": f"{float(row['value']):.4f}"})
+            total = f"{float(row['value']):.4f}"
         except ValueError:
             continue
-    if not extra:
-        return series_rows
-    return merge(series_rows, extra, lambda r: (r["date"],))
+        day = row["date"][:10]
+        got = by_date.get(day, {"date": day})
+        got["total_usd_mn"] = total
+        by_date[day] = got
+    return [by_date[d] for d in sorted(by_date)]
