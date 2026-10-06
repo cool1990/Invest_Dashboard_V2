@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-05T08:21:14+08:00",
+ "generated_at": "2026-10-06T10:00:41+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -196,7 +196,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$2.24",
-   "consensus": "$2.70",
+   "consensus": "$2.66",
    "priority": "中"
   },
   {
@@ -229,7 +229,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$12.25",
-   "consensus": "$14.59",
+   "consensus": "$14.05",
    "priority": "中"
   },
   {
@@ -273,7 +273,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$1.06",
-   "consensus": "$1.16",
+   "consensus": "$1.13",
    "priority": "中"
   },
   {
@@ -295,7 +295,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$2.80",
-   "consensus": "$3.01",
+   "consensus": "$2.97",
    "priority": "中"
   },
   {
@@ -306,7 +306,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$1.73",
-   "consensus": "$1.84",
+   "consensus": "$1.85",
    "priority": "中"
   },
   {
@@ -571,6 +571,105 @@
    "note": "关税厅公表日程：当月进出口速报每月11日、21日；10月21日为周三。页面未写钟点，公告注明日程变更会另行通知",
    "previous": "",
    "consensus": "",
+   "priority": "高"
+  },
+  {
+   "date": "2026-10-21",
+   "time_bj": "",
+   "category": "财报",
+   "title": "AT&T Inc.（T）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$0.54",
+   "consensus": "$0.61",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-21",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Abbott Laboratories（ABT）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$1.30",
+   "consensus": "$1.43",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-21",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Danaher Corporation（DHR）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$1.89",
+   "consensus": "$1.96",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-21",
+   "time_bj": "",
+   "category": "财报",
+   "title": "International Business Machines Corporation（IBM）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后",
+   "previous": "$2.65",
+   "consensus": "$2.90",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-21",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Progressive Corporation (The)（PGR）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$4.05",
+   "consensus": "$4.26",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-21",
+   "time_bj": "",
+   "category": "财报",
+   "title": "SAP SE（SAP）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后",
+   "previous": "$1.86",
+   "consensus": "$2.04",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-21",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Texas Instruments Incorporated（TXN）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后",
+   "previous": "$1.48",
+   "consensus": "$2.39",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-21",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Thermo Fisher Scientific Inc（TMO）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$5.79",
+   "consensus": "$6.40",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-21",
+   "time_bj": "",
+   "category": "财报",
+   "title": "拉姆研究（LRCX）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后。原名：Lam Research Corporation",
+   "previous": "$1.26",
+   "consensus": "$2.17",
    "priority": "高"
   },
   {
@@ -1053,6 +1152,28 @@
    "title": "美股月度期权到期",
    "url": "https://www.optionseducation.org/referencelibrary/expiration-calendar",
    "note": "OCC 到期日历：11月20日为月度期权到期日；AM 结算指数期权11月19日停止交易。美东日期",
+   "previous": "",
+   "consensus": "",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-20",
+   "time_bj": "05:30",
+   "category": "宏观",
+   "title": "美联储 H.4.1（资产负债表）",
+   "url": "https://www.federalreserve.gov/releases/h41/",
+   "note": "页面写明每周四、通常美东 16:30；遇联邦假日顺延。这一条按周四生成，没有另核假日表",
+   "previous": "",
+   "consensus": "",
+   "priority": "高"
+  },
+  {
+   "date": "2026-11-20",
+   "time_bj": "21:30",
+   "category": "宏观",
+   "title": "Activities of U.S. Multinational Enterprises, 2024",
+   "url": "https://www.bea.gov/news/schedule",
+   "note": "美东 8:30 AM。原名：Activities of U.S. Multinational Enterprises, 2024",
    "previous": "",
    "consensus": "",
    "priority": "中"
