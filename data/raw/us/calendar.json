@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-07T09:10:06+08:00",
+ "generated_at": "2026-10-08T09:28:09+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -185,7 +185,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$12.25",
-   "consensus": "$13.89",
+   "consensus": "$13.35",
    "priority": "中"
   },
   {
@@ -350,6 +350,17 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "",
    "previous": "$0.44",
+   "consensus": "$0.40",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-16",
+   "time_bj": "",
+   "category": "财报",
+   "title": "ICICI Bank Limited（IBN）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$0.39",
    "consensus": "$0.40",
    "priority": "中"
   },
@@ -526,7 +537,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$2.65",
-   "consensus": "$2.90",
+   "consensus": "$2.89",
    "priority": "中"
   },
   {
@@ -549,6 +560,17 @@
    "note": "美东盘后",
    "previous": "$1.86",
    "consensus": "$2.04",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-21",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Tesla, Inc. （TSLA）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后",
+   "previous": "$0.37",
+   "consensus": "$0.24",
    "priority": "中"
   },
   {
@@ -603,7 +625,18 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$1.71",
-   "consensus": "$1.92",
+   "consensus": "$1.94",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-22",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Spotify Technology S.A.（SPOT）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$3.83",
+   "consensus": "$3.12",
    "priority": "中"
   },
   {
@@ -638,6 +671,17 @@
    "previous": "$0.11",
    "consensus": "$0.27",
    "priority": "高"
+  },
+  {
+   "date": "2026-10-23",
+   "time_bj": "",
+   "category": "财报",
+   "title": "American Express Company（AXP）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$4.14",
+   "consensus": "$4.50",
+   "priority": "中"
   },
   {
    "date": "2026-10-23",
