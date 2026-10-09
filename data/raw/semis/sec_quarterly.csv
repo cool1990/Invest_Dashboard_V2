@@ -917,6 +917,7 @@ MU,cogs,2025-08-28,6261000000.0,CostOfGoodsAndServicesSold
 MU,cogs,2025-11-27,5997000000.0,CostOfGoodsAndServicesSold
 MU,cogs,2026-02-26,6105000000.0,CostOfGoodsAndServicesSold
 MU,cogs,2026-05-28,6400000000.0,CostOfGoodsAndServicesSold
+MU,cogs,2026-09-03,7182000000.0,CostOfGoodsAndServicesSold
 MU,inventory,2015-03-05,2377000000.0,InventoryNet
 MU,inventory,2015-06-04,2381000000.0,InventoryNet
 MU,inventory,2015-09-03,2340000000.0,InventoryNet
@@ -964,6 +965,7 @@ MU,inventory,2025-08-28,8355000000.0,InventoryNet
 MU,inventory,2025-11-27,8205000000.0,InventoryNet
 MU,inventory,2026-02-26,8267000000.0,InventoryNet
 MU,inventory,2026-05-28,8567000000.0,InventoryNet
+MU,inventory,2026-09-03,10372000000.0,InventoryNet
 MU,revenue,2017-11-30,6803000000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 MU,revenue,2018-03-01,7351000000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 MU,revenue,2018-05-31,7797000000.0,RevenueFromContractWithCustomerExcludingAssessedTax
@@ -999,6 +1001,7 @@ MU,revenue,2025-08-28,11315000000.0,RevenueFromContractWithCustomerExcludingAsse
 MU,revenue,2025-11-27,13643000000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 MU,revenue,2026-02-26,23860000000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 MU,revenue,2026-05-28,41456000000.0,RevenueFromContractWithCustomerExcludingAssessedTax
+MU,revenue,2026-09-03,54229000000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 NVDA,cogs,2015-01-25,552000000.0,CostOfRevenue
 NVDA,cogs,2015-04-26,498000000.0,CostOfRevenue
 NVDA,cogs,2015-07-26,519000000.0,CostOfRevenue
