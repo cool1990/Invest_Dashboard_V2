@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-08T09:28:09+08:00",
+ "generated_at": "2026-10-09T09:36:28+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -98,17 +98,6 @@
    "note": "美东盘后。原名：Lam Research Corporation",
    "previous": "$1.26",
    "consensus": "$2.17",
-   "priority": "高"
-  },
-  {
-   "date": "2026-10-22",
-   "time_bj": "",
-   "category": "财报",
-   "title": "英特尔（INTC）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "原名：Intel Corporation",
-   "previous": "$0.11",
-   "consensus": "$0.27",
    "priority": "高"
   },
   {
