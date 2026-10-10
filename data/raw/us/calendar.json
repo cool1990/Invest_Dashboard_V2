@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-09T09:36:28+08:00",
+ "generated_at": "2026-10-10T09:25:51+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -141,7 +141,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$2.80",
-   "consensus": "$2.82",
+   "consensus": "$2.53",
    "priority": "中"
   },
   {
@@ -218,7 +218,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$1.06",
-   "consensus": "$1.12",
+   "consensus": "$1.11",
    "priority": "中"
   },
   {
@@ -229,7 +229,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$11.55",
-   "consensus": "$14.04",
+   "consensus": "$14.01",
    "priority": "中"
   },
   {
@@ -240,7 +240,18 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$2.80",
-   "consensus": "$2.88",
+   "consensus": "$2.83",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-14",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Progressive Corporation (The)（PGR）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前。日期不一样：Nasdaq earnings calendar写的是 2026-10-14，Nasdaq earnings calendar写的是 2026-10-22",
+   "previous": "$4.05",
+   "consensus": "$4.37",
    "priority": "中"
   },
   {
@@ -504,7 +515,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$0.54",
-   "consensus": "$0.61",
+   "consensus": "$0.59",
    "priority": "中"
   },
   {
@@ -515,7 +526,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$1.30",
-   "consensus": "$1.43",
+   "consensus": "$1.42",
    "priority": "中"
   },
   {
@@ -526,7 +537,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$1.89",
-   "consensus": "$1.96",
+   "consensus": "$1.92",
    "priority": "中"
   },
   {
@@ -555,17 +566,6 @@
    "date": "2026-10-21",
    "time_bj": "",
    "category": "财报",
-   "title": "Progressive Corporation (The)（PGR）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "日期不一样：Nasdaq earnings calendar写的是 2026-10-21，Nasdaq earnings calendar写的是 2026-10-22",
-   "previous": "$4.05",
-   "consensus": "$4.37",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-21",
-   "time_bj": "",
-   "category": "财报",
    "title": "SAP SE（SAP）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
@@ -581,7 +581,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$0.37",
-   "consensus": "$0.24",
+   "consensus": "$0.23",
    "priority": "中"
   },
   {
@@ -636,7 +636,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$1.71",
-   "consensus": "$1.94",
+   "consensus": "$1.92",
    "priority": "中"
   },
   {
@@ -669,7 +669,18 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$3.66",
-   "consensus": "$18.15",
+   "consensus": "$18.45",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-22",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Western Digital Corporation（WDC）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后",
+   "previous": "$1.64",
+   "consensus": "$3.97",
    "priority": "中"
   },
   {
