@@ -1,7 +1,10 @@
 """标普 500 盈利周报。
 
-2026-08-07 及之前是 FactSet《Earnings Insight》，2026-08-15 起是 LSEG I/B/E/S
-《This Week in Earnings》。两套统计不是同一口径，调用方不要把断口前后连成一次跳变。
+断点 2026-08-15 FactSet→LSEG（不可改回 FactSet，不可重写断点前历史）：
+- 2026-08-07 及之前：FactSet《Earnings Insight》
+- 2026-08-15 起：LSEG I/B/E/S《This Week in Earnings》
+两套口径不同；EPS Surprise / 超预期 / 增速等断点前后不可直接对比，
+调用方不要把断口当成真实跳变，也不要跨源做周环比。
 
 笔记是 Obsidian 里的 markdown，指标在文首 frontmatter。仓库里落成
 data/raw/us/earnings_insight.csv。把新的笔记放进 data/raw/us/insight/ 后，
@@ -16,7 +19,7 @@ from pathlib import Path
 
 from ..csvio import read_csv, write_csv
 
-# 这一天起改用 LSEG。前一篇 2026-08-07 仍是 FactSet。
+# 断点 2026-08-15 FactSet→LSEG。此前最后一篇 FactSet=2026-08-07；此后只收 LSEG，不回写旧史。
 BREAK = date(2026, 8, 15)
 
 FIELDS = [

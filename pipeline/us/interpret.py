@@ -2,7 +2,7 @@
 
 和宏观页一样按经济锚点判断，不和历史平均比。阈值都写在这里。
 盈利的三块（兑现、指引、修正）和情绪的四块都分开写，不合成一个分数。
-只有修正决定上修 / 下修这一档。FactSet 与 LSEG 不互相比较。
+只有修正决定上修 / 下修这一档。断点 2026-08-15 FactSet→LSEG：两源不互相比较，surprise 等不可跨断点对比。
 """
 
 from __future__ import annotations
@@ -60,7 +60,7 @@ def earnings_state(v: dict) -> dict:
         "q_pos": f"没有净家数时，正面占比达到 {GUIDE_POS:g}% 为偏多",
         "reported": f"披露比例达到 {REPORTED_READY:g}% 才看超预期。早期笔记里的家数不是百分比",
         "eps_above": f"达到 {ABOVE_STRONG:g}% 为兑现强，低于 {ABOVE_WEAK:g}% 为偏弱",
-        "eps_surprise": "只在同一数据源内看。FactSet 和 LSEG 的 surprise 不能连着比",
+        "eps_surprise": "只在同一数据源内看。断点 2026-08-15 FactSet→LSEG，surprise 不能跨断点连着比",
         "rev_net": f"上修次数减下修次数。净占比达到 ±{REV_SHARE * 100:g} 个百分点才改成上修或下修",
     }
     useful = ("reported_pct", "reported_n", "eps_above", "q_net", "q_pos", "y_growth", "q_growth", "rev_up")

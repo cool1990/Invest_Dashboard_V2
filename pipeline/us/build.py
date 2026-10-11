@@ -175,7 +175,7 @@ class UsBuilder:
         view = self._earn_view()
         st = I.earnings_state(view)
         self.insight_view = self._weeks()
-        gap = "口径：2026-08-07 及之前是 FactSet，2026-08-15 起是 LSEG。两段分开画，断口不是真实跳变。"
+        gap = "断点 2026-08-15 FactSet→LSEG。两段分开画；断口不是真实跳变，surprise 等指标断点前后不可直接对比。"
         q_f, q_l = self._split("q_growth")
         y_f, y_l = self._split("y_growth")
         pos_f, pos_l = self._split("q_pos")
@@ -205,7 +205,7 @@ class UsBuilder:
                   note=gap + " 披露比例不到 50%，或早期笔记只写了家数时，不据此判断兑现。达到 80% 为兑现强。"),
             Chart("eps_surprise", "EPS Surprise", "%",
                   [Line("FactSet", sur_f), Line("LSEG", sur_l)], core=True,
-                  note=gap + " FactSet 常见百分之十几到三十，LSEG 同一季大约 +8%，不要当成惊喜突然消失。"),
+                  note=gap + " FactSet 常见百分之十几到三十，LSEG 同一季大约 +8%；这是口径切换，不是惊喜消失。"),
             Chart("q_net", "季度净指引", "家",
                   [Line("FactSet", net_f, "bar"), Line("LSEG", net_l, "bar")],
                   note="正面家数减负面家数。大于 0 为偏多。"),
@@ -259,8 +259,9 @@ class UsBuilder:
         } for r in rows]
         return {
             "break_date": insight.BREAK.isoformat(),
-            "note": "2026-08-07 及之前来自 FactSet《Earnings Insight》，2026-08-15 起换成 LSEG I/B/E/S"
-                    "《This Week in Earnings》。EPS Surprise 会从大约 +29% 掉到 +8.5%，这是口径切换，不是惊喜消失。",
+            "note": "断点 2026-08-15 FactSet→LSEG。2026-08-07 及之前 FactSet《Earnings Insight》，此后 LSEG I/B/E/S"
+                    "《This Week in Earnings》。EPS Surprise 约从 +29% 落到 +8.5% 是口径切换不是惊喜消失；"
+                    "断点前后 surprise/超预期/增速不可直接对比，禁止改回 FactSet 或重写旧史。",
             "weeks": weeks,
         }
 
@@ -323,7 +324,7 @@ class UsBuilder:
             pe_note = "判断用 data/us/manual.csv 里的 spx_fwd_pe。周报和个股中位数只作参考。"
         elif source == "insight":
             lines = [Line("FactSet", fact_pe), Line("LSEG", lseg_pe), Line("个股中位数", basket, dash=True)]
-            pe_note = "标普 500 未来四季市盈率，来自盈利周报。FactSet 与 LSEG 分开画。个股中位数不进判断。"
+            pe_note = "标普 500 未来四季市盈率，来自盈利周报。断点 2026-08-15 FactSet→LSEG，两段分开画。个股中位数不进判断。"
         else:
             lines = [Line("个股中位数", basket)]
             pe_note = "还没有标普周报的远期市盈率，暂用 8 家大盘股的中位数。"
@@ -331,7 +332,7 @@ class UsBuilder:
             Chart("pe", "标普 500 远期市盈率", "倍", lines, core=True, note=pe_note),
             Chart("erp", "股权风险溢价", "百分点", [Line("盈利收益率 − 实际利率", erp)], core=True,
                   note="盈利收益率 = 100 / 远期市盈率。低于 2 为贵，高于 4 为便宜。实际利率用 FRED 10 年期 TIPS（DFII10）。"
-                       "2026-08-15 前后市盈率来源不同，断口处的变化不要单独解读。"),
+                       "断点 2026-08-15 FactSet→LSEG：市盈率来源不同，断口处的变化不要单独解读。"),
             Chart("ey", "盈利收益率与 10 年实际利率", "%",
                   [Line("盈利收益率", ey), Line("10 年实际利率", ts.to_weekly(real) if len(real) > 30 else real, dash=True)],
                   note="两条线的差就是上面的风险溢价。"),
@@ -461,7 +462,7 @@ class UsBuilder:
             "method": "盈利看标普 500 周报，不看个股中位数。兑现、指引、修正分开写：披露过半后，EPS 超预期达到 80% 为兑现强、低于 70% 为偏弱；"
                       "季度净指引大于 0 为偏多。修正优先用主线里的上修/下修次数，净占比达到 ±10 个百分点才改成上修或下修；"
                       "没有次数时，看同一数据源的年度 EPS 增速较上一篇是否超过 ±0.5 个百分点。"
-                      "2026-08-07 及之前是 FactSet，2026-08-15 起是 LSEG，两段不互相比较。"
+                      "断点 2026-08-15 FactSet→LSEG：两段不互相比较，surprise 等指标断点前后不可直接对比。"
                       "估值用周报里的标普远期市盈率（手工表 spx_fwd_pe 优先），换成盈利收益率后减去 10 年实际利率，"
                       "低于 2 个百分点为贵、高于 4 个百分点为便宜。"
                       "个股表（" + core + " 等）只作对照。"

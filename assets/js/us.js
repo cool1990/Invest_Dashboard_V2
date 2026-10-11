@@ -3,8 +3,12 @@
 
 function sourceBanner() {
   const info = DATA.insight || {};
-  if (!info.note) return "";
-  return `<div class="source-break">${esc(info.note)}</div>`;
+  const br = info.break_date || "2026-08-15";
+  const title = `断点 ${br} FactSet→LSEG`;
+  const body = info.note
+    ? esc(info.note)
+    : "两段分开画；断点前后 surprise / 超预期 / 增速等指标不可直接对比。禁止改回 FactSet 或重写旧史。";
+  return `<div class="source-break"><b>${esc(title)}</b> — ${body}</div>`;
 }
 
 function weeksHTML() {
