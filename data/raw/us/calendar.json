@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-11T08:36:48+08:00",
+ "generated_at": "2026-10-12T08:53:19+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -249,7 +249,7 @@
    "category": "财报",
    "title": "Progressive Corporation (The)（PGR）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前。日期不一样：Nasdaq earnings calendar写的是 2026-10-14，Nasdaq earnings calendar写的是 2026-10-22",
+   "note": "美东盘前。日期不一样：Nasdaq earnings calendar写的是 2026-10-14，Nasdaq earnings calendar写的是 2026-10-22，Nasdaq earnings calendar写的是 2026-10-27，Nasdaq earnings calendar写的是 2026-10-27",
    "previous": "$4.05",
    "consensus": "$4.37",
    "priority": "中"
@@ -736,6 +736,94 @@
    "note": "美东盘后",
    "previous": "$1.34",
    "consensus": "$1.64",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-27",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Corning Incorporated（GLW）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$0.67",
+   "consensus": "$0.88",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-27",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Freeport-McMoran, Inc.（FCX）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$0.50",
+   "consensus": "$0.75",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-27",
+   "time_bj": "",
+   "category": "财报",
+   "title": "HSBC Holdings plc（HSBC）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$1.80",
+   "consensus": "$2.13",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-27",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Novartis AG（NVS）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$2.25",
+   "consensus": "$2.25",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-27",
+   "time_bj": "",
+   "category": "财报",
+   "title": "S&P Global Inc.（SPGI）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$4.73",
+   "consensus": "$4.42",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-27",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Seagate Technology Holdings PLC（STX）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$2.51",
+   "consensus": "$7.11",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-27",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Southern Copper Corporation（SCCO）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$1.35",
+   "consensus": "$2.07",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-27",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Visa Inc.（V）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$2.98",
+   "consensus": "$3.43",
    "priority": "中"
   },
   {
