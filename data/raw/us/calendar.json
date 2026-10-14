@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-13T10:47:47+08:00",
+ "generated_at": "2026-10-14T08:47:13+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -112,83 +112,6 @@
    "priority": "低"
   },
   {
-   "date": "2026-10-13",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Citigroup Inc.（C）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$2.24",
-   "consensus": "$2.66",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-13",
-   "time_bj": "",
-   "category": "财报",
-   "title": "J P Morgan Chase & Co（JPM）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$5.07",
-   "consensus": "$5.94",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-13",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Johnson & Johnson（JNJ）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$2.80",
-   "consensus": "$2.53",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-13",
-   "time_bj": "",
-   "category": "财报",
-   "title": "The Goldman Sachs Group, Inc.（GS）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$12.25",
-   "consensus": "$12.90",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-13",
-   "time_bj": "",
-   "category": "财报",
-   "title": "UnitedHealth Group Incorporated（UNH）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$2.92",
-   "consensus": "$4.12",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-13",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Wells Fargo & Company（WFC）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$1.73",
-   "consensus": "$1.85",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-13",
-   "time_bj": "15:45",
-   "category": "大事",
-   "title": "美联储讲话",
-   "url": "https://www.youtube.com/@BloombergNewEconomy",
-   "note": "Discussion - Governor Christopher J. Waller At the Bloomberg New Economy Forum 2026, New Delhi, India 美东 3:45 a.m.",
-   "previous": "",
-   "consensus": "",
-   "priority": "低"
-  },
-  {
    "date": "2026-10-14",
    "time_bj": "",
    "category": "宏观",
@@ -251,7 +174,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前。日期不一样：Nasdaq earnings calendar写的是 2026-10-14，Nasdaq earnings calendar写的是 2026-10-22，Nasdaq earnings calendar写的是 2026-10-27，Nasdaq earnings calendar写的是 2026-10-27",
    "previous": "$4.05",
-   "consensus": "$4.35",
+   "consensus": "$4.46",
    "priority": "中"
   },
   {
@@ -306,7 +229,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$1.31",
-   "consensus": "$1.66",
+   "consensus": "$1.67",
    "priority": "中"
   },
   {
@@ -326,7 +249,7 @@
    "category": "大事",
    "title": "美联储讲话",
    "url": "https://www.youtube.com/live/V7H5F2C5PNc",
-   "note": "Speech - Vice Chair for Supervision Michelle W. Bowman At the Bangkok Economic Festival 2026 美东 10:55 p.m.。原名：To be announced.",
+   "note": "Speech - Vice Chair for Supervision Michelle W. Bowman At the Bangkok Economic Festival 2026 美东 10:55 p.m.。原名：Supervision and Regulation",
    "previous": "",
    "consensus": "",
    "priority": "低"
@@ -361,6 +284,17 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "",
    "previous": "$0.44",
+   "consensus": "$0.40",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-16",
+   "time_bj": "",
+   "category": "财报",
+   "title": "ICICI Bank Limited（IBN）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$0.39",
    "consensus": "$0.40",
    "priority": "中"
   },
@@ -427,7 +361,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$7.49",
-   "consensus": "$6.29",
+   "consensus": "$6.42",
    "priority": "中"
   },
   {
@@ -471,7 +405,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$2.24",
-   "consensus": "$2.32",
+   "consensus": "$2.31",
    "priority": "中"
   },
   {
@@ -527,17 +461,6 @@
    "note": "美东盘前",
    "previous": "$1.30",
    "consensus": "$1.42",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-21",
-   "time_bj": "",
-   "category": "财报",
-   "title": "CME Group Inc.（CME）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$2.68",
-   "consensus": "$2.96",
    "priority": "中"
   },
   {
@@ -636,7 +559,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$6.95",
-   "consensus": "$7.25",
+   "consensus": "$7.48",
    "priority": "中"
   },
   {
@@ -680,7 +603,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$3.66",
-   "consensus": "$19.54",
+   "consensus": "$21.23",
    "priority": "中"
   },
   {
@@ -702,7 +625,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$4.14",
-   "consensus": "$4.50",
+   "consensus": "$4.49",
    "priority": "中"
   },
   {
@@ -933,7 +856,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$1.64",
-   "consensus": "$4.09",
+   "consensus": "$4.03",
    "priority": "中"
   },
   {
@@ -955,7 +878,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$2.52",
-   "consensus": "$10.41",
+   "consensus": "$10.49",
    "priority": "中"
   },
   {
@@ -1012,6 +935,215 @@
    "previous": "",
    "consensus": "",
    "priority": "中"
+  },
+  {
+   "date": "2026-10-29",
+   "time_bj": "",
+   "category": "财报",
+   "title": "ASE Technology Holding Co., Ltd.（ASX）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$0.16",
+   "consensus": "$0.34",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-29",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Altria Group（MO）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$1.45",
+   "consensus": "$1.50",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-29",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Amazon.com, Inc.（AMZN）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$1.95",
+   "consensus": "$2.02",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-29",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Anheuser-Busch Inbev SA（BUD）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$0.99",
+   "consensus": "$1.14",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-29",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Bristol-Myers Squibb Company（BMY）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$1.63",
+   "consensus": "$1.48",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-29",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Cloudflare, Inc.（NET）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "($0.01)",
+   "consensus": "$0.02",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-29",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Eli Lilly and Company（LLY）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$7.02",
+   "consensus": "$7.54",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-29",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Gilead Sciences, Inc.（GILD）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$2.47",
+   "consensus": "$2.16",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-29",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Linde plc（LIN）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$4.21",
+   "consensus": "$4.52",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-29",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Mastercard Incorporated（MA）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$4.38",
+   "consensus": "$5.13",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-29",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Merck & Company, Inc.（MRK）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$2.58",
+   "consensus": "$2.12",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-29",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Quanta Services, Inc.（PWR）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$3.08",
+   "consensus": "$4.68",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-29",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Shell PLC（SHEL）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$1.86",
+   "consensus": "$3.25",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-29",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Starbucks Corporation（SBUX）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后",
+   "previous": "$0.52",
+   "consensus": "$0.72",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-29",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Stryker Corporation（SYK）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后",
+   "previous": "$3.19",
+   "consensus": "$3.59",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-29",
+   "time_bj": "",
+   "category": "财报",
+   "title": "TotalEnergies SE（TTE）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$1.77",
+   "consensus": "$3.36",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-29",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Trane Technologies plc（TT）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$3.88",
+   "consensus": "$4.74",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-29",
+   "time_bj": "",
+   "category": "财报",
+   "title": "英特尔（INTC）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后。原名：Intel Corporation",
+   "previous": "$0.11",
+   "consensus": "$0.27",
+   "priority": "高"
+  },
+  {
+   "date": "2026-10-29",
+   "time_bj": "",
+   "category": "财报",
+   "title": "闪迪（SNDK）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后。原名：Sandisk Corporation",
+   "previous": "$0.90",
+   "consensus": "$45.22",
+   "priority": "高"
   },
   {
    "date": "2026-10-29",
