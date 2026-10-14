@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-13T10:47:47+08:00",
+ "generated_at": "2026-10-14T08:47:13+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -131,6 +131,39 @@
    "note": "UMC IR：3Q 2026 Earnings Release & Investor Conference Call 10/28/2026，官方标注 Subject to change；会议细节提前15天公布",
    "previous": "",
    "consensus": "",
+   "priority": "高"
+  },
+  {
+   "date": "2026-10-29",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Amazon.com, Inc.（AMZN）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$1.95",
+   "consensus": "$2.02",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-29",
+   "time_bj": "",
+   "category": "财报",
+   "title": "英特尔（INTC）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后。原名：Intel Corporation",
+   "previous": "$0.11",
+   "consensus": "$0.27",
+   "priority": "高"
+  },
+  {
+   "date": "2026-10-29",
+   "time_bj": "",
+   "category": "财报",
+   "title": "闪迪（SNDK）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后。原名：Sandisk Corporation",
+   "previous": "$0.90",
+   "consensus": "$45.22",
    "priority": "高"
   },
   {
