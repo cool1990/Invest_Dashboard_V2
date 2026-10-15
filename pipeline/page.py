@@ -110,6 +110,10 @@ class Metric:
     model: bool = False  # 模型预测，不进判断
     ref: bool = False  # 已公布的数据，但只作参考，不进判断
     about: str = ""  # 这个指标判断什么、怎么判断、为什么有效（几句话）
+    surprise: bool = False  # 这一行要展示与最新值同一期的预期、以及是否超预期
+    expect: float | None = None
+    verdict: str = ""
+    verdict_dir: str = ""  # hot 超预期 / cool 低于预期 / flat 符合预期
 
 
 def signed(fmt: str) -> str:
@@ -139,7 +143,11 @@ def metric_json(m: Metric, anchors: dict[str, str], charts: dict) -> dict | None
         flat = float(txt.replace(",", "").replace("+", "")) == 0  # 按显示精度看是否为 0
         chg = {"label": label, "text": "持平" if flat else txt, "base": m.fmt.format(base),
                "dir": "flat" if flat else "up" if v > base else "down"}
-    return {"id": m.id, "name": m.name, "text": m.fmt.format(v), "unit": m.unit,
-            "date": period_text(d, m.freq), "chg": chg, "anchor": anchors.get(m.id, ""),
-            "note": m.note, "chart": m.chart if m.chart in charts else None, "model": m.model,
-            "ref": m.ref, **({"about": m.about} if m.about else {})}
+    out = {"id": m.id, "name": m.name, "text": m.fmt.format(v), "unit": m.unit,
+           "date": period_text(d, m.freq), "chg": chg, "anchor": anchors.get(m.id, ""),
+           "note": m.note, "chart": m.chart if m.chart in charts else None, "model": m.model,
+           "ref": m.ref, **({"about": m.about} if m.about else {})}
+    if m.surprise:
+        out["expect"] = None if m.expect is None else m.fmt.format(m.expect)
+        out["verdict"] = {"key": m.verdict_dir, "label": m.verdict} if m.verdict else None
+    return out

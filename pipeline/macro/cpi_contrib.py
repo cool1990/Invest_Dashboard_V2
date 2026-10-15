@@ -103,8 +103,8 @@ def _effect(anchor: Anchor, levels: dict[str, dict[date, float]], component: str
     return ri * (new / old - 1)
 
 
-def breakdown(raw: dict[str, Series], anchors: list[Anchor] | None = None) -> dict[str, Series]:
-    """各月贡献。缺锚、缺指数或上月没有指数时，该月留空。"""
+def contributions(raw: dict[str, Series], lag: int = 1, anchors: list[Anchor] | None = None) -> dict[str, Series]:
+    """各月贡献。lag=1 是环比，lag=12 是同比。缺锚、缺指数或基期没有指数时，该月留空。"""
     empty = {k: [] for k in PARTS}
     anchors = load_anchors() if anchors is None else anchors
     if not anchors:
@@ -115,7 +115,7 @@ def breakdown(raw: dict[str, Series], anchors: list[Anchor] | None = None) -> di
     food, energy, core = [], [], []
     goods, shelter, supercore = [], [], []
     for current in sorted(levels["all"]):
-        prev = _shift_month(current, -1)
+        prev = _shift_month(current, -lag)
         anchor = _anchor_for(anchors, current.year)
         all_prev, all_now = levels["all"].get(prev), levels["all"].get(current)
         if anchor is None or all_prev in (None, 0) or all_now is None:
@@ -139,3 +139,68 @@ def breakdown(raw: dict[str, Series], anchors: list[Anchor] | None = None) -> di
             supercore.append((current, (services_pp - shelter_pp) / scale))
     return {"food": food, "energy": energy, "core": core,
             "core_goods": goods, "shelter": shelter, "supercore": supercore}
+
+
+def breakdown(raw: dict[str, Series], anchors: list[Anchor] | None = None) -> dict[str, Series]:
+    """环比贡献。缺锚、缺指数或上月没有指数时，该月留空。"""
+    return contributions(raw, 1, anchors)
+
+
+def _rate(levels: dict[str, dict[date, float]], component: str, prev: date, current: date) -> float | None:
+    """分项价格变化，小数。"""
+    old, new = levels[component].get(prev), levels[component].get(current)
+    if old in (None, 0) or new is None:
+        return None
+    return new / old - 1
+
+
+def _compound(moms: dict[date, float], end: date, n: int, annualize: int | None) -> float | None:
+    """连乘 end 往前 n 个已实现的月环比。窗口里缺月就返回 None。结果是百分数。"""
+    ratio = 1.0
+    for i in range(n):
+        v = moms.get(_shift_month(end, -i))
+        if v is None:
+            return None
+        ratio *= 1 + v
+    if ratio <= 0:
+        return None
+    if annualize:
+        return (ratio ** (annualize / n) - 1) * 100
+    return (ratio - 1) * 100
+
+
+def supercore_cpi(raw: dict[str, Series], anchors: list[Anchor] | None = None) -> dict[str, Series]:
+    """超级核心 CPI 的环比、3 个月年化、6 个月年化、同比，单位 %。
+
+    没有单独的超级核心指数。每月环比用上月相对重要性，从「服务除能源服务」里剔除住房：
+    (RI_服务 × 服务环比 − RI_住房 × 住房环比) / (RI_服务 − RI_住房)。
+    3 个月、6 个月和同比把这些月环比连乘；窗口里缺任何一个月就留空，不插值。
+    """
+    empty = {"mom": [], "ann3": [], "ann6": [], "yoy": []}
+    anchors = load_anchors() if anchors is None else anchors
+    if not anchors:
+        return empty
+    levels = {k: dict(raw.get(sid) or []) for k, sid in INDEX.items()}
+    if not levels["all"]:
+        return empty
+    moms: dict[date, float] = {}
+    for current in sorted(levels["all"]):
+        prev = _shift_month(current, -1)
+        anchor = _anchor_for(anchors, current.year)
+        if anchor is None:
+            continue
+        ri_services = ri_at(anchor, levels, "services_ex_energy", prev)
+        ri_shelter = ri_at(anchor, levels, "shelter", prev)
+        if ri_services is None or ri_shelter is None or ri_services <= ri_shelter:
+            continue
+        services = _rate(levels, "services_ex_energy", prev, current)
+        shelter = _rate(levels, "shelter", prev, current)
+        if services is None or shelter is None:
+            continue
+        moms[current] = (ri_services * services - ri_shelter * shelter) / (ri_services - ri_shelter)
+    return {
+        "mom": [(d, v * 100) for d, v in sorted(moms.items())],
+        "ann3": [(d, v) for d in sorted(moms) if (v := _compound(moms, d, 3, 12)) is not None],
+        "ann6": [(d, v) for d in sorted(moms) if (v := _compound(moms, d, 6, 12)) is not None],
+        "yoy": [(d, v) for d in sorted(moms) if (v := _compound(moms, d, 12, None)) is not None],
+    }
