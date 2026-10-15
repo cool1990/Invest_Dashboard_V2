@@ -20,6 +20,7 @@ from .. import series as ts
 from ..page import FREQ, Chart, Line, Metric, metric_json, period_text
 from ..series import Series
 from . import consensus as cons
+from . import cpi_contrib
 from . import interpret as I
 from . import importance
 from .scenario import Scenario
@@ -339,8 +340,14 @@ class MacroBuilder:
         ccpi = self.m("CPILFESL", "last")
         cpi_yoy = ts.pct_change(cpi, 12, "M")
         ccpi_yoy = ts.pct_change(ccpi, 12, "M")
+        cpi_mom = ts.pct_change(cpi, 1, "M")
         ccpi_mom = ts.pct_change(ccpi, 1, "M")
+        cpi_3m = ts.pct_change(cpi, 3, "M", annualize=12)
+        cpi_6m = ts.pct_change(cpi, 6, "M", annualize=12)
+        ccpi_3m = ts.pct_change(ccpi, 3, "M", annualize=12)
+        ccpi_6m = ts.pct_change(ccpi, 6, "M", annualize=12)
         br = self.pce_breakdown()
+        cbr = cpi_contrib.breakdown(self.raw)
         supercore = self.m("IA001260M", "last")
         supercore_yoy = ts.pct_change(supercore, 12, "M")
         supercore_3m = ts.pct_change(supercore, 3, "M", annualize=12)
@@ -352,7 +359,7 @@ class MacroBuilder:
 
         self.actuals.update({
             "pce_mom": pce_mom, "pce_yoy": pce_yoy, "core_pce_mom": core_mom, "core_pce_yoy": core_yoy,
-            "cpi_mom": ts.pct_change(cpi, 1, "M"), "cpi_yoy": cpi_yoy, "core_cpi_mom": ccpi_mom,
+            "cpi_mom": cpi_mom, "cpi_yoy": cpi_yoy, "core_cpi_mom": ccpi_mom,
             "core_cpi_yoy": ccpi_yoy, "mich": mich,
         })
         weight_note = ("权重用最近可得的低频数据近似：住房比重用上一年年度数据，能源商品比重用最近一季"
@@ -392,12 +399,53 @@ class MacroBuilder:
             )),
             ("CPI 与预期", self.add(
                 Chart("cpi", "CPI 与核心 CPI 同比", "%", [
-                    Line("CPI", cpi_yoy), Line("核心 CPI", ccpi_yoy)]),
-                Chart("cpi_mom", "核心 CPI 环比", "%", [Line("核心 CPI 环比", ccpi_mom, "bar")]),
+                    Line("CPI", cpi_yoy), Line("核心 CPI", ccpi_yoy)],
+                    note="数据表在有一致预期的月份另列预期，取日历里发布前最后一次看到的值；没有的月份留空。"),
+                Chart("cpi_mom", "CPI 与核心 CPI 环比", "%", [
+                    Line("CPI 环比", cpi_mom, "bar"), Line("核心 CPI 环比", ccpi_mom, "bar")],
+                    note="季调环比。数据表的预期列与同比同一套日历，只填已经记下来的月份。"),
+                Chart("cpi_ann", "CPI 年化动能（整体与核心）", "%", [
+                    Line("核心 3 个月年化", ccpi_3m), Line("核心 6 个月年化", ccpi_6m),
+                    Line("整体 3 个月年化", cpi_3m, dash=True), Line("整体 6 个月年化", cpi_6m, dash=True)],
+                    note="由季调指数复利：3 个月年化 =（近 3 个月之比）^4 − 1，6 个月年化 =（近 6 个月之比）^2 − 1。"
+                         "核心和整体都列。本站通胀标签仍看核心 PCE，不看这里。"
+                         "没有指数的月份留空，不插值，也不把缺口两边当成相邻的一个月。"),
+                Chart("cpi_contrib_mom", "CPI 环比：食品、能源、核心", "百分点", [
+                    Line("食品", cbr["food"], "bar"), Line("能源", cbr["energy"], "bar"),
+                    Line("核心", cbr["core"], "bar"), Line("CPI 环比", cpi_mom)],
+                    stacked="bar", start=date(2015, 1, 1), digits=4,
+                    note="对整体 CPI 的绝对贡献（百分点）。食品、核心 = 上月相对重要性 × 季调环比；"
+                         "能源 = 整体环比 − 食品 − 核心，使三项相加等于整体环比，与 BLS 新闻稿 Table 6 的可加总一致。"
+                         "比重用 BLS 每年 12 月 CPI-U，在同一套权重内按价格指数相对变化推到上一个月；"
+                         "2026 年用 2025 年 12 月、2024 年权重的重置比重。跨过缺失月份的点留空。"),
+                Chart("cpi_core_contrib_mom", "核心 CPI 环比：商品、住房、超级核心", "百分点", [
+                    Line("核心商品", cbr["core_goods"], "bar"), Line("住房", cbr["shelter"], "bar"),
+                    Line("超级核心", cbr["supercore"], "bar"), Line("核心 CPI 环比", ccpi_mom)],
+                    stacked="bar", start=date(2015, 1, 1), digits=4,
+                    note="对核心 CPI 的绝对贡献 = 对整体的贡献 ÷ 上月核心相对重要性。"
+                         "核心商品 = 除食品与能源的商品；住房 = Shelter。"
+                         "超级核心 = 核心服务剔除住房 = 服务除能源服务 − 住房"
+                         "（BLS：Services less energy services − Shelter），没有单独指数。"
+                         "三项大致加总到核心环比；公开指数四舍五入会留下大约 0.01 个百分点以内的残差。"),
+                Chart("cpi_cleveland", "克利夫兰联储：中位数与 16% 截尾均值", "%", [
+                    Line("中位数环比年化", self.s("MEDCPIM158SFRBCLE")),
+                    Line("中位数同比", self.s("MEDCPIM159SFRBCLE")),
+                    Line("16% 截尾均值环比年化", self.s("TRMMEANCPIM158SFRBCLE"), dash=True),
+                    Line("16% 截尾均值同比", self.s("TRMMEANCPIM159SFRBCLE"), dash=True)],
+                    note="环比年化是 FRED 的月度 Percent Change at Annual Rate，已经年化，不是未年化的月环比；"
+                         "同比是 Percent Change from Year Ago。"
+                         "2025 年 10 月官方 CPI 缺失，克利夫兰对该月使用插值，序列里的该月是其公布值。"),
+                Chart("zori", "Zillow ZORI 新租约租金", "%", [
+                    Line("同比", ts.pct_change(self.s("ZORI"), 12, "M")),
+                    Line("环比", ts.pct_change(self.s("ZORI"), 1, "M"), "bar")],
+                    note="Zillow Observed Rent Index，美国全国，平滑后的典型观察租金，按租赁存量加权。"
+                         "日期对齐到月初，和 CPI 同一条月度轴。新租约领先 CPI 租金和业主等价租金大约 6–12 个月，"
+                         "不是 CPI 住房本身。公开 CSV 还没更新的月份留空。"),
                 Chart("expect", "通胀预期", "%", [
                     Line("5y5y 远期", fwd), Line("10 年盈亏平衡", be10), Line("密歇根一年期", mich)]),
             )),
         ]
+        self._attach_cpi_forecasts()
         nc_rows = self._nowcast_rows("核心 PCE")
         metrics = [
             Metric("core_yoy", "核心 PCE 同比", core_yoy, "%", "{:.2f}", chart="core_contrib_yoy"),
@@ -686,6 +734,43 @@ class MacroBuilder:
             return date(int(y), int(m), 1)
         except (ValueError, AttributeError):
             return None
+
+    def _attach_cpi_forecasts(self) -> None:
+        """同比、环比的数据表加预期列。只填日历里已经有的月份，其余留空。"""
+        specs = {
+            "cpi": {"CPI y/y": "CPI", "Core CPI y/y": "核心 CPI"},
+            "cpi_mom": {"CPI m/m": "CPI 环比", "Core CPI m/m": "核心 CPI 环比"},
+        }
+        for cid, mapping in specs.items():
+            chart = self.charts.get(cid)
+            columns = self._forecast_columns(mapping) if chart else []
+            if chart and columns:
+                chart["forecasts"] = columns
+
+    def _forecast_columns(self, mapping: dict[str, str]) -> list[dict]:
+        buckets: dict[str, dict[date, float]] = {}
+        for event in self.events:
+            title = event.get("title", "")
+            series_name = mapping.get(title)
+            spec = cons.EVENTS.get(title)
+            if not series_name or spec is None:
+                continue
+            value = cons.parse_value(event.get("forecast") or "")
+            if value is None:
+                continue
+            try:
+                ref = cons.ref_period(spec, cons.release_date(event["release_at"]))
+            except (KeyError, ValueError):
+                continue
+            buckets.setdefault(series_name, {})[ref] = value
+        out = []
+        for series_name in dict.fromkeys(mapping.values()):
+            pts = buckets.get(series_name)
+            if not pts:
+                continue
+            out.append({"name": f"{series_name} 预期", "for": series_name,
+                        "data": [[d.isoformat(), round(v, 4)] for d, v in sorted(pts.items())]})
+        return out
 
     def nowcast_after(self, measure: str, latest: date | None) -> list[tuple[str, float]]:
         """比最新官方数据更新的各期 Nowcast（同比），按期间排序。"""

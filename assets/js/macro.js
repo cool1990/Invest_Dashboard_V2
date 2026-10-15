@@ -47,6 +47,7 @@ function renderHealth() {
     st.effr_expect_error && `市场隐含 EFFR：${st.effr_expect_error}`,
     st.calendar_error && `经济日历预期：${st.calendar_error}`,
     st.nowcast_error && `克利夫兰联储 Nowcast：${st.nowcast_error}`,
+    st.zori_error && `Zillow ZORI：${st.zori_error}`,
   ].filter(Boolean);
   document.getElementById("health").innerHTML = `
     <details>

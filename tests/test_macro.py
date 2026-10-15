@@ -10,7 +10,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from pipeline import fred, series as ts  # noqa: E402
-from pipeline.macro import consensus as cons, effr_expect, interpret as I  # noqa: E402
+from pipeline.macro import consensus as cons, cpi_contrib, effr_expect, interpret as I, zori  # noqa: E402
 from pipeline.macro.build import MacroBuilder, build_dashboard  # noqa: E402
 
 
@@ -614,6 +614,94 @@ class EffrSignalTest(unittest.TestCase):
         year_flat = [(date(2026, 9, 28), 4.20), (date(2026, 9, 29), 4.205)]
         level, reasons = I.cross_signal(meet, year_flat)
         self.assertEqual((level, reasons), ("背离", ["背离（短期转鹰，长期几乎不动）"]))
+
+
+class CpiContribTest(unittest.TestCase):
+    """2026-09 用冻结的 FRED 指数和 BLS 2025-12 重置比重，对照新闻稿 Table 6。"""
+
+    def setUp(self):
+        self.anchor = cpi_contrib.Anchor(2026, 2026, date(2025, 12, 1), {
+            "food": 13.698, "energy": 6.383, "core": 79.919,
+            "core_goods": 19.176, "shelter": 35.625, "services_ex_energy": 60.744,
+        })
+        self.raw = {
+            "CPIAUCSL": [(date(2025, 12, 1), 326.031), (date(2026, 8, 1), 334.131), (date(2026, 9, 1), 336.298)],
+            "CPIUFDSL": [(date(2025, 12, 1), 344.632), (date(2026, 8, 1), 350.309), (date(2026, 9, 1), 350.477)],
+            "CPILFESL": [(date(2025, 12, 1), 331.814), (date(2026, 8, 1), 337.765), (date(2026, 9, 1), 338.896)],
+            "CUSR0000SACL1E": [(date(2025, 12, 1), 167.325), (date(2026, 8, 1), 167.939), (date(2026, 9, 1), 168.361)],
+            "CUSR0000SAH1": [(date(2025, 12, 1), 421.039), (date(2026, 8, 1), 430.227), (date(2026, 9, 1), 431.908)],
+            "CUSR0000SASLE": [(date(2025, 12, 1), 437.090), (date(2026, 8, 1), 447.075), (date(2026, 9, 1), 448.723)],
+        }
+
+    def test_sep2026_matches_table6_partition(self):
+        br = cpi_contrib.breakdown(self.raw, [self.anchor])
+        sep = date(2026, 9, 1)
+        food, energy, core = (dict(br[k])[sep] for k in ("food", "energy", "core"))
+        headline = (336.298 / 334.131 - 1) * 100
+        self.assertAlmostEqual(food + energy + core, headline, places=9)
+        # BLS Table 6（2026-09）：食品约 +0.006、核心约 +0.265、能源约 +0.377
+        self.assertAlmostEqual(food, 0.0065, delta=0.001)
+        self.assertAlmostEqual(core, 0.266, delta=0.002)
+        self.assertAlmostEqual(energy, 0.377, delta=0.003)
+        goods, shelter, super_ = (dict(br[k])[sep] for k in ("core_goods", "shelter", "supercore"))
+        self.assertAlmostEqual(goods, 0.059, delta=0.005)
+        self.assertAlmostEqual(shelter, 0.175, delta=0.005)
+        self.assertAlmostEqual(super_, 0.107, delta=0.005)
+
+    def test_missing_month_is_left_blank(self):
+        raw = {
+            "CPIAUCSL": [(date(2025, 9, 1), 100.0), (date(2025, 11, 1), 101.0), (date(2025, 12, 1), 102.0)],
+            "CPIUFDSL": [(date(2025, 9, 1), 100.0), (date(2025, 11, 1), 100.2), (date(2025, 12, 1), 100.3)],
+            "CPILFESL": [(date(2025, 9, 1), 100.0), (date(2025, 11, 1), 100.4), (date(2025, 12, 1), 100.5)],
+            "CUSR0000SACL1E": [(date(2025, 9, 1), 50.0), (date(2025, 11, 1), 50.1), (date(2025, 12, 1), 50.2)],
+            "CUSR0000SAH1": [(date(2025, 9, 1), 80.0), (date(2025, 11, 1), 80.2), (date(2025, 12, 1), 80.3)],
+            "CUSR0000SASLE": [(date(2025, 9, 1), 90.0), (date(2025, 11, 1), 90.3), (date(2025, 12, 1), 90.4)],
+        }
+        anchor = cpi_contrib.Anchor(2025, 2025, date(2025, 12, 1), {
+            "food": 10, "core": 80, "core_goods": 20, "shelter": 30, "services_ex_energy": 60,
+        })
+        br = cpi_contrib.breakdown(raw, [anchor])
+        months = {d for d, _ in br["food"]}
+        self.assertNotIn(date(2025, 11, 1), months)  # 上月 10 月没有指数
+        self.assertIn(date(2025, 12, 1), months)
+
+    def test_forecast_columns_only_on_cpi_actuals(self):
+        start, rows_cpi, rows_core = date(2025, 9, 1), [], []
+        level_cpi, level_core = 320.0, 330.0
+        for _ in range(13):
+            rows_cpi.append((start, level_cpi))
+            rows_core.append((start, level_core))
+            level_cpi *= 1.003
+            level_core *= 1.002
+            start = ts._shift_month(start, 1)
+        events = [
+            {"release_at": "2026-10-14T08:30:00-04:00", "title": "CPI y/y", "forecast": "3.6%"},
+            {"release_at": "2026-10-14T08:30:00-04:00", "title": "CPI m/m", "forecast": "0.6%"},
+            {"release_at": "2026-10-14T08:30:00-04:00", "title": "Core CPI y/y", "forecast": "2.5%"},
+            {"release_at": "2026-10-14T08:30:00-04:00", "title": "Core CPI m/m", "forecast": "0.2%"},
+            {"release_at": "2026-10-14T08:30:00-04:00", "title": "PPI m/m", "forecast": "0.4%"},
+        ]
+        from datetime import datetime, timezone
+        dash = build_dashboard({"CPIAUCSL": rows_cpi, "CPILFESL": rows_core}, [], date(2026, 10, 15),
+                               events, [], datetime(2026, 10, 15, tzinfo=timezone.utc))
+        self.assertEqual(dash["charts"]["cpi"]["forecasts"][0]["data"], [["2026-09-01", 3.6]])
+        self.assertEqual([c["for"] for c in dash["charts"]["cpi"]["forecasts"]], ["CPI", "核心 CPI"])
+        self.assertEqual(dash["charts"]["cpi_mom"]["forecasts"][1]["data"], [["2026-09-01", 0.2]])
+        self.assertNotIn("forecasts", dash["charts"]["cpi_ann"])
+        names = [s["name"] for s in dash["charts"]["cpi_ann"]["series"]]
+        self.assertEqual(names, ["核心 3 个月年化", "核心 6 个月年化", "整体 3 个月年化", "整体 6 个月年化"])
+
+
+class ZoriTest(unittest.TestCase):
+    def test_parse_aligns_to_month_start(self):
+        text = ("RegionID,SizeRank,RegionName,RegionType,2026-07-31,2026-08-31\n"
+                "1,0,United States,country,100,102\n"
+                "2,1,Somewhere,metro,1,1\n")
+        series = zori.parse_wide(text)
+        self.assertEqual(series, [(date(2026, 7, 1), 100.0), (date(2026, 8, 1), 102.0)])
+        yoy = ts.pct_change([(date(2025, 8, 1), 100.0)] + series, 12, "M")
+        self.assertEqual(yoy[0][0], date(2026, 8, 1))
+        self.assertAlmostEqual(yoy[0][1], 2.0)
 
 
 class EffrExpectTest(unittest.TestCase):

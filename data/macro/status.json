@@ -121,6 +121,13 @@
    "unit": "指数 1982-84=100",
    "freq": "月"
   },
+  "CPIUFDSL": {
+   "name": "CPI 食品",
+   "unit": "指数 1982-84=100",
+   "freq": "月",
+   "last_obs": "2026-09-01",
+   "ok": true
+  },
   "CSUSHPINSA": {
    "ok": true,
    "first_obs": "1987-01-01",
@@ -130,6 +137,27 @@
    "name": "标普 Case-Shiller 全国房价指数",
    "unit": "指数 2000-01=100",
    "freq": "月"
+  },
+  "CUSR0000SACL1E": {
+   "name": "CPI 核心商品（除食品与能源的商品）",
+   "unit": "指数 1982-84=100",
+   "freq": "月",
+   "last_obs": "2026-09-01",
+   "ok": true
+  },
+  "CUSR0000SAH1": {
+   "name": "CPI 住房",
+   "unit": "指数 1982-84=100",
+   "freq": "月",
+   "last_obs": "2026-09-01",
+   "ok": true
+  },
+  "CUSR0000SASLE": {
+   "name": "CPI 服务除能源服务",
+   "unit": "指数 1982-84=100",
+   "freq": "月",
+   "last_obs": "2026-09-01",
+   "ok": true
   },
   "DFEDTARL": {
    "ok": true,
@@ -551,6 +579,20 @@
    "unit": "%",
    "freq": "月"
   },
+  "MEDCPIM158SFRBCLE": {
+   "name": "克利夫兰联储中位数 CPI 环比年化",
+   "unit": "%",
+   "freq": "月",
+   "last_obs": "2026-09-01",
+   "ok": true
+  },
+  "MEDCPIM159SFRBCLE": {
+   "name": "克利夫兰联储中位数 CPI 同比",
+   "unit": "%",
+   "freq": "月",
+   "last_obs": "2026-09-01",
+   "ok": true
+  },
   "MICH": {
    "ok": true,
    "first_obs": "1978-01-01",
@@ -831,6 +873,20 @@
    "unit": "十亿美元",
    "freq": "月"
   },
+  "TRMMEANCPIM158SFRBCLE": {
+   "name": "克利夫兰联储 16% 截尾均值 CPI 环比年化",
+   "unit": "%",
+   "freq": "月",
+   "last_obs": "2026-09-01",
+   "ok": true
+  },
+  "TRMMEANCPIM159SFRBCLE": {
+   "name": "克利夫兰联储 16% 截尾均值 CPI 同比",
+   "unit": "%",
+   "freq": "月",
+   "last_obs": "2026-09-01",
+   "ok": true
+  },
   "U6RATE": {
    "ok": true,
    "first_obs": "1994-01-01",
@@ -904,5 +960,6 @@
  },
  "effr_expect_error": null,
  "calendar_error": null,
- "nowcast_error": null
+ "nowcast_error": null,
+ "zori_error": null
 }

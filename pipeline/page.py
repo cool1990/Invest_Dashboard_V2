@@ -53,6 +53,7 @@ class Chart:
     start: date = DISPLAY_START
     categories: list[str] = field(default_factory=list)
     core: bool = False
+    digits: int | None = None  # 数据表小数位；不填则前端用 2 位
 
     def to_json(self) -> dict | None:
         lines = [ln for ln in self.lines if ln.data]
@@ -60,6 +61,8 @@ class Chart:
             return None
         out = {"id": self.id, "title": self.title, "unit": self.unit, "kind": self.kind,
                "stacked": self.stacked, "note": self.note, "core": self.core, "series": []}
+        if self.digits is not None:
+            out["digits"] = self.digits
         if self.kind == "path":
             out["categories"] = self.categories
             for ln in lines:
