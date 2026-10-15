@@ -218,12 +218,21 @@ function tableHTML(spec) {
     const rows = spec.series.map((s) => `<tr><td>${esc(s.name)}</td>${s.data.map((v) => `<td>${fmtNum(v)}</td>`).join("")}</tr>`).join("");
     return `<div class="table-wrap"><table class="data">${head}${rows}</table></div>`;
   }
+  const digits = spec.digits || 2;
   const dates = new Set();
-  const maps = spec.series.map((s) => new Map(s.data));
   spec.series.forEach((s) => s.data.slice(-12).forEach(([d]) => dates.add(d)));
   const ds = [...dates].sort().slice(-12).reverse();
-  const head = `<tr><th>日期</th>${spec.series.map((s) => `<th>${esc(s.name)}</th>`).join("")}</tr>`;
-  const rows = ds.map((d) => `<tr><td>${d}</td>${maps.map((m) => `<td>${m.has(d) ? fmtNum(m.get(d)) : ""}</td>`).join("")}</tr>`).join("");
+  // 预期列只加在这张表已经有对应实际序列的位置，没有预期的月份留空。
+  const cols = [];
+  for (const s of spec.series) {
+    cols.push({ name: s.name, map: new Map(s.data) });
+    for (const f of spec.forecasts || []) {
+      if (f.for === s.name) cols.push({ name: f.name, map: new Map(f.data || []) });
+    }
+  }
+  const cell = (map, d) => (map.has(d) ? fmtNum(map.get(d), digits) : "");
+  const head = `<tr><th>日期</th>${cols.map((c) => `<th>${esc(c.name)}</th>`).join("")}</tr>`;
+  const rows = ds.map((d) => `<tr><td>${d}</td>${cols.map((c) => `<td>${cell(c.map, d)}</td>`).join("")}</tr>`).join("");
   return `<div class="table-wrap"><table class="data">${head}${rows}</table></div>`;
 }
 
