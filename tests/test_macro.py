@@ -236,11 +236,9 @@ class ConsensusTest(unittest.TestCase):
         self.assertEqual((up["dim"], up["ref"]), ("inflation", "2026-08"))
         # Nowcast 只放在通胀那一块：不在即将发布里重复
         self.assertNotIn("nowcast_text", up)
-        m = {x["id"]: x for x in dash["dimensions"][1]["metrics"]}
-        nc = m["nowcast"]
-        self.assertEqual((nc["text"], nc["date"], nc["model"]), ("3.49", "2026-09", True))
-        self.assertEqual((nc["chg"]["label"], nc["chg"]["base"]), ("上月", "3.40"))
-        self.assertIn("最新官方", nc["anchor"])
+        self.assertNotIn("nowcast", {x["id"] for x in dash["dimensions"][1]["metrics"]})
+        rows = [r for r in dash["releases"]["nowcast"] if r["measure"] == "核心 PCE"]
+        self.assertEqual([(r["period"], r["nowcast"]) for r in rows], [("2026-8", "3.40"), ("2026-9", "3.49")])
 
 
 class ScenarioTest(unittest.TestCase):
@@ -554,6 +552,12 @@ class LevelStatusTest(unittest.TestCase):
         self.assertEqual(I.level_status("core_gdp", 2.0)["label"], "接近潜在")
         self.assertEqual(I.level_status("nfp3", 71)["label"], "降温")
         self.assertEqual(I.level_status("nfp3", 160)["label"], "强")
+        self.assertEqual(I.level_status("core_cpi_mom", 0.33)["label"], "明显高于目标")
+        self.assertEqual(I.level_status("core_pce_mom", 0.17)["label"], "接近目标")
+        self.assertEqual(I.level_status("supercore_cpi_mom", 0.10)["label"], "已降温")
+        self.assertEqual(I.level_status("supercore_pce_mom", 0.30)["label"], "粘性强")
+        mom_anchor = I.inflation_state({"core_yoy": 3.34, "core_cpi_mom": 0.3348})["anchors"]["core_cpi_mom"]
+        self.assertIn("单月折年", mom_anchor)
         self.assertEqual(I.level_status("core_yoy", 3.34)["label"], "明显高于目标")
         self.assertEqual(I.level_status("core_yoy", 2.1)["label"], "接近目标")
         self.assertEqual(I.level_status("supercore", 3.92)["label"], "粘性强")
@@ -665,6 +669,47 @@ class CpiContribTest(unittest.TestCase):
         self.assertNotIn(date(2025, 11, 1), months)  # 上月 10 月没有指数
         self.assertIn(date(2025, 12, 1), months)
 
+    def test_supercore_mom_matches_its_contribution(self):
+        br = cpi_contrib.breakdown(self.raw, [self.anchor])
+        sc = cpi_contrib.supercore_cpi(self.raw, [self.anchor])
+        sep = date(2026, 9, 1)
+        mom = dict(sc["mom"])[sep]
+        levels = {k: dict(self.raw[sid]) for k, sid in cpi_contrib.INDEX.items()}
+        prev = date(2026, 8, 1)
+        ri_s = cpi_contrib.ri_at(self.anchor, levels, "services_ex_energy", prev)
+        ri_h = cpi_contrib.ri_at(self.anchor, levels, "shelter", prev)
+        ri_core = cpi_contrib.ri_at(self.anchor, levels, "core", prev)
+        # 对核心的贡献（百分点）= 环比（%）× 超级核心占核心的比重
+        self.assertAlmostEqual(dict(br["supercore"])[sep], mom * (ri_s - ri_h) / ri_core, places=4)
+        self.assertAlmostEqual(mom, 0.34, delta=0.03)
+        self.assertEqual(sc["ann3"], [])  # 窗口里没有连续三个月
+        self.assertEqual(sc["yoy"], [])
+
+    def test_yoy_partition_adds_to_headline(self):
+        # 从 2024-12 锚起，每月整体 +1%、食品持平、核心跟着整体，同比贡献应加总回整体同比
+        anchor = cpi_contrib.Anchor(2025, 2026, date(2024, 12, 1), {
+            "food": 10.0, "core": 80.0, "core_goods": 20.0, "shelter": 30.0, "services_ex_energy": 60.0,
+        })
+        raw = {sid: [] for sid in (
+            "CPIAUCSL", "CPIUFDSL", "CPILFESL", "CUSR0000SACL1E", "CUSR0000SAH1", "CUSR0000SASLE")}
+        level = {sid: 100.0 for sid in raw}
+        d = date(2024, 12, 1)
+        for _ in range(13):
+            for sid in raw:
+                raw[sid].append((d, level[sid]))
+            level["CPIAUCSL"] *= 1.01
+            level["CPILFESL"] *= 1.01
+            level["CUSR0000SACL1E"] *= 1.005
+            level["CUSR0000SAH1"] *= 1.012
+            level["CUSR0000SASLE"] *= 1.011
+            d = ts._shift_month(d, 1)
+        yoy = cpi_contrib.contributions(raw, 12, [anchor])
+        end = date(2025, 12, 1)
+        food, energy, core = (dict(yoy[k])[end] for k in ("food", "energy", "core"))
+        headline = (dict(raw["CPIAUCSL"])[end] / dict(raw["CPIAUCSL"])[date(2024, 12, 1)] - 1) * 100
+        self.assertAlmostEqual(food + energy + core, headline, places=6)
+        self.assertGreater(dict(yoy["supercore"])[end], 0)
+
     def test_forecast_columns_only_on_cpi_actuals(self):
         start, rows_cpi, rows_core = date(2025, 9, 1), [], []
         level_cpi, level_core = 320.0, 330.0
@@ -688,8 +733,61 @@ class CpiContribTest(unittest.TestCase):
         self.assertEqual([c["for"] for c in dash["charts"]["cpi"]["forecasts"]], ["CPI", "核心 CPI"])
         self.assertEqual(dash["charts"]["cpi_mom"]["forecasts"][1]["data"], [["2026-09-01", 0.2]])
         self.assertNotIn("forecasts", dash["charts"]["cpi_ann"])
-        names = [s["name"] for s in dash["charts"]["cpi_ann"]["series"]]
-        self.assertEqual(names, ["核心 3 个月年化", "核心 6 个月年化", "整体 3 个月年化", "整体 6 个月年化"])
+        self.assertEqual([s["name"] for s in dash["charts"]["cpi_ann"]["series"]],
+                         ["3 个月年化", "6 个月年化", "同比"])
+        self.assertEqual(dash["charts"]["cpi_ann"]["title"], "CPI 年化动能")
+        core_ann = dash["charts"]["core_cpi_ann"]
+        self.assertEqual([s["name"] for s in core_ann["series"]], ["3 个月年化", "6 个月年化", "同比"])
+        self.assertTrue(core_ann["core"])
+        self.assertEqual([c["for"] for c in dash["charts"]["core_cpi"]["forecasts"]], ["环比", "同比"])
+        self.assertEqual(dash["charts"]["core_cpi"]["forecasts"][0]["data"], [["2026-09-01", 0.2]])
+        inf = dash["dimensions"][1]
+        self.assertEqual(inf["metric_layout"], "surprise")
+        self.assertEqual([m["id"] for m in inf["metrics"]], ["core_cpi_mom"])
+        self.assertEqual(inf["metrics"][0]["expect"], "0.20")
+        self.assertEqual(inf["metrics"][0]["verdict"]["label"], "符合预期")
+
+    def test_inflation_table_matches_forecast_month(self):
+        # 核心 CPI 最新是 9 月、核心 PCE 最新是 8 月，预期必须落在各自那一期，不能串月
+        cpi, pce, super_ = [], [], []
+        d, cpi_v, pce_v, sc_v = date(2025, 8, 1), 330.0, 128.0, 130.0
+        for i in range(14):
+            cpi.append((d, cpi_v))
+            if d <= date(2026, 8, 1):
+                pce.append((d, pce_v))
+                super_.append((d, sc_v))
+            cpi_v *= 1.003  # 环比 0.3%，预期 0.2% → 超预期
+            pce_v *= 1.002  # 环比 0.2%，预期 0.3% → 低于预期
+            sc_v *= 1.002
+            d = ts._shift_month(d, 1)
+        events = [
+            {"release_at": "2026-10-14T08:30:00-04:00", "title": "Core CPI m/m", "forecast": "0.2%"},
+            {"release_at": "2026-09-30T08:30:00-04:00", "title": "Core PCE Price Index m/m", "forecast": "0.3%"},
+            {"release_at": "2026-08-12T08:30:00-04:00", "title": "Core CPI m/m", "forecast": "9.9%"},
+        ]
+        from datetime import datetime, timezone
+        dash = build_dashboard(
+            {"CPILFESL": cpi, "PCEPILFE": pce, "IA001260M": super_}, [], date(2026, 10, 15),
+            events, [], datetime(2026, 10, 15, tzinfo=timezone.utc))
+        m = {x["id"]: x for x in dash["dimensions"][1]["metrics"]}
+        self.assertEqual([x["id"] for x in dash["dimensions"][1]["metrics"]],
+                         ["core_cpi_mom", "core_pce_mom", "supercore_pce_mom"])
+        self.assertEqual(m["core_cpi_mom"]["date"], "2026-09")
+        self.assertEqual((m["core_cpi_mom"]["expect"], m["core_cpi_mom"]["verdict"]["label"]), ("0.20", "超预期"))
+        self.assertEqual(m["core_pce_mom"]["date"], "2026-08")
+        self.assertEqual((m["core_pce_mom"]["expect"], m["core_pce_mom"]["verdict"]["label"]), ("0.30", "低于预期"))
+        self.assertIsNone(m["supercore_pce_mom"]["expect"])
+        self.assertIsNone(m["supercore_pce_mom"]["verdict"])
+        core_ids = [cid for g in dash["sections"][1]["groups"] for cid in g["charts"]
+                    if dash["charts"][cid]["core"]]
+        titles = [dash["charts"][i]["title"] for i in core_ids]
+        want = ["核心 PCE：环比与同比", "核心 PCE 环比：按贡献拆分", "核心 PCE 同比：按贡献拆分",
+                "核心 PCE 年化动能", "超级核心 PCE 年化动能", "核心 CPI：环比与同比",
+                "核心 CPI 环比：按贡献拆分", "核心 CPI 同比：按贡献拆分", "核心 CPI 年化动能"]
+        self.assertEqual([t for t in titles if t in want], want)
+        self.assertLess(titles.index("超级核心 PCE 年化动能"), titles.index("核心 CPI：环比与同比"))
+        self.assertEqual([s["name"] for s in dash["charts"]["core_pce_ann"]["series"]],
+                         [s["name"] for s in dash["charts"]["core_cpi_ann"]["series"]])
 
 
 class ZoriTest(unittest.TestCase):

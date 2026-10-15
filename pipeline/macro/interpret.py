@@ -220,6 +220,27 @@ def growth_state(v: dict) -> dict:
             "level": level, "split": split, "output": o_txt, "labor": l_txt}
 
 
+def _mom_anchor(mom: float | None, kind: str) -> str | None:
+    """环比的对照：把页面上看到的单月环比折年，再对 2%（超级核心沿用同比那档）。"""
+    if mom is None:
+        return None
+    a = ann(mom)
+    if kind == "super":
+        return f"单月折年 {a:.2f}%：≤ 2.75% 与目标相容，≥ 3.5% 粘性强"
+    return f"单月折年 {a:.2f}%：比 2% 目标{_hi_lo(a - 2)}"
+
+
+def _mom_level(mom: float, supercore: bool) -> dict:
+    a = ann(round(mom, 2))
+    if supercore:
+        if a <= 2.75:
+            return _st("cooled", "已降温")
+        if a < 3.5:
+            return _st("elevated", "偏高")
+        return _st("sticky", "粘性强")
+    return _st(*_inflation_band(a))
+
+
 def _nowcast_word(gap: float) -> str:
     """Nowcast 与最新官方同比的差，按大小措辞：±0.1 以内持平，0.1–0.3 略高/略低，再大才说明显。"""
     if gap > 0.3:
@@ -265,6 +286,12 @@ def inflation_state(v: dict) -> dict:
     }
     if mom is not None:
         anchors["core_3m"] = f"对同比 {yoy:.2f}%：{_hi_lo(mom)}，±0.3 以内为动能持平"
+    # 依据表上的四条环比不改右上角标签，只给「状态 / 对照」用。按显示的两位小数折年。
+    for key, kind in (("core_cpi_mom", "core"), ("core_pce_mom", "core"),
+                      ("supercore_cpi_mom", "super"), ("supercore_pce_mom", "super")):
+        text = _mom_anchor(r2(v.get(key)), kind)
+        if text:
+            anchors[key] = text
     # Nowcast 是模型预测，不改标签；只有和官方差超过 0.3 个百分点才写进理由
     nc_gap = nc_word = nc_why = None
     if nc:
@@ -540,6 +567,8 @@ def level_status(metric_id: str, value: float | None, extra: dict | None = None)
         if value >= 0:
             return _st("stable", "平稳")
         return _st("weak", "走弱")
+    if metric_id in ("core_cpi_mom", "core_pce_mom", "supercore_cpi_mom", "supercore_pce_mom"):
+        return _mom_level(value, metric_id.startswith("supercore"))
     if metric_id == "core_yoy":
         return _st(*_inflation_band(value))
     if metric_id == "core_3m":

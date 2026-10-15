@@ -119,7 +119,33 @@ function statusHTML(st) {
   return `<b class="lv lv-${esc(st.key)}">${esc(st.label)}</b>`;
 }
 
+function verdictHTML(v) {
+  if (!v || !v.label) return `<span class="muted">—</span>`;
+  return `<b class="vd vd-${esc(v.key)}">${esc(v.label)}</b>`;
+}
+
+function expectHTML(m) {
+  if (m.expect == null || m.expect === "") return `<span class="muted">—</span>`;
+  return `<b>${esc(m.expect)}</b><small>${esc(m.unit)}</small>`;
+}
+
+function surpriseMetricsHTML(d) {
+  const rows = (d.metrics || []).map((m) => `
+    <div class="ev has-surprise">
+      <span class="ev-name">${m.chart ? `<a href="#c-${esc(m.chart)}">${esc(m.name)}</a>` : esc(m.name)}${m.note ? `<div class="small muted">${esc(m.note)}</div>` : ""}</span>
+      <span class="ev-val"><i class="m-label">最新</i><b>${esc(m.text)}</b><small>${esc(m.unit)}</small><div class="small muted">${esc(m.date)}</div></span>
+      <span class="ev-expect"><i class="m-label">预期</i>${expectHTML(m)}</span>
+      <span class="ev-vd"><i class="m-label">判断</i>${verdictHTML(m.verdict)}</span>
+      <span class="ev-chg"><i class="m-label">较上期</i>${chgHTML(m.chg)}</span>
+      <span class="ev-st"><i class="m-label">状态</i>${statusHTML(m.status)}</span>
+      <span class="ev-anchor"><i class="m-label">对照</i>${esc(m.anchor || "—")}</span>
+    </div>`).join("");
+  if (!rows) return "";
+  return `<div class="card evid"><div class="ev ev-head has-surprise"><span>指标</span><span>最新</span><span>预期</span><span>判断</span><span>较上期</span><span>状态</span><span>对照</span></div>${rows}</div>`;
+}
+
 function metricsHTML(d) {
+  if (d.metric_layout === "surprise") return surpriseMetricsHTML(d);
   const hasMv = (d.metrics || []).some((m) => m.move);
   const hasSt = (d.metrics || []).some((m) => m.status);
   const cols = `has-mv${hasSt ? " has-st" : ""}`;

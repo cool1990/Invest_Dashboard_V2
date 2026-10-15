@@ -4,7 +4,8 @@
 - 结论：verdict（增长 × 通胀定环境名，下面四行白话写经济、流动性、财政、货币）
   和 dimensions 的 label / why（五个维度各一个标签，理由写用哪几个数、对照什么锚点得出）。
   不用 z 分数：和「2000 年以来平均」比没有经济含义，等权汇总又会把分歧抵消掉。
-- 依据：dimensions 的 metrics（决定标签的几个数：最新值、较上期、对照的锚点），
+- 依据：dimensions 的 metrics（决定标签的几个数：最新值、较上期、对照的锚点）。
+  通胀这一格是四条环比，并列出与最新月份匹配的预期、以及是否超预期；右上角标签仍看核心 PCE。
   sections + charts（这几个数对应的图，core=True 的默认展开，其余折叠），
   通胀一块另附克利夫兰联储 Nowcast 与实际的对照（releases.nowcast）。
 - 时间：releases 的即将发布（附情景门槛）、最近发布（实际 vs 预期），以及每条已公布数据的变动和会不会改判断。
@@ -348,9 +349,13 @@ class MacroBuilder:
         ccpi_6m = ts.pct_change(ccpi, 6, "M", annualize=12)
         br = self.pce_breakdown()
         cbr = cpi_contrib.breakdown(self.raw)
+        cbr_yoy = cpi_contrib.contributions(self.raw, 12)
+        sc_cpi = cpi_contrib.supercore_cpi(self.raw)
         supercore = self.m("IA001260M", "last")
+        supercore_mom = ts.pct_change(supercore, 1, "M")
         supercore_yoy = ts.pct_change(supercore, 12, "M")
         supercore_3m = ts.pct_change(supercore, 3, "M", annualize=12)
+        supercore_6m = ts.pct_change(supercore, 6, "M", annualize=12)
         goods_yoy = self.yoy_m("DGDSRG3M086SBEA")
         services_yoy = self.yoy_m("DSERRG3M086SBEA")
         fwd = self.w("T5YIFR")
@@ -365,6 +370,8 @@ class MacroBuilder:
         weight_note = ("权重用最近可得的低频数据近似：住房比重用上一年年度数据，能源商品比重用最近一季"
                        "（FRED 没有月度住房支出和汽油支出）。")
 
+        ann_note = ("3 个月年化 =（近 3 个月之比）^4 − 1，6 个月年化 =（近 6 个月之比）^2 − 1。"
+                    "没有指数的月份留空，不插值，也不把缺口两边当成相邻的一个月。")
         groups = [
             ("核心 PCE", self.add(
                 Chart("core_pce", "核心 PCE：环比与同比", "%", [
@@ -380,10 +387,46 @@ class MacroBuilder:
                 Chart("core_pce_ann", "核心 PCE 年化动能", "%", [
                     Line("3 个月年化", core_3m), Line("6 个月年化", core_6m), Line("同比", core_yoy, dash=True)],
                     core=True),
+                Chart("supercore_ann", "超级核心 PCE 年化动能", "%", [
+                    Line("3 个月年化", supercore_3m), Line("6 个月年化", supercore_6m),
+                    Line("同比", supercore_yoy, dash=True)],
+                    note="超级核心 = 服务除能源、住房（与工资相关）。" + ann_note, core=True),
                 Chart("supercore", "超级核心与商品、服务价格同比", "%", [
                     Line("超级核心（服务除能源、住房）", supercore_yoy), Line("超级核心 3 个月年化", supercore_3m, dash=True),
                     Line("PCE 商品", goods_yoy), Line("PCE 服务", services_yoy)],
                     note="超级核心是美联储最关注的与工资相关的服务通胀。"),
+            )),
+            ("核心 CPI", self.add(
+                Chart("core_cpi", "核心 CPI：环比与同比", "%", [
+                    Line("环比", ccpi_mom, "bar"), Line("同比", ccpi_yoy)],
+                    note="季调，样式与核心 PCE 相同：柱是环比，线是同比。核心环比约 0.17% 对应年化 2%。"
+                         "数据表在有一致预期的月份另列预期，取日历里发布前最后一次看到的值。", core=True),
+                Chart("cpi_core_contrib_mom", "核心 CPI 环比：按贡献拆分", "百分点", [
+                    Line("核心商品", cbr["core_goods"], "bar"), Line("住房", cbr["shelter"], "bar"),
+                    Line("超级核心", cbr["supercore"], "bar"), Line("核心 CPI 环比", ccpi_mom)],
+                    stacked="bar", start=date(2015, 1, 1), digits=4, core=True,
+                    note="对核心 CPI 的绝对贡献 = 对整体的贡献 ÷ 上月核心相对重要性。"
+                         "核心商品 = 除食品与能源的商品；住房 = Shelter。"
+                         "超级核心 = 核心服务剔除住房 = 服务除能源服务 − 住房"
+                         "（BLS：Services less energy services − Shelter），没有单独指数。"
+                         "三项大致加总到核心环比；公开指数四舍五入会留下大约 0.01 个百分点以内的残差。"),
+                Chart("cpi_core_contrib_yoy", "核心 CPI 同比：按贡献拆分", "百分点", [
+                    Line("核心商品", cbr_yoy["core_goods"], "bar"), Line("住房", cbr_yoy["shelter"], "bar"),
+                    Line("超级核心", cbr_yoy["supercore"], "bar"), Line("核心 CPI 同比", ccpi_yoy)],
+                    stacked="bar", start=date(2015, 1, 1), digits=4, core=True,
+                    note="对核心 CPI 的贡献 = 12 个月前相对重要性 × 分项同比，再除以当时核心的相对重要性。"
+                         "超级核心 = 服务除能源服务 − 住房。三项大致加总到核心同比。"
+                         "没有指数的月份留空，不插值。"),
+                Chart("core_cpi_ann", "核心 CPI 年化动能", "%", [
+                    Line("3 个月年化", ccpi_3m), Line("6 个月年化", ccpi_6m),
+                    Line("同比", ccpi_yoy, dash=True)],
+                    note=ann_note, core=True),
+                Chart("cpi_supercore_ann", "超级核心 CPI 年化动能", "%", [
+                    Line("3 个月年化", sc_cpi["ann3"]), Line("6 个月年化", sc_cpi["ann6"]),
+                    Line("同比", sc_cpi["yoy"], dash=True)],
+                    note="超级核心没有单独指数。月环比 =（上月「服务除能源服务」的相对重要性 × 其环比"
+                         " − 上月住房相对重要性 × 住房环比）÷ 两者比重之差，再连乘成年化与同比。"
+                         + ann_note, core=True),
             )),
             ("整体 PCE", self.add(
                 Chart("pce_yoy", "PCE 与核心 PCE 同比", "%", [
@@ -404,12 +447,9 @@ class MacroBuilder:
                 Chart("cpi_mom", "CPI 与核心 CPI 环比", "%", [
                     Line("CPI 环比", cpi_mom, "bar"), Line("核心 CPI 环比", ccpi_mom, "bar")],
                     note="季调环比。数据表的预期列与同比同一套日历，只填已经记下来的月份。"),
-                Chart("cpi_ann", "CPI 年化动能（整体与核心）", "%", [
-                    Line("核心 3 个月年化", ccpi_3m), Line("核心 6 个月年化", ccpi_6m),
-                    Line("整体 3 个月年化", cpi_3m, dash=True), Line("整体 6 个月年化", cpi_6m, dash=True)],
-                    note="由季调指数复利：3 个月年化 =（近 3 个月之比）^4 − 1，6 个月年化 =（近 6 个月之比）^2 − 1。"
-                         "核心和整体都列。本站通胀标签仍看核心 PCE，不看这里。"
-                         "没有指数的月份留空，不插值，也不把缺口两边当成相邻的一个月。"),
+                Chart("cpi_ann", "CPI 年化动能", "%", [
+                    Line("3 个月年化", cpi_3m), Line("6 个月年化", cpi_6m), Line("同比", cpi_yoy, dash=True)],
+                    note="整体 CPI。" + ann_note),
                 Chart("cpi_contrib_mom", "CPI 环比：食品、能源、核心", "百分点", [
                     Line("食品", cbr["food"], "bar"), Line("能源", cbr["energy"], "bar"),
                     Line("核心", cbr["core"], "bar"), Line("CPI 环比", cpi_mom)],
@@ -418,15 +458,6 @@ class MacroBuilder:
                          "能源 = 整体环比 − 食品 − 核心，使三项相加等于整体环比，与 BLS 新闻稿 Table 6 的可加总一致。"
                          "比重用 BLS 每年 12 月 CPI-U，在同一套权重内按价格指数相对变化推到上一个月；"
                          "2026 年用 2025 年 12 月、2024 年权重的重置比重。跨过缺失月份的点留空。"),
-                Chart("cpi_core_contrib_mom", "核心 CPI 环比：商品、住房、超级核心", "百分点", [
-                    Line("核心商品", cbr["core_goods"], "bar"), Line("住房", cbr["shelter"], "bar"),
-                    Line("超级核心", cbr["supercore"], "bar"), Line("核心 CPI 环比", ccpi_mom)],
-                    stacked="bar", start=date(2015, 1, 1), digits=4,
-                    note="对核心 CPI 的绝对贡献 = 对整体的贡献 ÷ 上月核心相对重要性。"
-                         "核心商品 = 除食品与能源的商品；住房 = Shelter。"
-                         "超级核心 = 核心服务剔除住房 = 服务除能源服务 − 住房"
-                         "（BLS：Services less energy services − Shelter），没有单独指数。"
-                         "三项大致加总到核心环比；公开指数四舍五入会留下大约 0.01 个百分点以内的残差。"),
                 Chart("cpi_cleveland", "克利夫兰联储：中位数与 16% 截尾均值", "%", [
                     Line("中位数环比年化", self.s("MEDCPIM158SFRBCLE")),
                     Line("中位数同比", self.s("MEDCPIM159SFRBCLE")),
@@ -446,22 +477,25 @@ class MacroBuilder:
             )),
         ]
         self._attach_cpi_forecasts()
-        nc_rows = self._nowcast_rows("核心 PCE")
         metrics = [
-            Metric("core_yoy", "核心 PCE 同比", core_yoy, "%", "{:.2f}", chart="core_contrib_yoy"),
-            Metric("core_3m", "核心 PCE 3 个月年化", core_3m, "%", "{:.2f}", chart="core_pce_ann"),
-            Metric("supercore", "超级核心 PCE 同比", supercore_yoy, "%", "{:.2f}", chart="supercore",
-                   note="服务除能源、住房，与工资相关"),
-            Metric("fwd", "5y5y 远期通胀预期", fwd, "%", "{:.2f}", "W", "expect"),
+            self._surprise_metric("core_cpi_mom", "核心 CPI 环比", ccpi_mom, "core_cpi",
+                                  event_title="Core CPI m/m"),
+            self._surprise_metric("supercore_cpi_mom", "超级核心 CPI 环比", sc_cpi["mom"], "cpi_supercore_ann",
+                                  note="服务除能源服务剔除住房，没有公布的一致预期"),
+            self._surprise_metric("core_pce_mom", "核心 PCE 环比", core_mom, "core_pce",
+                                  event_title="Core PCE Price Index m/m"),
+            self._surprise_metric("supercore_pce_mom", "超级核心 PCE 环比", supercore_mom, "supercore_ann",
+                                  note="服务除能源、住房，没有公布的一致预期"),
         ]
-        if core_yoy and nc_rows and nc_rows[-1][0] > core_yoy[-1][0]:
-            metrics.insert(1, Metric("nowcast", "核心 PCE 同比 Nowcast", nc_rows, "%", "{:.2f}", model=True,
-                                     note="克利夫兰联储模型预测"))
         self.inputs["inflation"] = {
             "core_yoy": core_yoy[-1][1] if core_yoy else None, "core_3m": core_3m[-1][1] if core_3m else None,
             "supercore": supercore_yoy[-1][1] if supercore_yoy else None, "fwd": fwd[-1][1] if fwd else None,
             "nowcast": self.nowcast_after("核心 PCE", core_yoy[-1][0] if core_yoy else None),
             "core_yoy_period": f"{core_yoy[-1][0].month} 月" if core_yoy else None,
+            "core_cpi_mom": ccpi_mom[-1][1] if ccpi_mom else None,
+            "supercore_cpi_mom": sc_cpi["mom"][-1][1] if sc_cpi["mom"] else None,
+            "core_pce_mom": core_mom[-1][1] if core_mom else None,
+            "supercore_pce_mom": supercore_mom[-1][1] if supercore_mom else None,
         }
         self.ctx.update({"core_idx": core, "ccpi_idx": ccpi})
         state = I.inflation_state(self.inputs["inflation"])
@@ -740,6 +774,7 @@ class MacroBuilder:
         specs = {
             "cpi": {"CPI y/y": "CPI", "Core CPI y/y": "核心 CPI"},
             "cpi_mom": {"CPI m/m": "CPI 环比", "Core CPI m/m": "核心 CPI 环比"},
+            "core_cpi": {"Core CPI m/m": "环比", "Core CPI y/y": "同比"},
         }
         for cid, mapping in specs.items():
             chart = self.charts.get(cid)
@@ -771,6 +806,46 @@ class MacroBuilder:
             out.append({"name": f"{series_name} 预期", "for": series_name,
                         "data": [[d.isoformat(), round(v, 4)] for d, v in sorted(pts.items())]})
         return out
+
+    def _forecast_on(self, title: str, ref: date) -> tuple[float | None, str]:
+        """日历里这一期最后一次看到的预期。没有这一期就空着，不拿别的月份来填。"""
+        spec = cons.EVENTS.get(title)
+        if spec is None:
+            return None, ""
+        found: float | None = None
+        text = ""
+        for event in self.events:
+            if event.get("title") != title:
+                continue
+            value = cons.parse_value(event.get("forecast") or "")
+            if value is None:
+                continue
+            try:
+                period = cons.ref_period(spec, cons.release_date(event["release_at"]))
+            except (KeyError, ValueError):
+                continue
+            if period == ref:
+                found, text = value, event.get("forecast") or ""
+        return found, text
+
+    def _surprise_metric(self, mid: str, name: str, series: Series, chart: str, note: str = "",
+                         event_title: str | None = None) -> Metric:
+        """依据表的一行环比。预期只取和最新月份相同的那一期。"""
+        expect = None
+        verdict = ""
+        direction = ""
+        if series and event_title:
+            value, text = self._forecast_on(event_title, series[-1][0])
+            spec = cons.EVENTS.get(event_title)
+            if value is not None and spec is not None:
+                expect = value
+                dec = self._decimals(text) if text else 1
+                _, raw, way = self.judge(spec, series[-1][1], value, dec)
+                verdict = {"高于预期（偏热）": "超预期", "低于预期（偏冷）": "低于预期",
+                           "符合预期": "符合预期"}.get(raw, raw)
+                direction = {"pos": "hot", "neg": "cool", "flat": "flat"}.get(way, "")
+        return Metric(mid, name, series, "%", "{:.2f}", chart=chart, note=note,
+                      surprise=True, expect=expect, verdict=verdict, verdict_dir=direction)
 
     def nowcast_after(self, measure: str, latest: date | None) -> list[tuple[str, float]]:
         """比最新官方数据更新的各期 Nowcast（同比），按期间排序。"""
@@ -1059,11 +1134,14 @@ class MacroBuilder:
         out_dims, sections = [], []
         for key, name, groups, metrics, state in built:
             extras = self._metric_extras(key)
-            out_dims.append({
+            dim = {
                 "key": key, "name": name, "label": state["label"], "why": state.get("why", []),
                 "head": state["head"],
                 "metrics": [x for x in (self.metric_json(m, state.get("anchors", {}), extras) for m in metrics) if x],
-            })
+            }
+            if key == "inflation":
+                dim["metric_layout"] = "surprise"
+            out_dims.append(dim)
             sections.append({"key": key, "name": name,
                              "groups": [{"name": g, "charts": ids} for g, ids in groups if ids]})
 
