@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-14T08:47:13+08:00",
+ "generated_at": "2026-10-15T08:13:02+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -63,8 +63,8 @@
    "title": "ASML 2026年第三季度业绩",
    "url": "https://ourbrand.asml.com/asset/468514ab-2a25-42be-a284-1560ebebcb6a/Statutory-Interim-Report-2026.pdf",
    "note": "ASML Statutory Interim Report 2026 财务日历：October 14, 2026 Announcement of third quarter results。未写钟点",
-   "previous": "$6.41",
-   "consensus": "$12.47",
+   "previous": "",
+   "consensus": "",
    "priority": "高"
   },
   {
@@ -88,6 +88,17 @@
    "previous": "",
    "consensus": "",
    "priority": "高"
+  },
+  {
+   "date": "2026-10-21",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Meta Platforms, Inc.（META）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后",
+   "previous": "$7.25",
+   "consensus": "$6.39",
+   "priority": "中"
   },
   {
    "date": "2026-10-21",
