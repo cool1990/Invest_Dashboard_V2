@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-15T08:13:02+08:00",
+ "generated_at": "2026-10-16T07:59:56+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -74,8 +74,8 @@
    "title": "台积电 3Q26 业绩会",
    "url": "https://investor.tsmc.com/english/financial-calendar",
    "note": "TSMC IR 财务日历：3Q'26 Earnings Conference and Conference Call，台北时间14:00-15:30",
-   "previous": "$2.92",
-   "consensus": "$4.45",
+   "previous": "",
+   "consensus": "",
    "priority": "高"
   },
   {
@@ -97,8 +97,8 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$7.25",
-   "consensus": "$6.39",
-   "priority": "中"
+   "consensus": "$6.35",
+   "priority": "高"
   },
   {
    "date": "2026-10-21",
