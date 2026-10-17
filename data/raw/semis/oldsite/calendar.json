@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-16T07:59:56+08:00",
+ "generated_at": "2026-10-17T08:05:16+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -97,7 +97,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$7.25",
-   "consensus": "$6.35",
+   "consensus": "$6.67",
    "priority": "高"
   },
   {
@@ -163,7 +163,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后。原名：Intel Corporation",
    "previous": "$0.11",
-   "consensus": "$0.27",
+   "consensus": "$0.28",
    "priority": "高"
   },
   {
