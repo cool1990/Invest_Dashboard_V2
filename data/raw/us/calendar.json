@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-16T07:59:56+08:00",
+ "generated_at": "2026-10-17T08:05:16+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -168,39 +168,6 @@
   },
   {
    "date": "2026-10-16",
-   "time_bj": "",
-   "category": "财报",
-   "title": "HDFC Bank Limited（HDB）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "",
-   "previous": "$0.44",
-   "consensus": "$0.40",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-16",
-   "time_bj": "",
-   "category": "财报",
-   "title": "ICICI Bank Limited（IBN）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "",
-   "previous": "$0.39",
-   "consensus": "$0.40",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-16",
-   "time_bj": "11:30",
-   "category": "大事",
-   "title": "美联储讲话",
-   "url": "https://www.youtube.com/watch?v=T20jWBJ66X0&amp;list=PLGHsBhoupusk&amp;index=31",
-   "note": "Discussion - Chairman Kevin Warsh At the Fireside Chat with International Monetary Fund (IMF) Managing Director Kristalina Georgieva, Bangkok, Thailand 美东 11:30 p.m.。原名：Conversation between IMF Managing Director Georgieva and Federal Reserve Chairman Warsh",
-   "previous": "",
-   "consensus": "",
-   "priority": "低"
-  },
-  {
-   "date": "2026-10-16",
    "time_bj": "21:00",
    "category": "加密",
    "title": "ARB 代币解锁 9265万枚",
@@ -240,7 +207,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$7.49",
-   "consensus": "$6.42",
+   "consensus": "$6.53",
    "priority": "中"
   },
   {
@@ -251,7 +218,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$1.66",
-   "consensus": "$2.01",
+   "consensus": "$2.02",
    "priority": "中"
   },
   {
@@ -284,7 +251,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$1.70",
-   "consensus": "$1.76",
+   "consensus": "$1.78",
    "priority": "中"
   },
   {
@@ -372,7 +339,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$7.25",
-   "consensus": "$6.35",
+   "consensus": "$6.67",
    "priority": "高"
   },
   {
@@ -383,7 +350,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$1.13",
-   "consensus": "$1.18",
+   "consensus": "$1.19",
    "priority": "中"
   },
   {
@@ -394,7 +361,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$2.24",
-   "consensus": "$2.31",
+   "consensus": "$2.30",
    "priority": "中"
   },
   {
@@ -593,6 +560,17 @@
    "note": "美东盘前",
    "previous": "$0.67",
    "consensus": "$0.88",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-27",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Freeport-McMoran, Inc.（FCX）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$0.50",
+   "consensus": "$0.75",
    "priority": "中"
   },
   {
@@ -841,22 +819,11 @@
    "date": "2026-10-29",
    "time_bj": "",
    "category": "财报",
-   "title": "ASE Technology Holding Co., Ltd.（ASX）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "",
-   "previous": "$0.16",
-   "consensus": "$0.34",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-29",
-   "time_bj": "",
-   "category": "财报",
    "title": "Altria Group（MO）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$1.45",
-   "consensus": "$1.50",
+   "consensus": "$1.51",
    "priority": "中"
   },
   {
@@ -889,18 +856,18 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$1.63",
-   "consensus": "$1.42",
+   "consensus": "$1.28",
    "priority": "中"
   },
   {
    "date": "2026-10-29",
    "time_bj": "",
    "category": "财报",
-   "title": "Cloudflare, Inc.（NET）财报",
+   "title": "Caterpillar, Inc.（CAT）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "",
-   "previous": "($0.01)",
-   "consensus": "$0.02",
+   "note": "美东盘前",
+   "previous": "$4.95",
+   "consensus": "$6.95",
    "priority": "中"
   },
   {
@@ -911,7 +878,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$7.02",
-   "consensus": "$7.54",
+   "consensus": "$5.38",
    "priority": "中"
   },
   {
@@ -933,7 +900,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$4.21",
-   "consensus": "$4.52",
+   "consensus": "$4.51",
    "priority": "中"
   },
   {
@@ -956,17 +923,6 @@
    "note": "美东盘前",
    "previous": "$2.58",
    "consensus": "$2.12",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-29",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Quanta Services, Inc.（PWR）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$3.08",
-   "consensus": "$4.68",
    "priority": "中"
   },
   {
@@ -1010,7 +966,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$1.77",
-   "consensus": "$3.36",
+   "consensus": "$3.37",
    "priority": "中"
   },
   {
@@ -1032,7 +988,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后。原名：Intel Corporation",
    "previous": "$0.11",
-   "consensus": "$0.27",
+   "consensus": "$0.28",
    "priority": "高"
   },
   {
@@ -1120,7 +1076,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$1.85",
-   "consensus": "$4.66",
+   "consensus": "$4.74",
    "priority": "中"
   },
   {
@@ -1131,7 +1087,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "",
    "previous": "$1.88",
-   "consensus": "$3.93",
+   "consensus": "$3.92",
    "priority": "中"
   },
   {
@@ -1474,6 +1430,17 @@
    "previous": "",
    "consensus": "",
    "priority": "低"
+  },
+  {
+   "date": "2026-12-01",
+   "time_bj": "",
+   "category": "宏观",
+   "title": "JOLTS 发布",
+   "url": "https://fred.stlouisfed.org/release?rid=192",
+   "note": "JOLTS",
+   "previous": "",
+   "consensus": "",
+   "priority": "高"
   }
  ]
 }
