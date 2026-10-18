@@ -18,60 +18,44 @@
     <div class="page-head">
       <div>
         <h1>投资看板</h1>
-        <div class="sub">按板块整理的数据与读数。每个板块一页，数据各自独立。</div>
+        <div class="sub">四板当前环境，以及现在值得盯的变化。点进板块看完整结论。</div>
       </div>
     </div>
-    <div class="hub">
-      <a class="card" href="macro.html" style="color:inherit;text-decoration:none">
-        <h2>美国宏观</h2>
-        <div class="muted small" id="macro-asof">读取中…</div>
-        <div class="hub-dims" id="macro-dims"></div>
-      </a>
-      <a class="card" href="semis.html" style="color:inherit;text-decoration:none">
-        <h2>半导体与 AI</h2>
-        <div class="muted small" id="semis-asof">读取中…</div>
-        <div class="hub-dims" id="semis-dims"></div>
-      </a>
-      <a class="card" href="us.html" style="color:inherit;text-decoration:none">
-        <h2>美股</h2>
-        <div class="muted small" id="us-asof">读取中…</div>
-        <div class="hub-dims" id="us-dims"></div>
-      </a>
-      <a class="card" href="crypto.html" style="color:inherit;text-decoration:none">
-        <h2>加密货币</h2>
-        <div class="muted small" id="crypto-asof">读取中…</div>
-        <div class="hub-dims" id="crypto-dims"></div>
-      </a>
-      <div class="card off"><h2>个股</h2><div class="muted small">规划中</div></div>
+    <section class="card env-strip" id="env" aria-label="四板当前环境">
+      <div class="env-k">读取中…</div>
+    </section>
+    <h2 class="layer" id="attn-title">值得关注</h2>
+    <p class="layer-sub">每栏最多 5 条，按近 7 天标签变化、极端或告警读数、板块内关注、数据失败或过期来排。没有就写「暂无值得关注」。个股仍在规划中，不列入。</p>
+    <div class="attn" id="attn" aria-labelledby="attn-title"></div>
+    <div class="hub-block">
+      <h2 class="layer">进入板块</h2>
+      <p class="layer-sub">各板块的结论和维度标签仍从这里进入。</p>
+      <div class="hub">
+        <a class="card" href="macro.html">
+          <h2>美国宏观</h2>
+          <div class="muted small" id="macro-asof">读取中…</div>
+          <div class="hub-dims" id="macro-dims"></div>
+        </a>
+        <a class="card" href="semis.html">
+          <h2>半导体与 AI</h2>
+          <div class="muted small" id="semis-asof">读取中…</div>
+          <div class="hub-dims" id="semis-dims"></div>
+        </a>
+        <a class="card" href="us.html">
+          <h2>美股</h2>
+          <div class="muted small" id="us-asof">读取中…</div>
+          <div class="hub-dims" id="us-dims"></div>
+        </a>
+        <a class="card" href="crypto.html">
+          <h2>加密货币</h2>
+          <div class="muted small" id="crypto-asof">读取中…</div>
+          <div class="hub-dims" id="crypto-dims"></div>
+        </a>
+        <div class="card off"><h2>个股</h2><div class="muted small">规划中</div></div>
+      </div>
     </div>
   </main>
   <script src="assets/js/common.js"></script>
-  <script>
-    renderNav("index.html");
-    loadJSON("data/macro/dashboard.json").then((d) => {
-      document.getElementById("macro-asof").textContent = "数据更新于 " + (d.status?.updated_at || d.asof).replace("T", " ").replace("Z", " UTC");
-      document.getElementById("macro-dims").innerHTML =
-        `<span style="grid-column:1/-1;font-weight:600">${esc(d.verdict?.headline || "")}</span>` +
-        d.dimensions.map((x) => `<span>${esc(x.name)}</span><span class="muted" style="grid-column:2/-1">${esc(x.label)}</span>`).join("");
-    }).catch(() => { document.getElementById("macro-asof").textContent = "数据还没生成"; });
-    loadJSON("data/semis/dashboard.json").then((d) => {
-      document.getElementById("semis-asof").textContent = "数据更新于 " + (d.status?.updated_at || d.asof).replace("T", " ").replace("Z", " UTC");
-      document.getElementById("semis-dims").innerHTML =
-        `<span style="grid-column:1/-1;font-weight:600">${esc(d.verdict?.headline || "")}</span>` +
-        d.dimensions.filter((x) => x.side).map((x) => `<span>${esc(x.name)}</span><span class="muted" style="grid-column:2/-1">${esc(x.label)}</span>`).join("");
-    }).catch(() => { document.getElementById("semis-asof").textContent = "数据还没生成"; });
-    loadJSON("data/us/dashboard.json").then((d) => {
-      document.getElementById("us-asof").textContent = "数据更新于 " + (d.status?.updated_at || d.asof).replace("T", " ").replace("Z", " UTC");
-      document.getElementById("us-dims").innerHTML =
-        `<span style="grid-column:1/-1;font-weight:600">${esc(d.verdict?.headline || "")}</span>` +
-        d.dimensions.map((x) => `<span>${esc(x.name)}</span><span class="muted" style="grid-column:2/-1">${esc(x.label)}</span>`).join("");
-    }).catch(() => { document.getElementById("us-asof").textContent = "数据还没生成"; });
-    loadJSON("data/crypto/dashboard.json").then((d) => {
-      document.getElementById("crypto-asof").textContent = "数据更新于 " + (d.status?.updated_at || d.asof).replace("T", " ").replace("Z", " UTC");
-      document.getElementById("crypto-dims").innerHTML =
-        `<span style="grid-column:1/-1;font-weight:600">${esc(d.verdict?.headline || "")}</span>` +
-        d.dimensions.map((x) => `<span>${esc(x.name)}</span><span class="muted" style="grid-column:2/-1">${esc(x.label)}</span>`).join("");
-    }).catch(() => { document.getElementById("crypto-asof").textContent = "数据还没生成"; });
-  </script>
+  <script src="assets/js/overview.js"></script>
 </body>
 </html>
