@@ -20,7 +20,14 @@ item_count: 3
 报告日期: 2026-10-09
 跟踪季度: Q3 2026
 季度EPS growth: 30.6%
+当前季度: $90.23
+当前季度EPS growth: 30.6%
+下季度: $94.12
+下季度EPS growth: 28.9%
 年度EPS growth: 36.1%
+CY2026 EPS: $365.38
+CY2027 EPS: $423.08
+CY2027 EPS growth: 15.9%
 季度指引: 115
 季度Net: 26
 季度Positive %: 57.4%
@@ -28,9 +35,11 @@ item_count: 3
 年度Net:
 年度Positive %:
 实际披露: 3.8%
+实际披露家数: 19
 EPS Above %: 84.2%
 EPS Surprise %: +5.0%
 Forward P/E: 20.2
+FY1上调/下调比: 581/541
 SPX price change:
 Forward EPS change:
 本周主线: 26Q3财报季19家披露、84.2%超预期，EPS修正净上修（581上/541下），估值仍高
@@ -69,7 +78,9 @@ Forward EPS change:
 
 ## 3、管理层指引
 
-### 季度 guidance（26Q3）
+#
+
+## 季度 guidance（26Q3）
 
 | 类型 | 样本数 | 占比 | 26Q3 上年同期（3Q2025） | 26Q2 |
 |---|---:|---:|---:|---:|

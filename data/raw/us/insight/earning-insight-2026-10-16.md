@@ -20,7 +20,14 @@ item_count: 3
 报告日期: 2026-10-16
 跟踪季度: Q3 2026
 季度EPS growth: 30.7%
+当前季度: $90.20
+当前季度EPS growth: 30.7%
+下季度: $94.55
+下季度EPS growth: 29.5%
 年度EPS growth: 36.2%
+CY2026 EPS: $365.70
+CY2027 EPS: $424.19
+CY2027 EPS growth: 16.0%
 季度指引: 115
 季度Net: 26
 季度Positive %: 57.4%
@@ -28,9 +35,11 @@ item_count: 3
 年度Net:
 年度Positive %:
 实际披露: 9.0%
+实际披露家数: 45
 EPS Above %: 84.4%
 EPS Surprise %: +4.1%
 Forward P/E: 19.1
+FY1上调/下调比: 684/569
 SPX price change:
 Forward EPS change:
 本周主线: 26Q3财报季披露翻倍至45家、84.4%超预期，FY1 EPS修正连续第三周净上修（684上/569下），估值明显回落
@@ -49,7 +58,9 @@ Forward EPS change:
 - **管理层指引**：26Q3 positive guidance **66 家（57%）**，negative **40 家（35%）**，N/P **0.6**；与上年同期 3Q2025 的 **1.4** 相比偏谨慎，与 26Q2 的 **0.9** 相近。（主报告 Exhibit 14A；Dashboard Exhibit 9）
 - **实际披露**：26Q3 EPS 已披露 **45/500 家（9.0%）**，**84.4%** 超预期，EPS surprise **4.1%**；披露本周由 19 家增至 45 家，财报季明显加速。（主报告 Exhibit 2A）
 - **最新估值**：未来四季 P/E **19.1x**，trailing P/E **22.9x**；CY2026 P/E **21.2x**，CY2027 **18.3x**。估值较上周（Forward 20.2x / Trailing 24.2x）明显回落。（Dashboard Exhibit 22、23；主报告 Exhibit 15A）
-- **下周展望**：预计 **72 家** S&P 500 公司披露（10/19-23），以工业（20）、金融（15）为主，含 Blackstone、Chubb、Netflix、Meta、Tesla、IBM、Lam Research、GE、GM、American Express、AT&T 等。（主报告 Exhibit 1B、17A、2B-5B）## 2、盈利预期与修正
+- **下周展望**：预计 **72 家** S&P 500 公司披露（10/19-23），以工业（20）、金融（15）为主，含 Blackstone、Chubb、Netflix、Meta、Tesla、IBM、Lam Research、GE、GM、American Express、AT&T 等。（主报告 Exhibit 1B、17A、2B-5B）
+
+## 2、盈利预期与修正
 
 | 期间 | EPS growth 最新 | 上周 | 季初/基准 | Revenue growth 最新 | 上周 | 季初/基准 | Net margin | Bottom-up EPS 最新 | 上周 |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -67,7 +78,9 @@ Forward EPS change:
 
 ## 3、管理层指引
 
-### 季度 guidance（26Q3）
+#
+
+## 季度 guidance（26Q3）
 
 | 类型 | 样本数 | 占比 | 26Q3 上年同期（3Q2025） | 26Q2 |
 |---|---:|---:|---:|---:|
@@ -80,7 +93,9 @@ Forward EPS change:
 - **历史均值**：空；报告仅提供上年同期与上季度比较，未披露长期 guidance 均值。
 - **行业分布**：空（Exhibit 14A 未按行业拆分 preannouncements）。
 - **年度 guidance**：空（LSEG 无年度指引）。
-- **判断**：positive 数量明显超过 negative，方向上支持 26Q3 盈利增长预期；但 N/P 0.6 低于上年同期 1.4，指引偏谨慎。本期分析师修正连续第三周净上修，实际业绩与指引同步向好。（主报告 Exhibit 8A、14A）## 4、实际业绩
+- **判断**：positive 数量明显超过 negative，方向上支持 26Q3 盈利增长预期；但 N/P 0.6 低于上年同期 1.4，指引偏谨慎。本期分析师修正连续第三周净上修，实际业绩与指引同步向好。（主报告 Exhibit 8A、14A）
+
+## 4、实际业绩
 
 | 指标 | 26Q3 最新 | 历史/近期参照 |
 |---|---:|---:|
@@ -118,7 +133,9 @@ Forward EPS change:
 
 - **贡献**：信息技术 26Q3 盈利同比增加 **$102.5B** ($256.6B vs $154.1B)、能源增加 **$32.9B** ($58.6B vs $25.7B)，是主要绝对与增长率贡献；能源、IT 半导体驱动最强。11 个行业全部预期盈利改善，无负增长。（主报告 Exhibit 4A）
 - **拖累**：医疗保健、材料、通信服务相对 7/1 下修最大；医疗保健 26Q3 盈利增速仅 **1.2%**，为全指数最低（药品 -10.5%、医疗设施 -5.3%）。
-- **估值—盈利错配**：行业估值与价格变化未披露；指数层面 Forward P/E 19.1x 明显回落、bottom-up EPS 仍小幅上修、修正动量净上修，盈利预期与估值张力本周缓和。## 6、估值分析
+- **估值—盈利错配**：行业估值与价格变化未披露；指数层面 Forward P/E 19.1x 明显回落、bottom-up EPS 仍小幅上修、修正动量净上修，盈利预期与估值张力本周缓和。
+
+## 6、估值分析
 
 | 指标 | 最新 | 上周 | 5 年均值 | 10 年均值 |
 |---|---:|---:|---:|---:|
