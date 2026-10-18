@@ -371,16 +371,6 @@
    "unit": "十亿 2017 年美元（年化）",
    "freq": "月"
   },
-  "DTWEXBGS": {
-   "ok": true,
-   "first_obs": "2006-01-02",
-   "last_obs": "2026-10-09",
-   "fetched_at": "2026-10-18T00:17:18Z",
-   "last_ok_at": "2026-10-18T00:17:18Z",
-   "name": "美元广义贸易加权指数",
-   "unit": "指数",
-   "freq": "日"
-  },
   "EFFR": {
    "ok": true,
    "first_obs": "2000-07-03",
@@ -985,5 +975,8 @@
  "effr_expect_error": null,
  "calendar_error": null,
  "nowcast_error": null,
- "zori_error": null
+ "zori_error": null,
+ "dxy_error": null,
+ "dxy_last": "2026-10-16",
+ "dxy_source": "Yahoo Finance DX-Y.NYB"
 }

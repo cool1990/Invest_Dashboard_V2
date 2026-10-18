@@ -30,10 +30,10 @@ function esc(s) {
   return String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 }
 
-function fmtNum(v, digits = 2) {
+function fmtNum(v, digits = 2, exact = false) {
   if (v === null || v === undefined || !isFinite(v)) return "—";
   const a = Math.abs(v);
-  const d = a >= 1000 ? 0 : a >= 100 ? 1 : digits;
+  const d = exact ? digits : (a >= 1000 ? 0 : a >= 100 ? 1 : digits);
   return v.toLocaleString("zh-CN", { minimumFractionDigits: d, maximumFractionDigits: d });
 }
 
@@ -142,7 +142,7 @@ function drawChart(canvas, spec, opts = {}) {
         return d.toISOString().slice(0, 10);
       },
       label(item) {
-        return ` ${item.dataset.label}：${fmtNum(item.parsed.y)} ${unit}`;
+        return ` ${item.dataset.label}：${fmtNum(item.parsed.y, spec.digits ?? 2, spec.digits != null)} ${unit}`;
       },
       labelColor(item) {
         return { borderColor: item.dataset._color, backgroundColor: item.dataset._color };
@@ -218,7 +218,8 @@ function tableHTML(spec) {
     const rows = spec.series.map((s) => `<tr><td>${esc(s.name)}</td>${s.data.map((v) => `<td>${fmtNum(v)}</td>`).join("")}</tr>`).join("");
     return `<div class="table-wrap"><table class="data">${head}${rows}</table></div>`;
   }
-  const digits = spec.digits || 2;
+  const exact = spec.digits != null;
+  const digits = spec.digits ?? 2;
   const dates = new Set();
   spec.series.forEach((s) => s.data.slice(-12).forEach(([d]) => dates.add(d)));
   const ds = [...dates].sort().slice(-12).reverse();
@@ -230,7 +231,7 @@ function tableHTML(spec) {
       if (f.for === s.name) cols.push({ name: f.name, map: new Map(f.data || []) });
     }
   }
-  const cell = (map, d) => (map.has(d) ? fmtNum(map.get(d), digits) : "");
+  const cell = (map, d) => (map.has(d) ? fmtNum(map.get(d), digits, exact) : "");
   const head = `<tr><th>日期</th>${cols.map((c) => `<th>${esc(c.name)}</th>`).join("")}</tr>`;
   const rows = ds.map((d) => `<tr><td>${d}</td>${cols.map((c) => `<td>${cell(c.map, d)}</td>`).join("")}</tr>`).join("");
   return `<div class="table-wrap"><table class="data">${head}${rows}</table></div>`;
