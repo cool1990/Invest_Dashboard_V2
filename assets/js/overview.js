@@ -558,23 +558,6 @@ function renderAttn(rows) {
   }).join("");
 }
 
-function renderHub(rows) {
-  rows.forEach(({ board, data, error }) => {
-    const asof = document.getElementById(`${board.key}-asof`);
-    const dims = document.getElementById(`${board.key}-dims`);
-    if (!asof || !dims) return;
-    if (error || !data) {
-      asof.textContent = "数据还没生成";
-      return;
-    }
-    const stamp = data.status?.updated_at || data.asof || "";
-    asof.textContent = "数据更新于 " + String(stamp).replace("T", " ").replace("Z", " UTC");
-    const list = board.key === "semis" ? (data.dimensions || []).filter((x) => x.side) : (data.dimensions || []);
-    dims.innerHTML = `<span style="grid-column:1/-1;font-weight:600">${esc(data.verdict?.headline || "")}</span>`
-      + list.map((x) => `<span>${esc(x.name)}</span><span class="muted" style="grid-column:2/-1">${esc(x.label)}</span>`).join("");
-  });
-}
-
 async function main() {
   renderNav("index.html");
   const rows = await Promise.all(BOARDS.map(async (board) => {
@@ -586,7 +569,6 @@ async function main() {
   }));
   renderEnv(rows);
   renderAttn(rows);
-  renderHub(rows);
 }
 
 const OverviewAPI = { collectBoard, condMet, curFrom, prevFrom, BOARDS, envView };
