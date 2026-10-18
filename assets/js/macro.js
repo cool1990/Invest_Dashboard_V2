@@ -48,11 +48,15 @@ function renderHealth() {
     st.calendar_error && `经济日历预期：${st.calendar_error}`,
     st.nowcast_error && `克利夫兰联储 Nowcast：${st.nowcast_error}`,
     st.zori_error && `Zillow ZORI：${st.zori_error}`,
+    st.dxy_error && `美元指数 DXY：${st.dxy_error}`,
   ].filter(Boolean);
+  const dxyLine = st.dxy_last
+    ? `美元指数 DXY 最新观测 ${esc(st.dxy_last)}（${esc(st.dxy_source || "Yahoo Finance DX-Y.NYB")}）。`
+    : "";
   document.getElementById("health").innerHTML = `
     <details>
       <summary>数据状态：${Object.keys(series).length} 条 FRED 序列，${failed.length ? `<span class="bad">${failed.length} 条这次没刷新</span>` : "全部正常"}${extra.length ? `，<span class="bad">${extra.length} 个外部来源失败</span>` : ""}</summary>
-      <p class="small muted">更新时间 ${esc(st.updated_at || "—")}（UTC）。没刷新的序列沿用上次成功下载的数据。${extra.map(esc).join("；")}</p>
+      <p class="small muted">更新时间 ${esc(st.updated_at || "—")}（UTC）。没刷新的序列沿用上次成功下载的数据。${dxyLine}${extra.map(esc).join("；")}</p>
       <div class="table-wrap"><table class="data"><tr><th>FRED ID</th><th style="text-align:left">名称</th><th>频率</th><th>最新观测</th><th>状态</th></tr>${rows}</table></div>
     </details>`;
 }

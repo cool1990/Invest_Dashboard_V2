@@ -102,7 +102,7 @@ FRED: dict[str, tuple[str, str, str]] = {
     "NFCI": ("芝加哥联储金融状况指数", "指数", "周"),
     "BAMLH0A0HYM2": ("高收益债期权调整利差", "%", "日"),
     "BAMLC0A0CM": ("投资级公司债期权调整利差", "%", "日"),
-    "DTWEXBGS": ("美元广义贸易加权指数", "指数", "日"),
+    # 美元指数改用 ICE DXY（pipeline/macro/dxy.py，Yahoo Finance DX-Y.NYB），不再下 FRED 广义贸易加权指数 DTWEXBGS。
     # ---- 财政 ----
     "MTSDS133FMS": ("联邦财政盈余/赤字（月）", "百万美元", "月"),
     "FYFSGDA188S": ("联邦盈余/赤字占 GDP（财年）", "%", "年"),

@@ -10,7 +10,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from pipeline import fred, series as ts  # noqa: E402
-from pipeline.macro import consensus as cons, cpi_contrib, effr_expect, interpret as I, zori  # noqa: E402
+from pipeline.macro import consensus as cons, cpi_contrib, dxy, effr_expect, interpret as I, zori  # noqa: E402
 from pipeline.macro.build import MacroBuilder, build_dashboard  # noqa: E402
 
 
@@ -803,17 +803,65 @@ class ZoriTest(unittest.TestCase):
 
 
 class EffrExpectTest(unittest.TestCase):
-    def test_parse_and_merge(self):
-        text = ("date,series_id,name,value,unit,change_text,label,obs_date,carried,section,remark,hike_count,source\n"
-                "2026-09-26,effr_next,下月EFFR,4.046,百分比,,中性,2026-09-25,,利率,备注,0.7,x.md\n"
-                "2026-09-26,cnn_fg,CNN,33,点,,,2026-09-26,,,,,x.md\n"
-                "2026-09-26,effr_year,年底EFFR,未更新,百分比,,,,,,,,x.md\n")
-        rows = effr_expect.parse_source(text)
-        self.assertEqual([(r["series_id"], r["value"]) for r in rows], [("effr_next", "4.046")])
-        merged = effr_expect.merge([{"date": "2026-09-26", "series_id": "effr_next", "value": "4.0",
-                                     "obs_date": "", "remark": ""}], rows)
-        self.assertEqual(len(merged), 1)
-        self.assertEqual(merged[0]["value"], "4.046")
+    def test_next_meeting_keeps_zq_sessions_only(self):
+        text = (
+            "date,series_id,name,value,unit,change_text,label,obs_date,carried,section,remark,hike_count,source\n"
+            "2026-09-29,effr_next,下次,3.998,百分比,,中性,2026-09-29,,利率,"
+            "Investing Fed Rate Monitor；按目标上限-EFFR利差12bp折算,,x\n"
+            "2026-09-30,下次会议EFFR,下次,3.969,百分比,,中性,2026-09-30,,利率,"
+            "隐含加息0.4次，最大概率区间3.75 - 4.00,,x\n"
+            "2026-10-03,下次会议EFFR,下次,3.93,百分比,,中性,2026-10-02,1,利率,"
+            "休市/未更新，使用最近价格 2026-10-02；TradingView CBOT:ZQX2026 收盘96.070→100−价格=3.930%，日期2026-10-02,,x\n"
+            "2026-10-04,下次会议EFFR,下次,3.93,百分比,,中性,2026-10-02,1,利率,"
+            "休市/未更新，使用最近价格 2026-10-02；CBOT:ZQX2026 收盘96.070→100−价格=3.930%，日期2026-10-02,,x\n"
+            "2026-10-16,下次会议EFFR,下次,3.92,百分比,,中性,,,利率,"
+            "隐含加息0.2次；合约 CBOT:ZQX2026，收盘96.080→100−价格=3.920%，日期2026-10-16,,x\n"
+            "2026-10-17,下次会议EFFR,下次,3.92,百分比,,中性,,,利率,"
+            "合约 CBOT:ZQX2026，收盘96.080→100−价格=3.920%，日期2026-10-16,,x\n"
+            "2026-10-16,effr_year,年底,4.15,百分比,,中性,,,利率,"
+            "合约 CBOT:ZQF2027，收盘95.850→100−价格=4.150%，日期2026-10-16,,x\n"
+            "2026-09-26,cnn_fg,CNN,33,点,,,2026-09-26,,,,,x\n"
+        )
+        rows = effr_expect.prepare(effr_expect.parse_source(text))
+        nxt_rows = [r for r in rows if r["series_id"] == "effr_next"]
+        self.assertEqual([(r["date"], r["value"]) for r in nxt_rows],
+                         [("2026-10-02", "3.93"), ("2026-10-16", "3.92")])
+        self.assertIn(effr_expect.METHOD_MARK, nxt_rows[0]["remark"])
+        self.assertIn("ZQX2026", nxt_rows[0]["remark"])
+        self.assertNotIn(effr_expect.METHOD_MARK, nxt_rows[1]["remark"])
+        self.assertEqual([r["value"] for r in rows if r["series_id"] == "effr_year"], ["4.15"])
+
+    def test_merge_drops_investing_history(self):
+        old = [{"date": "2026-09-29", "series_id": "effr_next", "value": "3.998",
+                "obs_date": "2026-09-29", "remark": "按目标上限-EFFR利差12bp"}]
+        new = [{"date": "2026-10-16", "series_id": "effr_next", "value": "3.92",
+                "obs_date": "2026-10-16", "remark": "CBOT:ZQX2026 100−价格"}]
+        rows = effr_expect.prepare(effr_expect.merge(effr_expect._drop_old_next(old), new))
+        self.assertEqual([(r["date"], r["value"]) for r in rows], [("2026-10-16", "3.92")])
+        self.assertIn(effr_expect.METHOD_MARK, rows[0]["remark"])
+
+
+class DxyTest(unittest.TestCase):
+    def test_skips_blank_days_and_uses_official_last(self):
+        from datetime import datetime
+        from zoneinfo import ZoneInfo
+
+        ny = ZoneInfo("America/New_York")
+
+        def ts(y, m, d, hour=0):
+            return int(datetime(y, m, d, hour, tzinfo=ny).timestamp())
+
+        payload = {"chart": {"result": [{
+            "timestamp": [ts(2026, 10, 15), ts(2026, 10, 16), ts(2026, 10, 18)],
+            "indicators": {"quote": [{"close": [102.0, 101.839996, None]}]},
+            "meta": {"regularMarketPrice": 101.779, "regularMarketTime": ts(2026, 10, 16, 17)},
+        }]}}
+        self.assertEqual(dxy.parse_chart(payload),
+                         [(date(2026, 10, 15), 102.0), (date(2026, 10, 16), 101.779)])
+        # 报价落在没有 K 线的日子上时，不补出这一天
+        payload["chart"]["result"][0]["meta"]["regularMarketTime"] = ts(2026, 10, 18, 12)
+        self.assertEqual([d for d, _ in dxy.parse_chart(payload)],
+                         [date(2026, 10, 15), date(2026, 10, 16)])
 
 
 if __name__ == "__main__":

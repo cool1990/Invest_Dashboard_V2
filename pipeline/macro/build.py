@@ -534,7 +534,7 @@ class MacroBuilder:
         nfci = self.s("NFCI")
         hy = self.w("BAMLH0A0HYM2")
         ig = self.w("BAMLC0A0CM")
-        usd = self.w("DTWEXBGS")
+        usd = self.w("DXY")
 
         groups = [
             ("准备金拆分", self.add(
@@ -567,7 +567,10 @@ class MacroBuilder:
                 Chart("hy", "信用利差", "%", [
                     Line("高收益 OAS", hy), Line("投资级 OAS", ig)],
                       note="ICE 美银期权调整利差，FRED 上只保留近几年。高收益是 BAMLH0A0HYM2，投资级是 BAMLC0A0CM。"),
-                Chart("usd", "美元广义指数", "指数", [Line("美元指数", usd)], start=date(2006, 1, 1)),
+                Chart("usd", "美元指数（DXY）", "指数", [Line("DXY", usd)], start=date(2006, 1, 1), digits=2,
+                      note="ICE 美元指数（DXY）。Yahoo Finance DX-Y.NYB 日线收盘；"
+                           "最近一个交易日若有官方报价，用该报价（与 TradingView TVC:DXY、CNBC 的收盘一致）。"
+                           "没有收盘的日期留空。这条线原先是 FRED 广义贸易加权指数 DTWEXBGS。"),
             )),
         ]
         gdp = self.s("GDP")
@@ -690,8 +693,10 @@ class MacroBuilder:
         if not lines:
             return None
         return Chart("effr_path", "EFFR 路径：市场隐含 vs 点阵图", "%", lines, kind="path", categories=cats, core=True,
-                     note=f"市场隐含来自早晨笔记（Investing Fed Rate Monitor，{pv['asof']}），"
-                          "点阵图为最近一次 SEP 中位数。点阵图是区间中值，与 EFFR 通常相差几个基点。")
+                     note=f"市场隐含来自早晨笔记里的 CBOT 30 日联邦基金期货（ZQ，{pv['asof']}）："
+                          "隐含利率 = 100 − 具体月份合约价格，不用连续合约。"
+                          "下次会议、年底、明年底都取对应会议之后的首个整月。"
+                          "点阵图为最近一次 SEP 中位数，是区间中值，与 EFFR 通常相差几个基点。")
 
     def policy(self):
         effr_w = self.w("EFFR")
@@ -726,7 +731,10 @@ class MacroBuilder:
                 Chart("real_policy", "实际政策利率", "%", [Line("EFFR − 核心 PCE 同比", real_policy)],
                       note="正值越大，政策越紧。中性实际利率一般估计在 0.5–1%。", core=True),
                 Chart("effr_expect_hist", "市场隐含 EFFR 的变化", "%", exp_lines,
-                      start=date(2026, 1, 1), note="早晨笔记从 2026-09 开始记录，历史会逐日累积。"),
+                      start=date(2026, 1, 1),
+                      note="下次会议从 2026-10-02 起改为 ZQ 具体月份合约（隐含利率 = 100 − 价格），"
+                           "只保留有收盘的交易日，不与此前 Investing.com「目标上限减 12bp」连在一起。"
+                           "年底、明年底的当前值用同一套 ZQ 合约。没有收盘的日期留空。"),
                 Chart("two_minus", "2 年期国债 − EFFR", "基点", [Line("2Y − EFFR", two_minus)],
                       note="为正说明市场预期加息，为负说明预期降息。"),
             )),
