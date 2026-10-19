@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-18T07:41:27+08:00",
+ "generated_at": "2026-10-19T07:50:22+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -1198,6 +1198,127 @@
    "note": "JOLTS",
    "previous": "",
    "consensus": "",
+   "priority": "高"
+  },
+  {
+   "date": "2026-11-03",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Amgen Inc.（AMGN）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后",
+   "previous": "$5.64",
+   "consensus": "$5.72",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-03",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Arista Networks, Inc.（ANET）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后",
+   "previous": "$0.67",
+   "consensus": "$0.99",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-03",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Booking Holdings Inc.（BKNG）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后",
+   "previous": "$3.98",
+   "consensus": "$4.48",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-03",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Eaton Corporation, PLC（ETN）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$3.07",
+   "consensus": "$3.53",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-03",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Itau Unibanco Banco Holding SA（ITUB）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$0.18",
+   "consensus": "$0.22",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-03",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Marathon Petroleum Corporation（MPC）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$3.01",
+   "consensus": "$25.13",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-03",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Pfizer, Inc.（PFE）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$0.87",
+   "consensus": "$0.72",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-03",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Shopify Inc.（SHOP）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$0.27",
+   "consensus": "$0.33",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-03",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Space Exploration Technologies Corp.（SPCX）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "N/A",
+   "consensus": "$0.11",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-03",
+   "time_bj": "",
+   "category": "财报",
+   "title": "超威（AMD）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后。原名：Advanced Micro Devices, Inc.",
+   "previous": "$0.97",
+   "consensus": "$1.66",
+   "priority": "高"
+  },
+  {
+   "date": "2026-11-03",
+   "time_bj": "",
+   "category": "财报",
+   "title": "超微电脑（SMCI）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "原名：Super Micro Computer, Inc.",
+   "previous": "$0.26",
+   "consensus": "$0.94",
    "priority": "高"
   },
   {
