@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-18T07:41:27+08:00",
+ "generated_at": "2026-10-19T07:50:22+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -186,6 +186,28 @@
    "note": "规则同上：每月1日发布；11月1日是周日。页面未写钟点",
    "previous": "",
    "consensus": "",
+   "priority": "高"
+  },
+  {
+   "date": "2026-11-03",
+   "time_bj": "",
+   "category": "财报",
+   "title": "超威（AMD）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后。原名：Advanced Micro Devices, Inc.",
+   "previous": "$0.97",
+   "consensus": "$1.66",
+   "priority": "高"
+  },
+  {
+   "date": "2026-11-03",
+   "time_bj": "",
+   "category": "财报",
+   "title": "超微电脑（SMCI）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "原名：Super Micro Computer, Inc.",
+   "previous": "$0.26",
+   "consensus": "$0.94",
    "priority": "高"
   },
   {
