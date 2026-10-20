@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-19T07:50:22+08:00",
+ "generated_at": "2026-10-20T08:51:31+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -328,7 +328,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$2.65",
-   "consensus": "$2.87",
+   "consensus": "$2.88",
    "priority": "中"
   },
   {
@@ -339,7 +339,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$7.25",
-   "consensus": "$6.67",
+   "consensus": "$6.54",
    "priority": "高"
   },
   {
@@ -383,7 +383,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$0.37",
-   "consensus": "$0.21",
+   "consensus": "$0.22",
    "priority": "中"
   },
   {
@@ -394,7 +394,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$1.48",
-   "consensus": "$2.39",
+   "consensus": "$2.40",
    "priority": "中"
   },
   {
@@ -566,28 +566,6 @@
    "date": "2026-10-27",
    "time_bj": "",
    "category": "财报",
-   "title": "Freeport-McMoran, Inc.（FCX）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$0.50",
-   "consensus": "$0.75",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-27",
-   "time_bj": "",
-   "category": "财报",
-   "title": "HCA Healthcare, Inc.（HCA）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$6.96",
-   "consensus": "$6.75",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-27",
-   "time_bj": "",
-   "category": "财报",
    "title": "HSBC Holdings plc（HSBC）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "",
@@ -742,6 +720,17 @@
    "date": "2026-10-28",
    "time_bj": "",
    "category": "财报",
+   "title": "GSK plc（GSK）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$1.48",
+   "consensus": "$1.40",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-28",
+   "time_bj": "",
+   "category": "财报",
    "title": "Microsoft Corporation（MSFT）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
@@ -832,9 +821,9 @@
    "category": "财报",
    "title": "Amazon.com, Inc.（AMZN）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "",
+   "note": "美东盘后",
    "previous": "$1.95",
-   "consensus": "$2.02",
+   "consensus": "$2.01",
    "priority": "中"
   },
   {
@@ -887,7 +876,7 @@
    "category": "财报",
    "title": "Gilead Sciences, Inc.（GILD）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "",
+   "note": "美东盘后",
    "previous": "$2.47",
    "consensus": "$2.16",
    "priority": "中"
@@ -900,7 +889,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$4.21",
-   "consensus": "$4.51",
+   "consensus": "$4.52",
    "priority": "中"
   },
   {
@@ -1085,7 +1074,7 @@
    "category": "财报",
    "title": "ExxonMobil Holdings Corporation（XOM）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "",
+   "note": "美东盘前",
    "previous": "$1.88",
    "consensus": "$3.92",
    "priority": "中"
@@ -1142,7 +1131,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$1.85",
-   "consensus": "$1.99",
+   "consensus": "$2",
    "priority": "中"
   },
   {
@@ -1307,7 +1296,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后。原名：Advanced Micro Devices, Inc.",
    "previous": "$0.97",
-   "consensus": "$1.66",
+   "consensus": "$1.67",
    "priority": "高"
   },
   {
@@ -1330,6 +1319,127 @@
    "note": "财政部页面：Policy Statement 等 The next release is scheduled for November 4, 2026。上次是美东08:30；如果时间相同，北京时间为11月4日21:30",
    "previous": "",
    "consensus": "",
+   "priority": "高"
+  },
+  {
+   "date": "2026-11-04",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Arm（ARM）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后。原名：Arm Holdings plc",
+   "previous": "$0.15",
+   "consensus": "$0.22",
+   "priority": "高"
+  },
+  {
+   "date": "2026-11-04",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Banco Santander, S.A.（SAN）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$0.23",
+   "consensus": "$0.27",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-04",
+   "time_bj": "",
+   "category": "财报",
+   "title": "CVS Health Corporation（CVS）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$1.60",
+   "consensus": "$1.62",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-04",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Equinor ASA（EQNR）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$0.37",
+   "consensus": "$1.38",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-04",
+   "time_bj": "",
+   "category": "财报",
+   "title": "McDonald's Corporation（MCD）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$3.22",
+   "consensus": "$3.37",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-04",
+   "time_bj": "",
+   "category": "财报",
+   "title": "McKesson Corporation（MCK）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后",
+   "previous": "$9.86",
+   "consensus": "$10.69",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-04",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Novo Nordisk A/S（NVO）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$1.02",
+   "consensus": "$0.81",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-04",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Toyota Motor Corp Ltd Ord（TM）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$4.85",
+   "consensus": "",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-04",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Uber Technologies, Inc.（UBER）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$3.11",
+   "consensus": "$0.94",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-04",
+   "time_bj": "",
+   "category": "财报",
+   "title": "科磊（KLAC）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "原名：KLA Corporation",
+   "previous": "$0.88",
+   "consensus": "$1.18",
+   "priority": "高"
+  },
+  {
+   "date": "2026-11-04",
+   "time_bj": "",
+   "category": "财报",
+   "title": "高通（QCOM）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "原名：QUALCOMM Incorporated",
+   "previous": "$2.56",
+   "consensus": "$1.46",
    "priority": "高"
   },
   {
@@ -1614,6 +1724,28 @@
    "title": "GDP",
    "url": "https://www.bea.gov/news/schedule",
    "note": "美东 8:30 AM。原名：GDP by County and Personal Income by County, 2025",
+   "previous": "",
+   "consensus": "",
+   "priority": "高"
+  },
+  {
+   "date": "2026-12-04",
+   "time_bj": "",
+   "category": "宏观",
+   "title": "Employment Situation 发布",
+   "url": "https://fred.stlouisfed.org/release?rid=50",
+   "note": "Employment Situation",
+   "previous": "",
+   "consensus": "",
+   "priority": "中"
+  },
+  {
+   "date": "2026-12-04",
+   "time_bj": "05:30",
+   "category": "宏观",
+   "title": "美联储 H.4.1（资产负债表）",
+   "url": "https://www.federalreserve.gov/releases/h41/",
+   "note": "页面写明每周四、通常美东 16:30；遇联邦假日顺延。这一条按周四生成，没有另核假日表",
    "previous": "",
    "consensus": "",
    "priority": "高"
