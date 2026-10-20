@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-19T07:50:22+08:00",
+ "generated_at": "2026-10-20T08:51:31+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -97,7 +97,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$7.25",
-   "consensus": "$6.67",
+   "consensus": "$6.54",
    "priority": "高"
   },
   {
@@ -150,9 +150,9 @@
    "category": "财报",
    "title": "Amazon.com, Inc.（AMZN）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "",
+   "note": "美东盘后",
    "previous": "$1.95",
-   "consensus": "$2.02",
+   "consensus": "$2.01",
    "priority": "中"
   },
   {
@@ -196,7 +196,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后。原名：Advanced Micro Devices, Inc.",
    "previous": "$0.97",
-   "consensus": "$1.66",
+   "consensus": "$1.67",
    "priority": "高"
   },
   {
@@ -208,6 +208,39 @@
    "note": "原名：Super Micro Computer, Inc.",
    "previous": "$0.26",
    "consensus": "$0.94",
+   "priority": "高"
+  },
+  {
+   "date": "2026-11-04",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Arm（ARM）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后。原名：Arm Holdings plc",
+   "previous": "$0.15",
+   "consensus": "$0.22",
+   "priority": "高"
+  },
+  {
+   "date": "2026-11-04",
+   "time_bj": "",
+   "category": "财报",
+   "title": "科磊（KLAC）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "原名：KLA Corporation",
+   "previous": "$0.88",
+   "consensus": "$1.18",
+   "priority": "高"
+  },
+  {
+   "date": "2026-11-04",
+   "time_bj": "",
+   "category": "财报",
+   "title": "高通（QCOM）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "原名：QUALCOMM Incorporated",
+   "previous": "$2.56",
+   "consensus": "$1.46",
    "priority": "高"
   },
   {
