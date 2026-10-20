@@ -10,7 +10,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from pipeline import fred, series as ts  # noqa: E402
-from pipeline.macro import consensus as cons, cpi_contrib, dxy, effr_expect, interpret as I, zori  # noqa: E402
+from pipeline.macro import consensus as cons, cpi_contrib, dxy, effr_expect, interpret as I, treasury, zori  # noqa: E402
 from pipeline.macro.build import MacroBuilder, build_dashboard  # noqa: E402
 
 
@@ -862,6 +862,56 @@ class DxyTest(unittest.TestCase):
         payload["chart"]["result"][0]["meta"]["regularMarketTime"] = ts(2026, 10, 18, 12)
         self.assertEqual([d for d, _ in dxy.parse_chart(payload)],
                          [date(2026, 10, 15), date(2026, 10, 16)])
+
+
+class TreasuryTest(unittest.TestCase):
+    NOMINAL = (
+        "Date,2 Yr,3 Mo,10 Yr\n"
+        "10/16/2026,4.74,4.26,5.09\n"
+        "10/19/2026,4.77,4.27,5.15\n"
+        "10/20/2026,,4.28,\n"
+    )
+    REAL = "Date,10 YR\n10/16/2026,2.74\n10/19/2026,2.80\n"
+
+    def test_parse_and_extend_only_newer_dates(self):
+        nominal = treasury.parse_curve(self.NOMINAL)
+        real = treasury.parse_curve(self.REAL)
+        self.assertEqual(nominal["10 Yr"][-1], (date(2026, 10, 19), 5.15))
+        self.assertEqual(nominal["3 Mo"][-1], (date(2026, 10, 20), 4.28))
+        existing = [(date(2026, 10, 15), 5.10), (date(2026, 10, 16), 5.09)]
+        merged, added = treasury.extend_series(existing, nominal["10 Yr"])
+        self.assertEqual(added, "2026-10-19")
+        self.assertEqual(merged[-1], (date(2026, 10, 19), 5.15))
+        self.assertEqual(merged[0], (date(2026, 10, 15), 5.10))
+        # 不覆盖 FRED 已有的最后一天，也不在空文件上用一年曲线替换全历史
+        again, none = treasury.extend_series(merged, nominal["10 Yr"])
+        self.assertIsNone(none)
+        self.assertEqual(again, merged)
+        self.assertEqual(treasury.extend_series([], nominal["10 Yr"])[1], None)
+
+    def test_apply_writes_levels_and_lags_spreads(self):
+        import tempfile
+        from pipeline.fred import read_series, write_series
+
+        curves = {
+            treasury.NOMINAL: treasury.parse_curve(self.NOMINAL),
+            treasury.REAL: treasury.parse_curve(self.REAL),
+        }
+        with tempfile.TemporaryDirectory() as tmp:
+            raw = Path(tmp)
+            write_series(raw / "DGS10.csv", [(date(2026, 10, 16), 5.09)])
+            write_series(raw / "DGS2.csv", [(date(2026, 10, 16), 4.74)])
+            write_series(raw / "DFII10.csv", [(date(2026, 10, 16), 2.74)])
+            write_series(raw / "T10Y2Y.csv", [(date(2026, 10, 19), 0.38)])  # 已经跟上，不改
+            write_series(raw / "T10YIE.csv", [(date(2026, 10, 16), 2.35)])
+            filled = treasury.apply(raw, curves)
+            self.assertEqual(filled["DGS10"], "2026-10-19")
+            self.assertEqual(filled["DGS2"], "2026-10-19")
+            self.assertEqual(filled["DFII10"], "2026-10-19")
+            self.assertNotIn("T10Y2Y", filled)
+            self.assertEqual(read_series(raw / "T10Y2Y.csv"), [(date(2026, 10, 19), 0.38)])
+            self.assertEqual(read_series(raw / "T10YIE.csv")[-1], (date(2026, 10, 19), 2.35))
+            self.assertEqual(read_series(raw / "DGS10.csv")[-1], (date(2026, 10, 19), 5.15))
 
 
 if __name__ == "__main__":
