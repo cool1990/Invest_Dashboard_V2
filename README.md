@@ -187,6 +187,7 @@
 - 全历史下载，原样存在 `data/raw/fred/<ID>.csv`（列 `date,value`，数值和单位与 FRED 一致）。图表默认显示近 5 年，可切 2 年 / 10 年 / 全部（图表数据从 1990 年起，日频压成周频）。
 - 市场隐含 EFFR（下次会议 / 年底 / 明年底）来自每天早晨的笔记。旧站已把它整理进 `data/sentiment/series.csv`，本仓库从那份公开文件里挑出这几行，累积到 `data/macro/effr_expectations.csv`。三条都用 CBOT 30 日联邦基金期货的具体月份合约（不是连续合约），隐含利率 = 100 − 价格，合约是对应会议之后的首个整月。年底、明年底的 id 是 `effr_year`、`effr_ny`。下次会议在笔记里从 2026-10-02 起改记为 `下次会议EFFR`（此前是 Investing.com 概率，按目标上限减 12bp 折算）；本仓库只把 ZQ 口径并回 `effr_next`，旧口径不保留、缺日不补，口径切换写在最早一条的备注里。对照写隐含加息或降息次数；ZQ 没有概率区间。利率上升为转鹰、下降为转鸽：当日达到 5bp 为略转鹰或略转鸽，大于 10bp 为明显转鹰或明显转鸽；5 日累计超过 5bp 或 0.1% 也只到「略」。下次会议与年底当日变动方向相反，或一个超过 5bp、另一个几乎不动（不足 1bp），提示背离（短期转鹰或转鸽，长期相反或几乎不动）。
 - 美元指数是 ICE 美元指数（DXY），来自 Yahoo Finance `DX-Y.NYB` 日线收盘（与日报里的 TradingView `TVC:DXY` 是同一指数；最近一个交易日若有官方报价则用该报价）。存在 `data/raw/macro/dxy.csv`。没有收盘的日期留空。原先的 FRED 广义贸易加权指数 `DTWEXBGS` 已停用。
+- 2 年期、10 年期名义收益率和 10 年期实际利率（`DGS2`、`DGS10`、`DFII10`）先下 FRED。FRED 的 H.15 经常比财政部晚一个交易日，而利差（`T10Y2Y`、`T10Y3M`、`T10YIE`）已经含有这一天。更新时用财政部公开的当年名义、实际收益率曲线，只把本地文件最后一天之后的日期补上，不改 FRED 已有历史。利差若也落后，按同一天两条曲线相减、四舍五入到 0.01 补上。
 - `data/macro/dashboard.json`：页面读的唯一文件。
 - `data/macro/status.json`：每条序列这次有没有下载成功、最新观测日期。下载失败的序列沿用上次的文件，页面底部「数据状态」会列出来。
 
@@ -202,6 +203,7 @@ pipeline/macro/indicators.py  宏观序列清单
 pipeline/macro/build.py       派生计算、图表、每维的依据数字
 pipeline/macro/effr_expect.py 市场隐含 EFFR（ZQ 具体月份合约）
 pipeline/macro/dxy.py         ICE 美元指数 DXY（Yahoo Finance DX-Y.NYB）
+pipeline/macro/treasury.py    财政部收益率曲线（补 FRED 晚一天的 DGS2 / DGS10 / DFII10）
 pipeline/macro/consensus.py   市场一致预期（经济日历）与克利夫兰联储 Nowcast
 pipeline/macro/interpret.py   规则解读、维度状态与整体环境
 pipeline/macro/scenario.py    新数据的情景门槛与发布前后对比
