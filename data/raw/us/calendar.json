@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-20T08:51:31+08:00",
+ "generated_at": "2026-10-21T08:17:13+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -186,72 +186,6 @@
    "note": "Federal Register 2026-17183：Comments should be received on or before October 20, 2026。美东日期。原名：Regulation Crypto Assets",
    "previous": "",
    "consensus": "",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-20",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Capital One Financial Corporation（COF）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "$5.95",
-   "consensus": "$5.45",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-20",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Chubb Limited（CB）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "$7.49",
-   "consensus": "$6.53",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-20",
-   "time_bj": "",
-   "category": "财报",
-   "title": "GE Aerospace（GE）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$1.66",
-   "consensus": "$2.02",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-20",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Intuitive Surgical, Inc.（ISRG）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "$1.96",
-   "consensus": "$2.13",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-20",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Netflix, Inc.（NFLX）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "$0.59",
-   "consensus": "$0.82",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-20",
-   "time_bj": "",
-   "category": "财报",
-   "title": "RTX Corporation（RTX）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$1.70",
-   "consensus": "$1.78",
    "priority": "中"
   },
   {
@@ -447,7 +381,7 @@
    "category": "财报",
    "title": "Procter & Gamble Company (The)（PG）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前。日期不一样：Nasdaq earnings calendar写的是 2026-10-22，Nasdaq earnings calendar写的是 2026-10-27，Nasdaq earnings calendar写的是 2026-10-27",
+   "note": "美东盘前。日期不一样：Nasdaq earnings calendar写的是 2026-10-22，Nasdaq earnings calendar写的是 2026-10-27，Nasdaq earnings calendar写的是 2026-10-27，Nasdaq earnings calendar写的是 2026-11-05",
    "previous": "$1.99",
    "consensus": "$1.89",
    "priority": "中"
@@ -560,6 +494,17 @@
    "note": "美东盘前",
    "previous": "$0.67",
    "consensus": "$0.88",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-27",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Freeport-McMoran, Inc.（FCX）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$0.50",
+   "consensus": "$0.75",
    "priority": "中"
   },
   {
@@ -1473,6 +1418,83 @@
    "note": "BoE：Thursday 5 November，November MPC Summary and minutes 和 Monetary Policy Report。页面未写钟点",
    "previous": "",
    "consensus": "",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-05",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Airbnb, Inc.（ABNB）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后",
+   "previous": "$2.21",
+   "consensus": "$2.89",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-05",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Canadian Natural Resources Limited（CNQ）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$0.62",
+   "consensus": "$1.05",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-05",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Cloudflare, Inc.（NET）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后",
+   "previous": "($0.01)",
+   "consensus": "$0.02",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-05",
+   "time_bj": "",
+   "category": "财报",
+   "title": "ConocoPhillips（COP）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$1.61",
+   "consensus": "$2.86",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-05",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Monster Beverage Corporation（MNST）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$0.28",
+   "consensus": "$0.30",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-05",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Parker-Hannifin Corporation（PH）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$7.22",
+   "consensus": "$8.23",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-05",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Sony Group Corporation（SONY）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$0.35",
+   "consensus": "$0.38",
    "priority": "中"
   },
   {
