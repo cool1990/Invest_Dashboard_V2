@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-21T08:17:13+08:00",
+ "generated_at": "2026-10-22T08:20:53+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -90,28 +90,6 @@
    "priority": "高"
   },
   {
-   "date": "2026-10-21",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Meta Platforms, Inc.（META）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "$7.25",
-   "consensus": "$6.54",
-   "priority": "高"
-  },
-  {
-   "date": "2026-10-21",
-   "time_bj": "",
-   "category": "财报",
-   "title": "拉姆研究（LRCX）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后。原名：Lam Research Corporation",
-   "previous": "$1.26",
-   "consensus": "$2.17",
-   "priority": "高"
-  },
-  {
    "date": "2026-10-28",
    "time_bj": "",
    "category": "财报",
@@ -137,6 +115,17 @@
    "date": "2026-10-28",
    "time_bj": "",
    "category": "财报",
+   "title": "科磊（KLAC）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后。原名：KLA Corporation",
+   "previous": "$0.88",
+   "consensus": "$1.18",
+   "priority": "高"
+  },
+  {
+   "date": "2026-10-28",
+   "time_bj": "",
+   "category": "财报",
    "title": "联电 3Q26 业绩与法说会",
    "url": "https://www.umc.com/en/IR_Event/ir_events",
    "note": "UMC IR：3Q 2026 Earnings Release & Investor Conference Call 10/28/2026，官方标注 Subject to change；会议细节提前15天公布",
@@ -152,7 +141,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$1.95",
-   "consensus": "$2.01",
+   "consensus": "$2.02",
    "priority": "中"
   },
   {
@@ -196,7 +185,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后。原名：Advanced Micro Devices, Inc.",
    "previous": "$0.97",
-   "consensus": "$1.67",
+   "consensus": "$1.68",
    "priority": "高"
   },
   {
@@ -225,20 +214,9 @@
    "date": "2026-11-04",
    "time_bj": "",
    "category": "财报",
-   "title": "科磊（KLAC）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "原名：KLA Corporation",
-   "previous": "$0.88",
-   "consensus": "$1.18",
-   "priority": "高"
-  },
-  {
-   "date": "2026-11-04",
-   "time_bj": "",
-   "category": "财报",
    "title": "高通（QCOM）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "原名：QUALCOMM Incorporated",
+   "note": "美东盘后。原名：QUALCOMM Incorporated",
    "previous": "$2.56",
    "consensus": "$1.46",
    "priority": "高"
