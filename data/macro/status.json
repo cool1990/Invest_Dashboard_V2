@@ -1,1072 +1,976 @@
 {
- "updated_at": "2026-10-22T00:55:10Z",
+ "updated_at": "2026-10-23T00:56:08Z",
  "series": {
   "A007RY2Q224SBEA": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1947-04-01",
    "last_obs": "2026-04-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "GDP 增速贡献：固定投资",
    "unit": "百分点（年化）",
-   "freq": "季",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "季"
   },
   "A014RY2Q224SBEA": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1947-04-01",
    "last_obs": "2026-04-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "GDP 增速贡献：库存变化",
    "unit": "百分点（年化）",
-   "freq": "季",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "季"
   },
   "A019RY2Q224SBEA": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1947-04-01",
    "last_obs": "2026-04-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "GDP 增速贡献：净出口",
    "unit": "百分点（年化）",
-   "freq": "季",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "季"
   },
   "A091RC1Q027SBEA": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1947-01-01",
    "last_obs": "2026-04-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "联邦政府利息支出",
    "unit": "十亿美元（年化）",
-   "freq": "季",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "季"
   },
   "A822RY2Q224SBEA": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1947-04-01",
    "last_obs": "2026-04-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "GDP 增速贡献：政府消费与投资",
    "unit": "百分点（年化）",
-   "freq": "季",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "季"
   },
   "BAMLC0A0CM": {
-   "ok": false,
+   "ok": true,
    "first_obs": "2023-10-23",
-   "last_obs": "2026-10-19",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "last_obs": "2026-10-21",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "投资级公司债期权调整利差",
    "unit": "%",
-   "freq": "日",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "日"
   },
   "BAMLH0A0HYM2": {
-   "ok": false,
+   "ok": true,
    "first_obs": "2023-10-23",
-   "last_obs": "2026-10-19",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "last_obs": "2026-10-21",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "高收益债期权调整利差",
    "unit": "%",
-   "freq": "日",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "日"
   },
   "CCSA": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1967-01-07",
-   "last_obs": "2026-10-03",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "last_obs": "2026-10-10",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "持续申请失业金人数",
    "unit": "人",
-   "freq": "周",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "周"
   },
   "CES0500000003": {
-   "ok": false,
+   "ok": true,
    "first_obs": "2006-03-01",
    "last_obs": "2026-09-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "私人部门平均时薪",
    "unit": "美元/小时",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "CIVPART": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1948-01-01",
    "last_obs": "2026-09-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "劳动参与率",
    "unit": "%",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "CPIAUCSL": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1947-01-01",
    "last_obs": "2026-09-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "CPI",
    "unit": "指数 1982-84=100",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "CPILFESL": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1957-01-01",
    "last_obs": "2026-09-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "核心 CPI",
    "unit": "指数 1982-84=100",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "CPIUFDSL": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1947-01-01",
    "last_obs": "2026-09-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "CPI 食品",
    "unit": "指数 1982-84=100",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "CSUSHPINSA": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1987-01-01",
    "last_obs": "2026-07-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "标普 Case-Shiller 全国房价指数",
    "unit": "指数 2000-01=100",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "CUSR0000SACL1E": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1957-01-01",
    "last_obs": "2026-09-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "CPI 核心商品（除食品与能源的商品）",
    "unit": "指数 1982-84=100",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "CUSR0000SAH1": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1953-01-01",
    "last_obs": "2026-09-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "CPI 住房",
    "unit": "指数 1982-84=100",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "CUSR0000SASLE": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1967-01-01",
    "last_obs": "2026-09-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "CPI 服务除能源服务",
    "unit": "指数 1982-84=100",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "DFEDTARL": {
-   "ok": false,
+   "ok": true,
    "first_obs": "2008-12-16",
-   "last_obs": "2026-10-20",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "last_obs": "2026-10-22",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "联邦基金目标区间下限",
    "unit": "%",
-   "freq": "日",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "日"
   },
   "DFEDTARU": {
-   "ok": false,
+   "ok": true,
    "first_obs": "2008-12-16",
-   "last_obs": "2026-10-20",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "last_obs": "2026-10-22",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "联邦基金目标区间上限",
    "unit": "%",
-   "freq": "日",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "日"
   },
   "DFII10": {
-   "ok": false,
+   "ok": true,
    "first_obs": "2003-01-02",
-   "last_obs": "2026-10-19",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "last_obs": "2026-10-21",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "10 年期实际利率（TIPS）",
    "unit": "%",
-   "freq": "日",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "日"
   },
   "DFXARC1M027SBEA": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1959-01-01",
    "last_obs": "2026-08-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "PCE 食品（名义）",
    "unit": "十亿美元（年化）",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "DFXARG3M086SBEA": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1959-01-01",
    "last_obs": "2026-08-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "PCE 食品价格指数",
    "unit": "指数",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "DGDSRC1": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1959-01-01",
    "last_obs": "2026-08-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "PCE 商品（名义）",
    "unit": "十亿美元（年化）",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "DGDSRG3M086SBEA": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1959-01-01",
    "last_obs": "2026-08-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "PCE 商品价格指数",
    "unit": "指数",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "DGOERC1Q027SBEA": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1947-01-01",
    "last_obs": "2026-04-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "PCE 汽油及其他能源商品（名义，季度）",
    "unit": "十亿美元（年化）",
-   "freq": "季",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "季"
   },
   "DGORDER": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1992-02-01",
    "last_obs": "2026-08-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "耐用品新订单",
    "unit": "百万美元",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "DGS10": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1962-01-02",
-   "last_obs": "2026-10-19",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "last_obs": "2026-10-21",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "10 年期国债收益率",
    "unit": "%",
-   "freq": "日",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "日"
   },
   "DGS2": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1976-06-01",
-   "last_obs": "2026-10-19",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "last_obs": "2026-10-21",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "2 年期国债收益率",
    "unit": "%",
-   "freq": "日",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "日"
   },
   "DHSGRC1A027NBEA": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1929-01-01",
    "last_obs": "2025-01-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "PCE 住房（名义，年度）",
    "unit": "十亿美元",
-   "freq": "年",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "年"
   },
   "DNRGRC1M027SBEA": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1959-01-01",
    "last_obs": "2026-08-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "PCE 能源商品与服务（名义）",
    "unit": "十亿美元（年化）",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "DNRGRC1Q027SBEA": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1959-01-01",
    "last_obs": "2026-04-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "PCE 能源商品与服务（名义，季度）",
    "unit": "十亿美元（年化）",
-   "freq": "季",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "季"
   },
   "DNRGRG3M086SBEA": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1959-01-01",
    "last_obs": "2026-08-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "PCE 能源商品与服务价格指数",
    "unit": "指数",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "DPCCRC1M027SBEA": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1959-01-01",
    "last_obs": "2026-08-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "核心 PCE（名义）",
    "unit": "十亿美元（年化）",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "DPCERY2Q224SBEA": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1947-04-01",
    "last_obs": "2026-04-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "GDP 增速贡献：个人消费",
    "unit": "百分点（年化）",
-   "freq": "季",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "季"
   },
   "DRCCLACBS": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1991-01-01",
    "last_obs": "2026-04-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "信用卡贷款拖欠率（商业银行）",
    "unit": "%",
-   "freq": "季",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "季"
   },
   "DSERRG3M086SBEA": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1959-01-01",
    "last_obs": "2026-08-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "PCE 服务价格指数",
    "unit": "指数",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "DSPIC96": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1959-01-01",
    "last_obs": "2026-08-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "实际可支配收入",
    "unit": "十亿 2017 年美元（年化）",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "EFFR": {
-   "ok": false,
+   "ok": true,
    "first_obs": "2000-07-03",
-   "last_obs": "2026-10-19",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "last_obs": "2026-10-21",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "有效联邦基金利率 EFFR",
    "unit": "%",
-   "freq": "日",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "日"
   },
   "FEDTARMD": {
-   "ok": false,
+   "ok": true,
    "first_obs": "2026-01-01",
    "last_obs": "2029-01-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "点阵图中位数（年末）",
    "unit": "%",
-   "freq": "年",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "年"
   },
   "FEDTARMDLR": {
    "ok": false,
    "first_obs": "2012-01-25",
    "last_obs": "2026-09-16",
-   "fetched_at": "2026-10-22T00:53:22Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
    "last_ok_at": "2026-10-21T00:55:17Z",
    "name": "点阵图中位数（长期）",
    "unit": "%",
    "freq": "不定期",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "error": "HTTP 403"
   },
   "FYFSGDA188S": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1929-01-01",
    "last_obs": "2025-01-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "联邦盈余/赤字占 GDP（财年）",
    "unit": "%",
-   "freq": "年",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "年"
   },
   "FYOIGDA188S": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1940-01-01",
    "last_obs": "2025-01-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "联邦利息支出占 GDP（财年）",
    "unit": "%",
-   "freq": "年",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "年"
   },
   "GACDFSA066MSFRBPHI": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1968-05-01",
    "last_obs": "2026-10-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "费城联储制造业：当前总体活动",
    "unit": "扩散指数",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "GACDISA066MSFRBNY": {
-   "ok": false,
+   "ok": true,
    "first_obs": "2001-07-01",
    "last_obs": "2026-10-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "纽约联储制造业：当前总体活动",
    "unit": "扩散指数",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "GDP": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1947-01-01",
    "last_obs": "2026-04-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "名义 GDP",
    "unit": "十亿美元（年化）",
-   "freq": "季",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "季"
   },
   "GDPC1": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1947-01-01",
    "last_obs": "2026-04-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "实际 GDP",
    "unit": "十亿 2017 年美元（年化）",
-   "freq": "季",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "季"
   },
   "GDPNOW": {
-   "ok": false,
+   "ok": true,
    "first_obs": "2011-07-01",
    "last_obs": "2026-07-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "亚特兰大联储 GDPNow",
    "unit": "%（季环比年化）",
-   "freq": "不定期",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "不定期"
   },
   "GFDEGDQ188S": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1966-01-01",
    "last_obs": "2026-01-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "联邦债务占 GDP",
    "unit": "%",
-   "freq": "季",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "季"
   },
   "HOUST": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1959-01-01",
    "last_obs": "2026-09-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "新屋开工",
    "unit": "千套（年化）",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "HSN1F": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1963-01-01",
    "last_obs": "2026-08-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "新屋销售",
    "unit": "千套（年化）",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "IA001176M": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1959-01-01",
    "last_obs": "2026-08-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "PCE 除食品、能源、住房价格指数",
    "unit": "指数",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "IA001260M": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1959-01-01",
    "last_obs": "2026-08-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "PCE 服务除能源、住房价格指数（超级核心）",
    "unit": "指数",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "ICSA": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1967-01-07",
-   "last_obs": "2026-10-10",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "last_obs": "2026-10-17",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "首次申请失业金人数",
    "unit": "人",
-   "freq": "周",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "周"
   },
   "INDPRO": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1919-01-01",
    "last_obs": "2026-09-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "工业产出指数",
    "unit": "指数 2017=100",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "IOER": {
-   "ok": false,
+   "ok": true,
    "first_obs": "2008-10-09",
    "last_obs": "2021-07-28",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "超额准备金利率 IOER（2021-07 前）",
    "unit": "%",
-   "freq": "日",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "日"
   },
   "IORB": {
-   "ok": false,
+   "ok": true,
    "first_obs": "2021-07-29",
-   "last_obs": "2026-10-21",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "last_obs": "2026-10-23",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "准备金利率 IORB",
    "unit": "%",
-   "freq": "日",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "日"
   },
   "JTSJOL": {
-   "ok": false,
+   "ok": true,
    "first_obs": "2000-12-01",
    "last_obs": "2026-08-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "职位空缺数（JOLTS）",
    "unit": "千个",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "JTSQUR": {
-   "ok": false,
+   "ok": true,
    "first_obs": "2000-12-01",
    "last_obs": "2026-08-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "离职率（JOLTS）",
    "unit": "%",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "MEDCPIM158SFRBCLE": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1983-01-01",
    "last_obs": "2026-09-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "克利夫兰联储中位数 CPI 环比年化",
    "unit": "%",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "MEDCPIM159SFRBCLE": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1983-12-01",
    "last_obs": "2026-09-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "克利夫兰联储中位数 CPI 同比",
    "unit": "%",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "MICH": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1978-01-01",
    "last_obs": "2026-08-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "密歇根大学一年期通胀预期",
    "unit": "%",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "MORTGAGE30US": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1971-04-02",
-   "last_obs": "2026-10-15",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "last_obs": "2026-10-22",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "30 年期固定房贷利率",
    "unit": "%",
-   "freq": "周",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "周"
   },
   "MSACSR": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1963-01-01",
    "last_obs": "2026-08-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "新屋库存月数",
    "unit": "月",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "MTSDS133FMS": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1980-10-01",
    "last_obs": "2026-09-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "联邦财政盈余/赤字（月）",
    "unit": "百万美元",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "NEWORDER": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1992-02-01",
    "last_obs": "2026-08-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "核心资本品新订单（非国防除飞机）",
    "unit": "百万美元",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "NFCI": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1971-01-08",
-   "last_obs": "2026-10-09",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "last_obs": "2026-10-16",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "芝加哥联储金融状况指数",
    "unit": "指数",
-   "freq": "周",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "周"
   },
   "PAYEMS": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1939-01-01",
    "last_obs": "2026-09-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "非农就业人数",
    "unit": "千人",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "PB0000031Q225SBEA": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1947-04-01",
    "last_obs": "2026-04-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "对私人国内购买者的实际最终销售（核心 GDP）",
    "unit": "%（季环比年化）",
-   "freq": "季",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "季"
   },
   "PCE": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1959-01-01",
    "last_obs": "2026-08-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "个人消费支出（名义）",
    "unit": "十亿美元（年化）",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "PCEC96": {
-   "ok": false,
+   "ok": true,
    "first_obs": "2007-01-01",
    "last_obs": "2026-08-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "实际个人消费支出",
    "unit": "十亿 2017 年美元（年化）",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "PCEPI": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1959-01-01",
    "last_obs": "2026-08-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "PCE 价格指数",
    "unit": "指数 2017=100",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "PCEPILFE": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1959-01-01",
    "last_obs": "2026-08-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "核心 PCE 价格指数",
    "unit": "指数 2017=100",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "PERMIT": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1960-01-01",
    "last_obs": "2026-09-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "建筑许可",
    "unit": "千套（年化）",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "PSAVERT": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1959-01-01",
    "last_obs": "2026-08-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "个人储蓄率",
    "unit": "%",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "REVOLSL": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1968-01-01",
    "last_obs": "2026-08-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "循环消费信贷",
    "unit": "十亿美元",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "RRPONTSYD": {
-   "ok": false,
+   "ok": true,
    "first_obs": "2003-02-07",
-   "last_obs": "2026-10-20",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "last_obs": "2026-10-22",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "隔夜逆回购（ON RRP）",
    "unit": "十亿美元",
-   "freq": "日",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "日"
   },
   "RSAFS": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1992-01-01",
    "last_obs": "2026-09-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "零售和食品服务销售",
    "unit": "百万美元",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "RSBMGESD": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1992-01-01",
    "last_obs": "2026-09-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "零售：建材园艺",
    "unit": "百万美元",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "RSFSDP": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1992-01-01",
    "last_obs": "2026-09-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "零售：餐饮服务",
    "unit": "百万美元",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "RSGASS": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1992-01-01",
    "last_obs": "2026-09-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "零售：加油站",
    "unit": "百万美元",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "RSMVPD": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1992-01-01",
    "last_obs": "2026-09-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "零售：汽车及零部件经销商",
    "unit": "百万美元",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "SAHMREALTIME": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1959-12-01",
    "last_obs": "2026-09-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "Sahm 规则衰退指标（实时）",
    "unit": "百分点",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "SOFR": {
-   "ok": false,
+   "ok": true,
    "first_obs": "2018-04-03",
-   "last_obs": "2026-10-19",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "last_obs": "2026-10-21",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "SOFR",
    "unit": "%",
-   "freq": "日",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "日"
   },
   "T10Y2Y": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1976-06-01",
-   "last_obs": "2026-10-20",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "last_obs": "2026-10-22",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "10 年减 2 年利差",
    "unit": "百分点",
-   "freq": "日",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "日"
   },
   "T10Y3M": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1982-01-04",
-   "last_obs": "2026-10-20",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "last_obs": "2026-10-22",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "10 年减 3 个月利差",
    "unit": "百分点",
-   "freq": "日",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "日"
   },
   "T10YIE": {
-   "ok": false,
+   "ok": true,
    "first_obs": "2003-01-02",
-   "last_obs": "2026-10-20",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "last_obs": "2026-10-22",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "10 年盈亏平衡通胀率",
    "unit": "%",
-   "freq": "日",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "日"
   },
   "T5YIFR": {
-   "ok": false,
+   "ok": true,
    "first_obs": "2003-01-02",
-   "last_obs": "2026-10-20",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "last_obs": "2026-10-22",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "5 年后 5 年远期通胀预期",
    "unit": "%",
-   "freq": "日",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "日"
   },
   "TOTALSL": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1943-01-01",
    "last_obs": "2026-08-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "消费者信贷总额",
    "unit": "十亿美元",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "TRMMEANCPIM158SFRBCLE": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1983-01-01",
    "last_obs": "2026-09-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "克利夫兰联储 16% 截尾均值 CPI 环比年化",
    "unit": "%",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "TRMMEANCPIM159SFRBCLE": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1983-12-01",
    "last_obs": "2026-09-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "克利夫兰联储 16% 截尾均值 CPI 同比",
    "unit": "%",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "U6RATE": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1994-01-01",
    "last_obs": "2026-09-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "U-6 失业率",
    "unit": "%",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "UNEMPLOY": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1948-01-01",
    "last_obs": "2026-09-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "失业人数",
    "unit": "千人",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "UNRATE": {
-   "ok": false,
+   "ok": true,
    "first_obs": "1948-01-01",
    "last_obs": "2026-09-01",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "失业率",
    "unit": "%",
-   "freq": "月",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "月"
   },
   "WALCL": {
-   "ok": false,
+   "ok": true,
    "first_obs": "2002-12-18",
-   "last_obs": "2026-10-14",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "last_obs": "2026-10-21",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "美联储总资产",
    "unit": "百万美元",
-   "freq": "周三",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "周三"
   },
   "WCURCIR": {
-   "ok": false,
+   "ok": true,
    "first_obs": "2002-12-18",
-   "last_obs": "2026-10-14",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "last_obs": "2026-10-21",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "流通中货币",
    "unit": "百万美元",
-   "freq": "周",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "周"
   },
   "WDTGAL": {
-   "ok": false,
+   "ok": true,
    "first_obs": "2002-12-18",
-   "last_obs": "2026-10-14",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "last_obs": "2026-10-21",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "TGA（周三）",
    "unit": "百万美元",
-   "freq": "周三",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "周三"
   },
   "WRBWFRBL": {
-   "ok": false,
+   "ok": true,
    "first_obs": "2002-12-18",
-   "last_obs": "2026-10-14",
-   "fetched_at": "2026-10-22T00:53:22Z",
-   "last_ok_at": "2026-10-21T00:55:17Z",
+   "last_obs": "2026-10-21",
+   "fetched_at": "2026-10-23T00:55:55Z",
+   "last_ok_at": "2026-10-23T00:55:55Z",
    "name": "准备金余额（周三）",
    "unit": "百万美元",
-   "freq": "周三",
-   "error": "返回的不是 CSV：'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n    <title>Site Maintenance | St. Louis Fed<</title>\\n    <link href=\"https://fon'"
+   "freq": "周三"
   }
  },
  "effr_expect_error": null,
@@ -1074,6 +978,6 @@
  "nowcast_error": null,
  "zori_error": null,
  "dxy_error": null,
- "dxy_last": "2026-10-21",
+ "dxy_last": "2026-10-22",
  "dxy_source": "Yahoo Finance DX-Y.NYB"
 }
