@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-22T08:20:53+08:00",
+ "generated_at": "2026-10-23T08:17:57+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -98,7 +98,7 @@
    "note": "美东盘后",
    "previous": "$2.87",
    "consensus": "$2.94",
-   "priority": "中"
+   "priority": "高"
   },
   {
    "date": "2026-10-28",
@@ -109,7 +109,7 @@
    "note": "美东盘后",
    "previous": "$4.13",
    "consensus": "$4.71",
-   "priority": "中"
+   "priority": "高"
   },
   {
    "date": "2026-10-28",
@@ -141,7 +141,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$1.95",
-   "consensus": "$2.02",
+   "consensus": "$2.01",
    "priority": "中"
   },
   {
@@ -194,7 +194,7 @@
    "category": "财报",
    "title": "超微电脑（SMCI）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "原名：Super Micro Computer, Inc.",
+   "note": "美东盘后。原名：Super Micro Computer, Inc.",
    "previous": "$0.26",
    "consensus": "$0.94",
    "priority": "高"

@@ -663,6 +663,7 @@ LRCX,revenue,2025-09-28,5324173000.0,RevenueFromContractWithCustomerExcludingAss
 LRCX,revenue,2025-12-28,5344791000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 LRCX,revenue,2026-03-29,5841488000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 LRCX,revenue,2026-06-28,6722238000.0,RevenueFromContractWithCustomerExcludingAssessedTax
+LRCX,revenue,2026-09-27,8219418000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 MCHP,cogs,2017-09-30,398000000.0,CostOfRevenue
 MCHP,cogs,2017-12-31,387100000.0,CostOfRevenue
 MCHP,cogs,2018-03-31,387200000.0,CostOfRevenue
@@ -825,6 +826,7 @@ META,capex,2025-09-30,18829000000.0,PaymentsToAcquirePropertyPlantAndEquipment
 META,capex,2025-12-31,21383000000.0,PaymentsToAcquirePropertyPlantAndEquipment
 META,capex,2026-03-31,18997000000.0,PaymentsToAcquirePropertyPlantAndEquipment
 META,capex,2026-06-30,30116000000.0,PaymentsToAcquirePropertyPlantAndEquipment
+META,capex,2026-09-30,33942000000.0,PaymentsToAcquirePropertyPlantAndEquipment
 MSFT,capex,2015-03-31,1391000000.0,PaymentsToAcquirePropertyPlantAndEquipment
 MSFT,capex,2015-06-30,1781000000.0,PaymentsToAcquirePropertyPlantAndEquipment
 MSFT,capex,2015-09-30,1356000000.0,PaymentsToAcquirePropertyPlantAndEquipment
