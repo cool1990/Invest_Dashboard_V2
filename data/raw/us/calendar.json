@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-22T08:20:53+08:00",
+ "generated_at": "2026-10-23T08:17:57+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -211,94 +211,6 @@
    "priority": "高"
   },
   {
-   "date": "2026-10-22",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Lockheed Martin Corporation（LMT）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$6.95",
-   "consensus": "$7.49",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-22",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Newmont Corporation（NEM）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "$1.71",
-   "consensus": "$1.94",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-22",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Procter & Gamble Company (The)（PG）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前。日期不一样：Nasdaq earnings calendar写的是 2026-10-22，Nasdaq earnings calendar写的是 2026-10-27，Nasdaq earnings calendar写的是 2026-10-27，Nasdaq earnings calendar写的是 2026-11-05",
-   "previous": "$1.99",
-   "consensus": "$1.89",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-22",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Spotify Technology S.A.（SPOT）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$3.83",
-   "consensus": "$3.10",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-22",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Union Pacific Corporation（UNP）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$3.08",
-   "consensus": "$3.47",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-22",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Valero Energy Corporation（VLO）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$3.66",
-   "consensus": "$21.28",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-22",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Western Digital Corporation（WDC）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "$1.64",
-   "consensus": "$3.99",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-22",
-   "time_bj": "22:00",
-   "category": "宏观",
-   "title": "Experimental Research and Development Economic Statistics, U.S. and States, 2024",
-   "url": "https://www.bea.gov/news/schedule",
-   "note": "美东 10:00 AM。原名：Experimental Research and Development Economic Statistics, U.S. and States, 2024",
-   "previous": "",
-   "consensus": "",
-   "priority": "中"
-  },
-  {
    "date": "2026-10-23",
    "time_bj": "",
    "category": "财报",
@@ -308,17 +220,6 @@
    "previous": "$4.14",
    "consensus": "$4.47",
    "priority": "中"
-  },
-  {
-   "date": "2026-10-23",
-   "time_bj": "04:30",
-   "category": "宏观",
-   "title": "美联储 H.4.1（资产负债表）",
-   "url": "https://www.federalreserve.gov/releases/h41/",
-   "note": "页面写明每周四、通常美东 16:30；遇联邦假日顺延。这一条按周四生成，没有另核假日表",
-   "previous": "",
-   "consensus": "",
-   "priority": "高"
   },
   {
    "date": "2026-10-25",
@@ -357,22 +258,22 @@
    "date": "2026-10-27",
    "time_bj": "",
    "category": "财报",
-   "title": "Corning Incorporated（GLW）财报",
+   "title": "Coca-Cola Company (The)（KO）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$0.67",
-   "consensus": "$0.88",
+   "note": "美东盘前。日期不一样：Nasdaq earnings calendar写的是 2026-10-27，Nasdaq earnings calendar写的是 2026-10-27，Nasdaq earnings calendar写的是 2026-11-05",
+   "previous": "$0.82",
+   "consensus": "$0.87",
    "priority": "中"
   },
   {
    "date": "2026-10-27",
    "time_bj": "",
    "category": "财报",
-   "title": "HCA Healthcare, Inc.（HCA）财报",
+   "title": "Corning Incorporated（GLW）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
-   "previous": "$6.96",
-   "consensus": "$6.75",
+   "previous": "$0.67",
+   "consensus": "$0.88",
    "priority": "中"
   },
   {
@@ -403,7 +304,7 @@
    "category": "财报",
    "title": "Robinhood Markets, Inc.（HOOD）财报",
    "url": "",
-   "note": "笔记 盈利跟踪_2026-10-20.md 的未来 7 天财报",
+   "note": "笔记 盈利跟踪_2026-10-21.md 的未来 7 天财报",
    "previous": "",
    "consensus": "",
    "priority": "高"
@@ -428,17 +329,6 @@
    "note": "美东盘后",
    "previous": "$2.51",
    "consensus": "$7.17",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-27",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Southern Copper Corporation（SCCO）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "",
-   "previous": "$1.35",
-   "consensus": "$2.04",
    "priority": "中"
   },
   {
@@ -472,7 +362,7 @@
    "note": "美东盘后",
    "previous": "$2.87",
    "consensus": "$2.94",
-   "priority": "中"
+   "priority": "高"
   },
   {
    "date": "2026-10-28",
@@ -515,7 +405,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$0.49",
-   "consensus": "$0.59",
+   "consensus": "$0.60",
    "priority": "中"
   },
   {
@@ -544,12 +434,23 @@
    "date": "2026-10-28",
    "time_bj": "",
    "category": "财报",
+   "title": "GSK plc（GSK）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$1.48",
+   "consensus": "$1.40",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-28",
+   "time_bj": "",
+   "category": "财报",
    "title": "Microsoft Corporation（MSFT）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$4.13",
    "consensus": "$4.71",
-   "priority": "中"
+   "priority": "高"
   },
   {
    "date": "2026-10-28",
@@ -647,7 +548,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$1.95",
-   "consensus": "$2.02",
+   "consensus": "$2.01",
    "priority": "中"
   },
   {
@@ -878,7 +779,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$0.85",
-   "consensus": "$2.43",
+   "consensus": "$2.57",
    "priority": "中"
   },
   {
@@ -900,18 +801,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$1.88",
-   "consensus": "$3.93",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-30",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Sanofi（SNY）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$1.70",
-   "consensus": "$1.63",
+   "consensus": "$3.96",
    "priority": "中"
   },
   {
@@ -977,7 +867,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$2.47",
-   "consensus": "$2.84",
+   "consensus": "$2.85",
    "priority": "中"
   },
   {
@@ -1016,6 +906,17 @@
   {
    "date": "2026-11-03",
    "time_bj": "",
+   "category": "宏观",
+   "title": "JOLTS 发布",
+   "url": "https://fred.stlouisfed.org/release?rid=192",
+   "note": "JOLTS",
+   "previous": "",
+   "consensus": "",
+   "priority": "高"
+  },
+  {
+   "date": "2026-11-03",
+   "time_bj": "",
    "category": "财报",
    "title": "Amgen Inc.（AMGN）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
@@ -1043,7 +944,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$3.98",
-   "consensus": "$4.48",
+   "consensus": "$4.47",
    "priority": "中"
   },
   {
@@ -1118,7 +1019,7 @@
    "category": "财报",
    "title": "超微电脑（SMCI）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "原名：Super Micro Computer, Inc.",
+   "note": "美东盘后。原名：Super Micro Computer, Inc.",
    "previous": "$0.26",
    "consensus": "$0.94",
    "priority": "高"
@@ -1153,7 +1054,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "",
    "previous": "$0.23",
-   "consensus": "$0.27",
+   "consensus": "$0.26",
    "priority": "中"
   },
   {
@@ -1338,7 +1239,7 @@
    "category": "财报",
    "title": "Parker-Hannifin Corporation（PH）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "",
+   "note": "美东盘前",
    "previous": "$7.22",
    "consensus": "$8.23",
    "priority": "中"
@@ -1352,6 +1253,17 @@
    "note": "美东盘前",
    "previous": "$0.35",
    "consensus": "$0.38",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-06",
+   "time_bj": "",
+   "category": "宏观",
+   "title": "Employment Situation 发布",
+   "url": "https://fred.stlouisfed.org/release?rid=50",
+   "note": "Employment Situation",
+   "previous": "",
+   "consensus": "",
    "priority": "中"
   },
   {
@@ -1411,6 +1323,17 @@
   },
   {
    "date": "2026-11-10",
+   "time_bj": "",
+   "category": "宏观",
+   "title": "CPI 发布",
+   "url": "https://fred.stlouisfed.org/release?rid=10",
+   "note": "CPI",
+   "previous": "",
+   "consensus": "",
+   "priority": "高"
+  },
+  {
+   "date": "2026-11-10",
    "time_bj": "13:30",
    "category": "半导体",
    "title": "台积电10月营收",
@@ -1449,6 +1372,17 @@
    "title": "应用材料 FY26 Q4 业绩（官方标注预计）",
    "url": "https://investors.appliedmaterials.com/events",
    "note": "AMAT IR Fiscal Calendar 2026：Q4 季末 October 25，Earnings Call 写作 Projected - November 12，尚未正式确认。美东日期，未写钟点",
+   "previous": "",
+   "consensus": "",
+   "priority": "高"
+  },
+  {
+   "date": "2026-11-13",
+   "time_bj": "",
+   "category": "宏观",
+   "title": "PPI 发布",
+   "url": "https://fred.stlouisfed.org/release?rid=46",
+   "note": "PPI",
    "previous": "",
    "consensus": "",
    "priority": "高"
@@ -1597,6 +1531,17 @@
    "priority": "低"
   },
   {
+   "date": "2026-12-01",
+   "time_bj": "",
+   "category": "宏观",
+   "title": "JOLTS 发布",
+   "url": "https://fred.stlouisfed.org/release?rid=192",
+   "note": "JOLTS",
+   "previous": "",
+   "consensus": "",
+   "priority": "高"
+  },
+  {
    "date": "2026-12-02",
    "time_bj": "21:30",
    "category": "宏观",
@@ -1606,6 +1551,17 @@
    "previous": "",
    "consensus": "",
    "priority": "高"
+  },
+  {
+   "date": "2026-12-04",
+   "time_bj": "",
+   "category": "宏观",
+   "title": "Employment Situation 发布",
+   "url": "https://fred.stlouisfed.org/release?rid=50",
+   "note": "Employment Situation",
+   "previous": "",
+   "consensus": "",
+   "priority": "中"
   },
   {
    "date": "2026-12-04",
