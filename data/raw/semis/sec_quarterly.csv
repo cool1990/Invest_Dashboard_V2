@@ -1221,6 +1221,7 @@ TXN,cogs,2025-09-30,2019000000.0,CostOfGoodsAndServicesSold
 TXN,cogs,2025-12-31,1951000000.0,CostOfGoodsAndServicesSold
 TXN,cogs,2026-03-31,2026000000.0,CostOfGoodsAndServicesSold
 TXN,cogs,2026-06-30,2111000000.0,CostOfGoodsAndServicesSold
+TXN,cogs,2026-09-30,2168000000.0,CostOfGoodsAndServicesSold
 TXN,inventory,2015-03-31,1844000000.0,InventoryNet
 TXN,inventory,2015-06-30,1885000000.0,InventoryNet
 TXN,inventory,2015-09-30,1771000000.0,InventoryNet
@@ -1267,6 +1268,7 @@ TXN,inventory,2025-09-30,4829000000.0,InventoryNet
 TXN,inventory,2025-12-31,4804000000.0,InventoryNet
 TXN,inventory,2026-03-31,4695000000.0,InventoryNet
 TXN,inventory,2026-06-30,4605000000.0,InventoryNet
+TXN,inventory,2026-09-30,4672000000.0,InventoryNet
 TXN,revenue,2017-03-31,3402000000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 TXN,revenue,2017-06-30,3693000000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 TXN,revenue,2017-09-30,4116000000.0,RevenueFromContractWithCustomerExcludingAssessedTax
@@ -1305,3 +1307,4 @@ TXN,revenue,2025-09-30,4742000000.0,RevenueFromContractWithCustomerExcludingAsse
 TXN,revenue,2025-12-31,4423000000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 TXN,revenue,2026-03-31,4825000000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 TXN,revenue,2026-06-30,5463000000.0,RevenueFromContractWithCustomerExcludingAssessedTax
+TXN,revenue,2026-09-30,6055000000.0,RevenueFromContractWithCustomerExcludingAssessedTax
