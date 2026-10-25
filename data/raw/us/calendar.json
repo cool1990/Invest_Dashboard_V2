@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-24T08:10:47+08:00",
+ "generated_at": "2026-10-25T07:54:11+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -1584,6 +1584,17 @@
    "previous": "",
    "consensus": "",
    "priority": "中"
+  },
+  {
+   "date": "2026-12-09",
+   "time_bj": "",
+   "category": "大事",
+   "title": "FOMC 会议（含经济预测摘要）",
+   "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+   "note": "会议日落在北京时间同一天；声明通常在美东下午，具体钟点以当天新闻稿为准",
+   "previous": "",
+   "consensus": "",
+   "priority": "高"
   }
  ]
 }
