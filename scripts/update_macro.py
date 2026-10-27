@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 from pipeline import fred, statelog  # noqa: E402
-from pipeline.macro import consensus, dxy, effr_expect, zori  # noqa: E402
+from pipeline.macro import consensus, dxy, effr_expect, treasury, zori  # noqa: E402
 from pipeline.macro.build import build_dashboard  # noqa: E402
 from pipeline.macro.indicators import FRED  # noqa: E402
 
@@ -64,8 +64,10 @@ def main() -> int:
         nowcast = consensus.read_csv(OUT / "nowcast.csv")
         zori_series, zori_err = zori.read(ZORI), old.get("zori_error")
         dxy_series, dxy_err = dxy.read(DXY), old.get("dxy_error")
+        treasury_filled, treasury_err = old.get("treasury_filled") or {}, old.get("treasury_error")
     else:
         series_status = fred.fetch_all(ids, RAW, old.get("series"))
+        treasury_filled, treasury_err = treasury.update(RAW)
         expect, expect_err = effr_expect.update(OUT / "effr_expectations.csv")
         _, cal_err = consensus.update_events(OUT / "consensus.csv")
         nowcast, nc_err = consensus.update_nowcast(OUT / "nowcast.csv")
@@ -93,7 +95,9 @@ def main() -> int:
               "series": dict(sorted(series_status.items())),
               "effr_expect_error": expect_err, "calendar_error": cal_err, "nowcast_error": nc_err,
               "zori_error": zori_err, "dxy_error": dxy_err, "dxy_last": dxy_last,
-              "dxy_source": "Yahoo Finance DX-Y.NYB"}
+              "dxy_source": "Yahoo Finance DX-Y.NYB",
+              "treasury_error": treasury_err, "treasury_filled": treasury_filled,
+              "treasury_source": "U.S. Treasury daily yield curve"}
     dash["status"] = {
         "updated_at": status["updated_at"],
         "failed": sorted(k for k, v in series_status.items() if not v.get("ok", True) or not raw.get(k)),
@@ -106,6 +110,9 @@ def main() -> int:
         "dxy_error": dxy_err,
         "dxy_last": dxy_last,
         "dxy_source": "Yahoo Finance DX-Y.NYB",
+        "treasury_error": treasury_err,
+        "treasury_filled": treasury_filled,
+        "treasury_source": "U.S. Treasury daily yield curve",
         "calendar_events": len(events),
     }
 
@@ -119,10 +126,12 @@ def main() -> int:
     print(f"序列 {ok}/{len(ids)} 有数据；图 {len(dash['charts'])} 张；失败：{', '.join(dash['status']['failed']) or '无'}")
     for label, err in (("市场隐含 EFFR", expect_err), ("经济日历预期", cal_err),
                        ("克利夫兰联储 Nowcast", nc_err), ("Zillow ZORI", zori_err),
-                       ("美元指数 DXY", dxy_err)):
+                       ("美元指数 DXY", dxy_err), ("财政部收益率曲线", treasury_err)):
         if err:
             print(f"{label}读取失败：{err}")
     print(f"日历预期累计 {len(events)} 条；Nowcast {len(nowcast)} 条")
+    if treasury_filled:
+        print("财政部补丁：" + "，".join(f"{k} → {v}" for k, v in sorted(treasury_filled.items())))
     # 一条数据都没有说明网络整体不通，让工作流失败以便注意到
     return 0 if ok else 1
 
