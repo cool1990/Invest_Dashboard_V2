@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-27T09:02:19+08:00",
+ "generated_at": "2026-10-28T08:51:52+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -222,105 +222,6 @@
    "priority": "中"
   },
   {
-   "date": "2026-10-27",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Coca-Cola Company (The)（KO）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前。日期不一样：Nasdaq earnings calendar写的是 2026-10-27，Nasdaq earnings calendar写的是 2026-10-27，Nasdaq earnings calendar写的是 2026-11-05",
-   "previous": "$0.82",
-   "consensus": "$0.87",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-27",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Corning Incorporated（GLW）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$0.67",
-   "consensus": "$0.89",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-27",
-   "time_bj": "",
-   "category": "财报",
-   "title": "HCA Healthcare, Inc.（HCA）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$6.96",
-   "consensus": "$6.74",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-27",
-   "time_bj": "",
-   "category": "财报",
-   "title": "HSBC Holdings plc（HSBC）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "",
-   "previous": "$1.80",
-   "consensus": "$2.13",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-27",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Novartis AG（NVS）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$2.25",
-   "consensus": "$2.25",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-27",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Robinhood Markets, Inc.（HOOD）财报",
-   "url": "",
-   "note": "笔记 盈利跟踪_2026-10-21.md 的未来 7 天财报",
-   "previous": "",
-   "consensus": "",
-   "priority": "高"
-  },
-  {
-   "date": "2026-10-27",
-   "time_bj": "",
-   "category": "财报",
-   "title": "S&P Global Inc.（SPGI）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$4.73",
-   "consensus": "$4.43",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-27",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Seagate Technology Holdings PLC（STX）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "$2.51",
-   "consensus": "$7.17",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-27",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Visa Inc.（V）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "$2.98",
-   "consensus": "$3.43",
-   "priority": "中"
-  },
-  {
    "date": "2026-10-28",
    "time_bj": "",
    "category": "大事",
@@ -383,7 +284,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$0.49",
-   "consensus": "$0.60",
+   "consensus": "$0.62",
    "priority": "中"
   },
   {
@@ -676,6 +577,17 @@
    "date": "2026-10-29",
    "time_bj": "",
    "category": "财报",
+   "title": "Trane Technologies plc（TT）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$3.88",
+   "consensus": "$4.74",
+   "priority": "中"
+  },
+  {
+   "date": "2026-10-29",
+   "time_bj": "",
+   "category": "财报",
    "title": "英特尔（INTC）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后。原名：Intel Corporation",
@@ -735,7 +647,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$1.86",
-   "consensus": "$3.76",
+   "consensus": "$3.74",
    "priority": "中"
   },
   {
@@ -845,7 +757,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$1.85",
-   "consensus": "$2",
+   "consensus": "$1.98",
    "priority": "中"
   },
   {
@@ -856,7 +768,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$2.47",
-   "consensus": "$2.86",
+   "consensus": "$2.87",
    "priority": "中"
   },
   {
@@ -867,7 +779,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$0.18",
-   "consensus": "$0.34",
+   "consensus": "$0.33",
    "priority": "中"
   },
   {
@@ -933,7 +845,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$3.98",
-   "consensus": "$4.47",
+   "consensus": "$4.48",
    "priority": "中"
   },
   {
@@ -945,17 +857,6 @@
    "note": "美东盘前",
    "previous": "$3.07",
    "consensus": "$3.54",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-03",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Itau Unibanco Banco Holding SA（ITUB）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "$0.18",
-   "consensus": "$0.22",
    "priority": "中"
   },
   {
@@ -1050,6 +951,17 @@
    "date": "2026-11-04",
    "time_bj": "",
    "category": "财报",
+   "title": "Datadog, Inc.（DDOG）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$0.11",
+   "consensus": "$0.18",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-04",
+   "time_bj": "",
+   "category": "财报",
    "title": "Equinor ASA（EQNR）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "",
@@ -1065,7 +977,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$3.22",
-   "consensus": "$3.37",
+   "consensus": "$3.36",
    "priority": "中"
   },
   {
@@ -1234,6 +1146,17 @@
    "priority": "中"
   },
   {
+   "date": "2026-11-05",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Southern Company (The)（SO）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$1.60",
+   "consensus": "$1.71",
+   "priority": "中"
+  },
+  {
    "date": "2026-11-06",
    "time_bj": "",
    "category": "宏观",
@@ -1274,7 +1197,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$0.33",
-   "consensus": "$0.38",
+   "consensus": "$0.37",
    "priority": "中"
   },
   {
@@ -1329,7 +1252,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$0.82",
-   "consensus": "$1.21",
+   "consensus": "$1.23",
    "priority": "中"
   },
   {
@@ -1383,8 +1306,8 @@
    "title": "应用材料 FY26 Q4 业绩（官方标注预计）",
    "url": "https://investors.appliedmaterials.com/events",
    "note": "AMAT IR Fiscal Calendar 2026：Q4 季末 October 25，Earnings Call 写作 Projected - November 12，尚未正式确认。美东日期，未写钟点",
-   "previous": "",
-   "consensus": "",
+   "previous": "$2.17",
+   "consensus": "$4.06",
    "priority": "高"
   },
   {
