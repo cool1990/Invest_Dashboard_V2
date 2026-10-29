@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-28T08:51:52+08:00",
+ "generated_at": "2026-10-29T09:28:03+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -93,39 +93,6 @@
    "date": "2026-10-28",
    "time_bj": "",
    "category": "财报",
-   "title": "Alphabet Inc.（GOOGL）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "$2.87",
-   "consensus": "$2.94",
-   "priority": "高"
-  },
-  {
-   "date": "2026-10-28",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Microsoft Corporation（MSFT）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "$4.13",
-   "consensus": "$4.71",
-   "priority": "高"
-  },
-  {
-   "date": "2026-10-28",
-   "time_bj": "",
-   "category": "财报",
-   "title": "科磊（KLAC）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后。原名：KLA Corporation",
-   "previous": "$0.88",
-   "consensus": "$1.18",
-   "priority": "高"
-  },
-  {
-   "date": "2026-10-28",
-   "time_bj": "",
-   "category": "财报",
    "title": "联电 3Q26 业绩与法说会",
    "url": "https://www.umc.com/en/IR_Event/ir_events",
    "note": "UMC IR：3Q 2026 Earnings Release & Investor Conference Call 10/28/2026，官方标注 Subject to change；会议细节提前15天公布",
@@ -163,7 +130,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后。原名：Sandisk Corporation",
    "previous": "$0.90",
-   "consensus": "$45.22",
+   "consensus": "$46.19",
    "priority": "高"
   },
   {
