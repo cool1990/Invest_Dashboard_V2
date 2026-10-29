@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-28T08:51:52+08:00",
+ "generated_at": "2026-10-29T09:28:03+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -224,182 +224,6 @@
   {
    "date": "2026-10-28",
    "time_bj": "",
-   "category": "大事",
-   "title": "FOMC 会议",
-   "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
-   "note": "会议日落在北京时间同一天；声明通常在美东下午，具体钟点以当天新闻稿为准",
-   "previous": "",
-   "consensus": "",
-   "priority": "高"
-  },
-  {
-   "date": "2026-10-28",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Alphabet Inc.（GOOGL）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "$2.87",
-   "consensus": "$2.94",
-   "priority": "高"
-  },
-  {
-   "date": "2026-10-28",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Alphabet Inc.（GOOG）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "$2.87",
-   "consensus": "$2.94",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-28",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Amphenol Corporation（APH）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$0.47",
-   "consensus": "$0.73",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-28",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Automatic Data Processing, Inc.（ADP）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$2.49",
-   "consensus": "$2.78",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-28",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Banco Bilbao Vizcaya Argentaria S.A.（BBVA）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "$0.49",
-   "consensus": "$0.62",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-28",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Banco Santander, S.A.（SAN）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$0.23",
-   "consensus": "$0.26",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-28",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Fortinet, Inc.（FTNT）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "$0.65",
-   "consensus": "$0.77",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-28",
-   "time_bj": "",
-   "category": "财报",
-   "title": "GE Vernova Inc.（GEV）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$1.64",
-   "consensus": "$4.03",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-28",
-   "time_bj": "",
-   "category": "财报",
-   "title": "GSK plc（GSK）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$1.48",
-   "consensus": "$1.40",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-28",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Microsoft Corporation（MSFT）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "$4.13",
-   "consensus": "$4.71",
-   "priority": "高"
-  },
-  {
-   "date": "2026-10-28",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Phillips 66（PSX）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$2.52",
-   "consensus": "$11.97",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-28",
-   "time_bj": "",
-   "category": "财报",
-   "title": "ServiceNow, Inc.（NOW）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "$0.59",
-   "consensus": "$0.56",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-28",
-   "time_bj": "",
-   "category": "财报",
-   "title": "T-Mobile US, Inc.（TMUS）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "$2.59",
-   "consensus": "$2.86",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-28",
-   "time_bj": "",
-   "category": "财报",
-   "title": "UBS AG（UBS）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$0.76",
-   "consensus": "$0.91",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-28",
-   "time_bj": "",
-   "category": "财报",
-   "title": "科磊（KLAC）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后。原名：KLA Corporation",
-   "previous": "$0.88",
-   "consensus": "$1.18",
-   "priority": "高"
-  },
-  {
-   "date": "2026-10-28",
-   "time_bj": "",
    "category": "财报",
    "title": "联电 3Q26 业绩与法说会",
    "url": "https://www.umc.com/en/IR_Event/ir_events",
@@ -460,7 +284,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$1.63",
-   "consensus": "$1.28",
+   "consensus": "$1.21",
    "priority": "中"
   },
   {
@@ -603,7 +427,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后。原名：Sandisk Corporation",
    "previous": "$0.90",
-   "consensus": "$45.22",
+   "consensus": "$46.19",
    "priority": "高"
   },
   {
@@ -1320,6 +1144,39 @@
    "previous": "",
    "consensus": "",
    "priority": "高"
+  },
+  {
+   "date": "2026-11-13",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Mitsubishi UFJ Financial Group Inc（MUFG）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$0.44",
+   "consensus": "$0.45",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-13",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Mizuho Financial Group, Inc.（MFG）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$0.20",
+   "consensus": "$0.21",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-13",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Sumitomo Mitsui Financial Group Inc（SMFG）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$0.59",
+   "consensus": "$0.24",
+   "priority": "中"
   },
   {
    "date": "2026-11-13",
