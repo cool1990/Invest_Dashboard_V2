@@ -503,6 +503,7 @@ GOOGL,capex,2025-09-30,23953000000.0,PaymentsToAcquirePropertyPlantAndEquipment
 GOOGL,capex,2025-12-31,27851000000.0,PaymentsToAcquirePropertyPlantAndEquipment
 GOOGL,capex,2026-03-31,35674000000.0,PaymentsToAcquirePropertyPlantAndEquipment
 GOOGL,capex,2026-06-30,44924000000.0,PaymentsToAcquirePropertyPlantAndEquipment
+GOOGL,capex,2026-09-30,51355000000.0,PaymentsToAcquirePropertyPlantAndEquipment
 KLAC,cogs,2015-03-31,320282000.0,CostOfRevenue
 KLAC,cogs,2015-06-30,323267000.0,CostOfRevenue
 KLAC,cogs,2015-09-30,270244000.0,CostOfRevenue
@@ -549,6 +550,7 @@ KLAC,cogs,2025-09-30,1243070000.0,CostOfRevenue
 KLAC,cogs,2025-12-31,1271210000.0,CostOfRevenue
 KLAC,cogs,2026-03-31,1327672000.0,CostOfRevenue
 KLAC,cogs,2026-06-30,1413108000.0,CostOfRevenue
+KLAC,cogs,2026-09-30,1577791000.0,CostOfRevenue
 KLAC,revenue,2017-09-30,969581000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 KLAC,revenue,2017-12-31,975822000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 KLAC,revenue,2018-03-31,1021294000.0,RevenueFromContractWithCustomerExcludingAssessedTax
@@ -585,6 +587,7 @@ KLAC,revenue,2025-09-30,3209696000.0,RevenueFromContractWithCustomerExcludingAss
 KLAC,revenue,2025-12-31,3297146000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 KLAC,revenue,2026-03-31,3415078000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 KLAC,revenue,2026-06-30,3657556000.0,RevenueFromContractWithCustomerExcludingAssessedTax
+KLAC,revenue,2026-09-30,4136015000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 LRCX,cogs,2015-03-29,792731000.0,CostOfGoodsAndServicesSold
 LRCX,cogs,2015-06-28,839832000.0,CostOfGoodsAndServicesSold
 LRCX,cogs,2015-09-27,877680000.0,CostOfGoodsAndServicesSold
