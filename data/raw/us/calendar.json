@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T09:29:39+08:00",
+ "generated_at": "2026-10-31T09:18:51+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -252,72 +252,6 @@
    "note": "BoJ 日程：10月29-30日会议，展望报告要点在会后立即公布，全文在下一个工作日14:00 JST 公布。会议结束钟点不固定",
    "previous": "",
    "consensus": "",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-30",
-   "time_bj": "",
-   "category": "财报",
-   "title": "AbbVie Inc.（ABBV）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$1.86",
-   "consensus": "$3.74",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-30",
-   "time_bj": "",
-   "category": "财报",
-   "title": "AstraZeneca PLC（AZN）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$2.38",
-   "consensus": "$2.60",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-30",
-   "time_bj": "",
-   "category": "财报",
-   "title": "BP p.l.c.（BP）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$0.85",
-   "consensus": "$2.66",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-30",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Chevron Corporation（CVX）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$1.85",
-   "consensus": "$4.78",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-30",
-   "time_bj": "",
-   "category": "财报",
-   "title": "ExxonMobil Holdings Corporation（XOM）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$1.88",
-   "consensus": "$3.90",
-   "priority": "中"
-  },
-  {
-   "date": "2026-10-30",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Sanofi（SNY）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$1.70",
-   "consensus": "$1.63",
    "priority": "中"
   },
   {
@@ -689,7 +623,7 @@
    "category": "财报",
    "title": "Monster Beverage Corporation（MNST）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "",
+   "note": "美东盘后",
    "previous": "$0.28",
    "consensus": "$0.30",
    "priority": "中"
@@ -1174,6 +1108,17 @@
    "title": "美联储 H.4.1（资产负债表）",
    "url": "https://www.federalreserve.gov/releases/h41/",
    "note": "页面写明每周四、通常美东 16:30；遇联邦假日顺延。这一条按周四生成，没有另核假日表",
+   "previous": "",
+   "consensus": "",
+   "priority": "高"
+  },
+  {
+   "date": "2026-12-15",
+   "time_bj": "",
+   "category": "宏观",
+   "title": "PPI 发布",
+   "url": "https://fred.stlouisfed.org/release?rid=46",
+   "note": "PPI",
    "previous": "",
    "consensus": "",
    "priority": "高"
