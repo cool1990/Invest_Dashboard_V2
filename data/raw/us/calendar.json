@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:35:30+08:00",
+ "generated_at": "2026-11-02T09:09:53+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -656,7 +656,7 @@
    "category": "财报",
    "title": "Southern Company (The)（SO）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
+   "note": "美东盘前。日期不一样：Nasdaq earnings calendar写的是 2026-11-05，Nasdaq earnings calendar写的是 2026-11-17，Nasdaq earnings calendar写的是 2026-11-17",
    "previous": "$1.60",
    "consensus": "$1.71",
    "priority": "中"
@@ -891,6 +891,50 @@
    "previous": "",
    "consensus": "",
    "priority": "中"
+  },
+  {
+   "date": "2026-11-17",
+   "time_bj": "",
+   "category": "财报",
+   "title": "BHP Group Limited（BHP）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "N/A",
+   "consensus": "",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-17",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Medtronic plc（MDT）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$1.36",
+   "consensus": "$1.34",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-17",
+   "time_bj": "",
+   "category": "财报",
+   "title": "PDD Holdings Inc.（PDD）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$2.77",
+   "consensus": "$2.60",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-17",
+   "time_bj": "",
+   "category": "财报",
+   "title": "英伟达（NVDA）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后。原名：NVIDIA Corporation",
+   "previous": "$1.24",
+   "consensus": "$2.49",
+   "priority": "高"
   },
   {
    "date": "2026-11-18",
