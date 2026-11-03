@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-02T09:09:53+08:00",
+ "generated_at": "2026-11-03T11:14:51+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -288,50 +288,6 @@
    "priority": "高"
   },
   {
-   "date": "2026-11-02",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Apple Inc.（AAPL）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "$1.85",
-   "consensus": "$1.98",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-02",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Marriott International（MAR）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$2.47",
-   "consensus": "$2.87",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-02",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Palantir Technologies Inc.（PLTR）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "$0.18",
-   "consensus": "$0.33",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-02",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Vertex Pharmaceuticals Incorporated（VRTX）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "$4.22",
-   "consensus": "$4.36",
-   "priority": "中"
-  },
-  {
    "date": "2026-11-03",
    "time_bj": "",
    "category": "大事",
@@ -599,22 +555,11 @@
    "date": "2026-11-05",
    "time_bj": "",
    "category": "财报",
-   "title": "Cloudflare, Inc.（NET）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "($0.01)",
-   "consensus": "$0.02",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-05",
-   "time_bj": "",
-   "category": "财报",
    "title": "ConocoPhillips（COP）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$1.61",
-   "consensus": "$2.97",
+   "consensus": "$2.95",
    "priority": "中"
   },
   {
@@ -656,7 +601,7 @@
    "category": "财报",
    "title": "Southern Company (The)（SO）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前。日期不一样：Nasdaq earnings calendar写的是 2026-11-05，Nasdaq earnings calendar写的是 2026-11-17，Nasdaq earnings calendar写的是 2026-11-17",
+   "note": "美东盘前。日期不一样：Nasdaq earnings calendar写的是 2026-11-05，Nasdaq earnings calendar写的是 2026-11-17，Nasdaq earnings calendar写的是 2026-11-17，Nasdaq earnings calendar写的是 2026-11-18",
    "previous": "$1.60",
    "consensus": "$1.71",
    "priority": "中"
@@ -938,6 +883,28 @@
   },
   {
    "date": "2026-11-18",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Lowe's Companies, Inc.（LOW）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$3.06",
+   "consensus": "$2.86",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-18",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Palo Alto Networks, Inc.（PANW）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$0.53",
+   "consensus": "$0.52",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-18",
    "time_bj": "23:00",
    "category": "宏观",
    "title": "Outdoor Recreation Economic Statistics, U.S. and States, 2025",
@@ -1166,6 +1133,28 @@
    "previous": "",
    "consensus": "",
    "priority": "高"
+  },
+  {
+   "date": "2026-12-18",
+   "time_bj": "05:30",
+   "category": "宏观",
+   "title": "美联储 H.4.1（资产负债表）",
+   "url": "https://www.federalreserve.gov/releases/h41/",
+   "note": "页面写明每周四、通常美东 16:30；遇联邦假日顺延。这一条按周四生成，没有另核假日表",
+   "previous": "",
+   "consensus": "",
+   "priority": "高"
+  },
+  {
+   "date": "2026-12-18",
+   "time_bj": "21:30",
+   "category": "宏观",
+   "title": "U.S. International Transactions and Investment Position, 3rd Quarter 2026",
+   "url": "https://www.bea.gov/news/schedule",
+   "note": "美东 8:30 AM。原名：U.S. International Transactions and Investment Position, 3rd Quarter 2026",
+   "previous": "",
+   "consensus": "",
+   "priority": "中"
   }
  ]
 }
