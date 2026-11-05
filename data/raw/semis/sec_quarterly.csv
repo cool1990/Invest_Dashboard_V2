@@ -232,6 +232,7 @@ AMD,cogs,2025-09-27,4466000000.0,CostOfGoodsAndServicesSold
 AMD,cogs,2025-12-27,4693000000.0,CostOfGoodsAndServicesSold
 AMD,cogs,2026-03-28,4837000000.0,CostOfGoodsAndServicesSold
 AMD,cogs,2026-06-27,5333000000.0,CostOfGoodsAndServicesSold
+AMD,cogs,2026-09-26,6167000000.0,CostOfGoodsAndServicesSold
 AMD,inventory,2015-03-28,688000000.0,InventoryNet
 AMD,inventory,2015-06-27,799000000.0,InventoryNet
 AMD,inventory,2015-09-26,761000000.0,InventoryNet
@@ -278,6 +279,7 @@ AMD,inventory,2025-09-27,7313000000.0,InventoryNet
 AMD,inventory,2025-12-27,7920000000.0,InventoryNet
 AMD,inventory,2026-03-28,8045000000.0,InventoryNet
 AMD,inventory,2026-06-27,8468000000.0,InventoryNet
+AMD,inventory,2026-09-26,11463000000.0,InventoryNet
 AMD,revenue,2017-04-01,1178000000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 AMD,revenue,2017-07-01,1151000000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 AMD,revenue,2017-09-30,1584000000.0,RevenueFromContractWithCustomerExcludingAssessedTax
@@ -316,6 +318,7 @@ AMD,revenue,2025-09-27,9246000000.0,RevenueFromContractWithCustomerExcludingAsse
 AMD,revenue,2025-12-27,10270000000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 AMD,revenue,2026-03-28,10253000000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 AMD,revenue,2026-06-27,11536000000.0,RevenueFromContractWithCustomerExcludingAssessedTax
+AMD,revenue,2026-09-26,13377000000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 AMZN,capex,2017-09-30,3074000000.0,PaymentsToAcquireProductiveAssets
 AMZN,capex,2017-12-31,3619000000.0,PaymentsToAcquireProductiveAssets
 AMZN,capex,2018-03-31,3098000000.0,PaymentsToAcquireProductiveAssets

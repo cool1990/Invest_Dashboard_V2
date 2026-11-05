@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-04T09:46:56+08:00",
+ "generated_at": "2026-11-05T09:55:40+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -109,28 +109,6 @@
    "note": "规则同上：每月1日发布；11月1日是周日。页面未写钟点",
    "previous": "",
    "consensus": "",
-   "priority": "高"
-  },
-  {
-   "date": "2026-11-04",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Arm（ARM）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后。原名：Arm Holdings plc",
-   "previous": "$0.15",
-   "consensus": "$0.22",
-   "priority": "高"
-  },
-  {
-   "date": "2026-11-04",
-   "time_bj": "",
-   "category": "财报",
-   "title": "高通（QCOM）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后。原名：QUALCOMM Incorporated",
-   "previous": "$2.56",
-   "consensus": "$1.46",
    "priority": "高"
   },
   {
