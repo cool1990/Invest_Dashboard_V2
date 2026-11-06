@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-05T09:55:40+08:00",
+ "generated_at": "2026-11-06T09:56:57+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -332,72 +332,6 @@
    "priority": "中"
   },
   {
-   "date": "2026-11-05",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Canadian Natural Resources Limited（CNQ）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$0.62",
-   "consensus": "$1.05",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-05",
-   "time_bj": "",
-   "category": "财报",
-   "title": "ConocoPhillips（COP）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$1.61",
-   "consensus": "$3.06",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-05",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Monster Beverage Corporation（MNST）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "$0.28",
-   "consensus": "$0.30",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-05",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Parker-Hannifin Corporation（PH）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$7.22",
-   "consensus": "$8.23",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-05",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Sony Group Corporation（SONY）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$0.35",
-   "consensus": "$0.38",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-05",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Southern Company (The)（SO）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前。日期不一样：Nasdaq earnings calendar写的是 2026-11-05，Nasdaq earnings calendar写的是 2026-11-17，Nasdaq earnings calendar写的是 2026-11-17，Nasdaq earnings calendar写的是 2026-11-18",
-   "previous": "$1.60",
-   "consensus": "$1.71",
-   "priority": "中"
-  },
-  {
    "date": "2026-11-06",
    "time_bj": "",
    "category": "宏观",
@@ -443,22 +377,33 @@
   },
   {
    "date": "2026-11-06",
-   "time_bj": "05:30",
-   "category": "宏观",
-   "title": "美联储 H.4.1（资产负债表）",
-   "url": "https://www.federalreserve.gov/releases/h41/",
-   "note": "页面写明每周四、通常美东 16:30；遇联邦假日顺延。这一条按周四生成，没有另核假日表",
-   "previous": "",
-   "consensus": "",
-   "priority": "高"
+   "time_bj": "",
+   "category": "财报",
+   "title": "Moderna, Inc.（MRNA）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "($0.51)",
+   "consensus": "($1.10)",
+   "priority": "中"
   },
   {
    "date": "2026-11-07",
    "time_bj": "01:15",
    "category": "大事",
    "title": "美联储讲话",
-   "url": "https://www.federalreserve.gov/newsevents/2026-november.htm",
+   "url": "https://olemiss.zoom.us/j/83516188915?pwd=wHQgE4aZSqUdn2oBqJ93yHDWHT56cY.1&amp;from=addon",
    "note": "Discussion - Vice Chair for Supervision Michelle W. Bowman At the University of Mississippi Banking and Finance Symposium, Oxford, Miss. 美东 12:15 p.m.。原名：Supervision and Regulation",
+   "previous": "",
+   "consensus": "",
+   "priority": "低"
+  },
+  {
+   "date": "2026-11-09",
+   "time_bj": "21:40",
+   "category": "大事",
+   "title": "美联储讲话",
+   "url": "https://www.federalreserve.gov/newsevents/2026-november.htm",
+   "note": "Discussion - Vice Chair for Supervision Michelle W. Bowman At the Mutual Board Summit Conference, Boston, Mass. 美东 8:40 a.m.。原名：Community Banking",
    "previous": "",
    "consensus": "",
    "priority": "低"
@@ -530,6 +475,17 @@
    "priority": "中"
   },
   {
+   "date": "2026-11-10",
+   "time_bj": "17:00",
+   "category": "大事",
+   "title": "美联储讲话：经济展望",
+   "url": "https://teams.microsoft.com/meet/3555893727932509?p=Jzb3qhkJr8SKStNZlD",
+   "note": "Speech - Governor Christopher J. Waller At The Bank of England and its Watchers Conference 2026, London, United Kingdom 美东 4:00 a.m.。原名：Economic Outlook",
+   "previous": "",
+   "consensus": "",
+   "priority": "低"
+  },
+  {
    "date": "2026-11-11",
    "time_bj": "",
    "category": "半导体",
@@ -542,11 +498,33 @@
   },
   {
    "date": "2026-11-11",
+   "time_bj": "07:30",
+   "category": "大事",
+   "title": "美联储讲话：经济展望",
+   "url": "https://us06web.zoom.us/j/82913231287?pwd=LVtmihv49gUcWXnQz4q9by5b5aixiP.1",
+   "note": "Speech - Vice Chair for Supervision Michelle W. Bowman At A View from the Federal Reserve Board (virtual) 美东 6:30 p.m.。原名：Economic Outlook",
+   "previous": "",
+   "consensus": "",
+   "priority": "低"
+  },
+  {
+   "date": "2026-11-12",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Brookfield Corporation（BN）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$0.63",
+   "consensus": "$0.72",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-12",
    "time_bj": "",
    "category": "财报",
    "title": "Cisco Systems, Inc.（CSCO）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "",
+   "note": "美东盘后",
    "previous": "$0.81",
    "consensus": "$1.15",
    "priority": "中"
@@ -561,6 +539,17 @@
    "previous": "$2.17",
    "consensus": "$4.06",
    "priority": "高"
+  },
+  {
+   "date": "2026-11-12",
+   "time_bj": "23:00",
+   "category": "大事",
+   "title": "美联储讲话",
+   "url": "https://youtube.com/live/O2NvR1shSI0?feature=share",
+   "note": "Speech - Governor Michael S. Barr At A Conversation with Michael S. Barr (virtual) 美东 10:00 a.m.。原名：Artificial Intelligence and Inequality",
+   "previous": "",
+   "consensus": "",
+   "priority": "低"
   },
   {
    "date": "2026-11-13",
@@ -618,6 +607,28 @@
    "priority": "高"
   },
   {
+   "date": "2026-11-13",
+   "time_bj": "23:50",
+   "category": "大事",
+   "title": "美联储讲话",
+   "url": "https://www.federalreserve.gov/newsevents/2026-november.htm",
+   "note": "Discussion - Vice Chair for Supervision Michelle W. Bowman At the Connecticut Bankers Association Annual Meeting and Conference 2026 (virtual) 美东 10:50 a.m.。原名：Supervision and Regulation",
+   "previous": "",
+   "consensus": "",
+   "priority": "低"
+  },
+  {
+   "date": "2026-11-14",
+   "time_bj": "08:00",
+   "category": "大事",
+   "title": "美联储讲话",
+   "url": "https://cvent.me/8AmwNV",
+   "note": "Speech - Vice Chair Philip N. Jefferson At the University of California San Diego Economics Roundtable, La Jolla, Calif. 美东 7:00 p.m.。原名：New Technology, Old Questions: Assessing Productivity Puzzles and Their Implications for Macroeconomic Activity",
+   "previous": "",
+   "consensus": "",
+   "priority": "低"
+  },
+  {
    "date": "2026-11-15",
    "time_bj": "",
    "category": "加密",
@@ -637,6 +648,17 @@
    "note": "",
    "previous": "N/A",
    "consensus": "",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-17",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Home Depot, Inc. (The)（HD）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前。日期不一样：Nasdaq earnings calendar写的是 2026-11-17，Nasdaq earnings calendar写的是 2026-11-17，Nasdaq earnings calendar写的是 2026-11-18",
+   "previous": "$3.74",
+   "consensus": "$3.86",
    "priority": "中"
   },
   {
