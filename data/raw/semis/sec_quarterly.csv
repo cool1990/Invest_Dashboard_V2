@@ -707,6 +707,7 @@ MCHP,cogs,2025-09-30,502500000.0,CostOfRevenue
 MCHP,cogs,2025-12-31,479100000.0,CostOfRevenue
 MCHP,cogs,2026-03-31,511600000.0,CostOfRevenue
 MCHP,cogs,2026-06-30,545800000.0,CostOfRevenue
+MCHP,cogs,2026-09-30,553500000.0,CostOfRevenue
 MCHP,inventory,2015-03-31,279456000.0,InventoryNet
 MCHP,inventory,2015-06-30,303690000.0,InventoryNet
 MCHP,inventory,2015-09-30,363760000.0,InventoryNet
@@ -754,6 +755,7 @@ MCHP,inventory,2025-09-30,1095300000.0,InventoryNet
 MCHP,inventory,2025-12-31,1057700000.0,InventoryNet
 MCHP,inventory,2026-03-31,1035400000.0,InventoryNet
 MCHP,inventory,2026-06-30,1047300000.0,InventoryNet
+MCHP,inventory,2026-09-30,1117300000.0,InventoryNet
 MCHP,revenue,2018-06-30,1212500000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 MCHP,revenue,2018-09-30,1432500000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 MCHP,revenue,2018-12-31,1374700000.0,RevenueFromContractWithCustomerExcludingAssessedTax
@@ -787,6 +789,7 @@ MCHP,revenue,2025-09-30,1140400000.0,RevenueFromContractWithCustomerExcludingAss
 MCHP,revenue,2025-12-31,1186000000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 MCHP,revenue,2026-03-31,1311200000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 MCHP,revenue,2026-06-30,1484700000.0,RevenueFromContractWithCustomerExcludingAssessedTax
+MCHP,revenue,2026-09-30,1621500000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 META,capex,2015-03-31,502000000.0,PaymentsToAcquirePropertyPlantAndEquipment
 META,capex,2015-06-30,549000000.0,PaymentsToAcquirePropertyPlantAndEquipment
 META,capex,2015-09-30,780000000.0,PaymentsToAcquirePropertyPlantAndEquipment
