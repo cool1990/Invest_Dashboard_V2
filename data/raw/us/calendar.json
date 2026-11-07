@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-06T09:56:57+08:00",
+ "generated_at": "2026-11-07T09:29:32+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -332,58 +332,25 @@
    "priority": "中"
   },
   {
-   "date": "2026-11-06",
-   "time_bj": "",
-   "category": "宏观",
-   "title": "Employment Situation 发布",
-   "url": "https://fred.stlouisfed.org/release?rid=50",
-   "note": "Employment Situation",
-   "previous": "",
-   "consensus": "",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-06",
+   "date": "2026-11-07",
    "time_bj": "",
    "category": "财报",
    "title": "Berkshire Hathaway Inc.（BRK.A）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "",
+   "note": "美东盘前",
    "previous": "N/A",
    "consensus": "",
    "priority": "中"
   },
   {
-   "date": "2026-11-06",
+   "date": "2026-11-07",
    "time_bj": "",
    "category": "财报",
    "title": "Berkshire Hathaway Inc.（BRK.B）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "",
+   "note": "美东盘前",
    "previous": "$6.26",
    "consensus": "$5.91",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-06",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Enbridge Inc（ENB）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$0.33",
-   "consensus": "$0.36",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-06",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Moderna, Inc.（MRNA）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "($0.51)",
-   "consensus": "($1.10)",
    "priority": "中"
   },
   {
@@ -659,17 +626,6 @@
    "note": "美东盘前。日期不一样：Nasdaq earnings calendar写的是 2026-11-17，Nasdaq earnings calendar写的是 2026-11-17，Nasdaq earnings calendar写的是 2026-11-18",
    "previous": "$3.74",
    "consensus": "$3.86",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-17",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Medtronic plc（MDT）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "",
-   "previous": "$1.36",
-   "consensus": "$1.34",
    "priority": "中"
   },
   {
