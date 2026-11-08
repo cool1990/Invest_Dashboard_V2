@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-07T09:29:32+08:00",
+ "generated_at": "2026-11-08T08:59:11+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -332,39 +332,6 @@
    "priority": "中"
   },
   {
-   "date": "2026-11-07",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Berkshire Hathaway Inc.（BRK.A）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "N/A",
-   "consensus": "",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-07",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Berkshire Hathaway Inc.（BRK.B）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$6.26",
-   "consensus": "$5.91",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-07",
-   "time_bj": "01:15",
-   "category": "大事",
-   "title": "美联储讲话",
-   "url": "https://olemiss.zoom.us/j/83516188915?pwd=wHQgE4aZSqUdn2oBqJ93yHDWHT56cY.1&amp;from=addon",
-   "note": "Discussion - Vice Chair for Supervision Michelle W. Bowman At the University of Mississippi Banking and Finance Symposium, Oxford, Miss. 美东 12:15 p.m.。原名：Supervision and Regulation",
-   "previous": "",
-   "consensus": "",
-   "priority": "低"
-  },
-  {
    "date": "2026-11-09",
    "time_bj": "21:40",
    "category": "大事",
@@ -416,7 +383,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$0.82",
-   "consensus": "$1.23",
+   "consensus": "$1.38",
    "priority": "中"
   },
   {
@@ -946,6 +913,28 @@
    "previous": "",
    "consensus": "",
    "priority": "中"
+  },
+  {
+   "date": "2026-12-23",
+   "time_bj": "21:30",
+   "category": "宏观",
+   "title": "2026年11月个人收入与支出",
+   "url": "https://www.bea.gov/news/schedule",
+   "note": "美东 8:30 AM。原名：Personal Income and Outlays, November 2026",
+   "previous": "",
+   "consensus": "",
+   "priority": "高"
+  },
+  {
+   "date": "2026-12-23",
+   "time_bj": "21:30",
+   "category": "宏观",
+   "title": "2026年三季度 GDP 第三次估计",
+   "url": "https://www.bea.gov/news/schedule",
+   "note": "美东 8:30 AM。原名：GDP (Third Estimate), Industries, Corporate Profits, State GDP, and State Personal Income, 3rd Quarter 2026",
+   "previous": "",
+   "consensus": "",
+   "priority": "高"
   }
  ]
 }
