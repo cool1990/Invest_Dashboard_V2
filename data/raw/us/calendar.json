@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-09T09:20:42+08:00",
+ "generated_at": "2026-11-10T11:55:17+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -332,17 +332,6 @@
    "priority": "中"
   },
   {
-   "date": "2026-11-09",
-   "time_bj": "21:40",
-   "category": "大事",
-   "title": "美联储讲话",
-   "url": "https://www.federalreserve.gov/newsevents/2026-november.htm",
-   "note": "Discussion - Vice Chair for Supervision Michelle W. Bowman At the Mutual Board Summit Conference, Boston, Mass. 美东 8:40 a.m.。原名：Community Banking",
-   "previous": "",
-   "consensus": "",
-   "priority": "低"
-  },
-  {
    "date": "2026-11-10",
    "time_bj": "",
    "category": "半导体",
@@ -665,6 +654,17 @@
    "date": "2026-11-19",
    "time_bj": "",
    "category": "财报",
+   "title": "Alibaba Group Holding Limited（BABA）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$0.44",
+   "consensus": "$1.31",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-19",
+   "time_bj": "",
+   "category": "财报",
    "title": "Walmart Inc.（WMT）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
@@ -720,17 +720,6 @@
    "date": "2026-11-24",
    "time_bj": "",
    "category": "财报",
-   "title": "Alibaba Group Holding Limited（BABA）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "",
-   "previous": "$0.44",
-   "consensus": "$1.31",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-24",
-   "time_bj": "",
-   "category": "财报",
    "title": "Analog Devices, Inc.（ADI）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
@@ -758,6 +747,17 @@
    "note": "美东盘前",
    "previous": "$1.36",
    "consensus": "$1.34",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-25",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Deere & Company（DE）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$3.93",
+   "consensus": "$4.07",
    "priority": "中"
   },
   {
@@ -976,6 +976,17 @@
    "title": "2026年三季度 GDP 第三次估计",
    "url": "https://www.bea.gov/news/schedule",
    "note": "美东 8:30 AM。原名：GDP (Third Estimate), Industries, Corporate Profits, State GDP, and State Personal Income, 3rd Quarter 2026",
+   "previous": "",
+   "consensus": "",
+   "priority": "高"
+  },
+  {
+   "date": "2026-12-25",
+   "time_bj": "05:30",
+   "category": "宏观",
+   "title": "美联储 H.4.1（资产负债表）",
+   "url": "https://www.federalreserve.gov/releases/h41/",
+   "note": "页面写明每周四、通常美东 16:30；遇联邦假日顺延。这一条按周四生成，没有另核假日表",
    "previous": "",
    "consensus": "",
    "priority": "高"
