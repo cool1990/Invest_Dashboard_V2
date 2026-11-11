@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-10T11:55:17+08:00",
+ "generated_at": "2026-11-11T09:37:23+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -344,39 +344,6 @@
   },
   {
    "date": "2026-11-10",
-   "time_bj": "",
-   "category": "宏观",
-   "title": "CPI 发布",
-   "url": "https://fred.stlouisfed.org/release?rid=10",
-   "note": "CPI",
-   "previous": "",
-   "consensus": "",
-   "priority": "高"
-  },
-  {
-   "date": "2026-11-10",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Petroleo Brasileiro S.A.- Petrobras（PBR.A）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "$0.82",
-   "consensus": "",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-10",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Petroleo Brasileiro S.A.- Petrobras（PBR）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "$0.82",
-   "consensus": "$1.38",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-10",
    "time_bj": "13:30",
    "category": "半导体",
    "title": "台积电10月营收",
@@ -396,17 +363,6 @@
    "previous": "",
    "consensus": "",
    "priority": "中"
-  },
-  {
-   "date": "2026-11-10",
-   "time_bj": "17:00",
-   "category": "大事",
-   "title": "美联储讲话：经济展望",
-   "url": "https://teams.microsoft.com/meet/3555893727932509?p=Jzb3qhkJr8SKStNZlD",
-   "note": "Speech - Governor Christopher J. Waller At The Bank of England and its Watchers Conference 2026, London, United Kingdom 美东 4:00 a.m.。原名：Economic Outlook",
-   "previous": "",
-   "consensus": "",
-   "priority": "低"
   },
   {
    "date": "2026-11-11",
@@ -434,33 +390,11 @@
    "date": "2026-11-12",
    "time_bj": "",
    "category": "财报",
-   "title": "Brookfield Corporation（BN）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$0.63",
-   "consensus": "$0.72",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-12",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Cisco Systems, Inc.（CSCO）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "$0.81",
-   "consensus": "$1.15",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-12",
-   "time_bj": "",
-   "category": "财报",
    "title": "应用材料 FY26 Q4 业绩（官方标注预计）",
    "url": "https://investors.appliedmaterials.com/events",
    "note": "AMAT IR Fiscal Calendar 2026：Q4 季末 October 25，Earnings Call 写作 Projected - November 12，尚未正式确认。美东日期，未写钟点",
-   "previous": "$2.17",
-   "consensus": "$4.06",
+   "previous": "",
+   "consensus": "",
    "priority": "高"
   },
   {
@@ -484,39 +418,6 @@
    "previous": "",
    "consensus": "",
    "priority": "高"
-  },
-  {
-   "date": "2026-11-13",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Mitsubishi UFJ Financial Group Inc（MUFG）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "",
-   "previous": "$0.44",
-   "consensus": "$0.45",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-13",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Mizuho Financial Group, Inc.（MFG）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "",
-   "previous": "$0.20",
-   "consensus": "$0.21",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-13",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Sumitomo Mitsui Financial Group Inc（SMFG）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "",
-   "previous": "$0.59",
-   "consensus": "$0.24",
-   "priority": "中"
   },
   {
    "date": "2026-11-13",
@@ -564,50 +465,6 @@
   },
   {
    "date": "2026-11-17",
-   "time_bj": "",
-   "category": "财报",
-   "title": "BHP Group Limited（BHP）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "",
-   "previous": "N/A",
-   "consensus": "",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-17",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Home Depot, Inc. (The)（HD）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前。日期不一样：Nasdaq earnings calendar写的是 2026-11-17，Nasdaq earnings calendar写的是 2026-11-17，Nasdaq earnings calendar写的是 2026-11-18",
-   "previous": "$3.74",
-   "consensus": "$3.86",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-17",
-   "time_bj": "",
-   "category": "财报",
-   "title": "PDD Holdings Inc.（PDD）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "",
-   "previous": "$2.77",
-   "consensus": "$2.60",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-17",
-   "time_bj": "",
-   "category": "财报",
-   "title": "英伟达（NVDA）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后。原名：NVIDIA Corporation",
-   "previous": "$1.24",
-   "consensus": "$2.49",
-   "priority": "高"
-  },
-  {
-   "date": "2026-11-17",
    "time_bj": "23:00",
    "category": "宏观",
    "title": "Experimental Super Intelligence Economic Statistics, 2024",
@@ -619,28 +476,6 @@
   },
   {
    "date": "2026-11-18",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Lowe's Companies, Inc.（LOW）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$3.06",
-   "consensus": "$2.86",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-18",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Palo Alto Networks, Inc.（PANW）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "$0.53",
-   "consensus": "$0.52",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-18",
    "time_bj": "23:00",
    "category": "宏观",
    "title": "Outdoor Recreation Economic Statistics, U.S. and States, 2025",
@@ -648,28 +483,6 @@
    "note": "美东 10:00 AM。原名：Outdoor Recreation Economic Statistics, U.S. and States, 2025",
    "previous": "",
    "consensus": "",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-19",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Alibaba Group Holding Limited（BABA）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$0.44",
-   "consensus": "$1.31",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-19",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Walmart Inc.（WMT）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$0.62",
-   "consensus": "$0.64",
    "priority": "中"
   },
   {
@@ -714,50 +527,6 @@
    "note": "美东 8:30 AM。原名：Activities of U.S. Multinational Enterprises, 2024",
    "previous": "",
    "consensus": "",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-24",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Analog Devices, Inc.（ADI）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$2.26",
-   "consensus": "$3.89",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-24",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Dell Technologies Inc.（DELL）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "",
-   "previous": "$2.35",
-   "consensus": "$6.41",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-24",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Medtronic plc（MDT）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$1.36",
-   "consensus": "$1.34",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-25",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Deere & Company（DE）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$3.93",
-   "consensus": "$4.07",
    "priority": "中"
   },
   {
