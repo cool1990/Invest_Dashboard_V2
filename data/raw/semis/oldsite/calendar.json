@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-10T11:55:17+08:00",
+ "generated_at": "2026-11-11T09:37:23+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -173,19 +173,8 @@
    "title": "应用材料 FY26 Q4 业绩（官方标注预计）",
    "url": "https://investors.appliedmaterials.com/events",
    "note": "AMAT IR Fiscal Calendar 2026：Q4 季末 October 25，Earnings Call 写作 Projected - November 12，尚未正式确认。美东日期，未写钟点",
-   "previous": "$2.17",
-   "consensus": "$4.06",
-   "priority": "高"
-  },
-  {
-   "date": "2026-11-17",
-   "time_bj": "",
-   "category": "财报",
-   "title": "英伟达（NVDA）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后。原名：NVIDIA Corporation",
-   "previous": "$1.24",
-   "consensus": "$2.49",
+   "previous": "",
+   "consensus": "",
    "priority": "高"
   },
   {
