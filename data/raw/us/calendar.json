@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-11T09:37:23+08:00",
+ "generated_at": "2026-11-12T10:37:50+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -374,17 +374,6 @@
    "previous": "",
    "consensus": "",
    "priority": "高"
-  },
-  {
-   "date": "2026-11-11",
-   "time_bj": "07:30",
-   "category": "大事",
-   "title": "美联储讲话：经济展望",
-   "url": "https://us06web.zoom.us/j/82913231287?pwd=LVtmihv49gUcWXnQz4q9by5b5aixiP.1",
-   "note": "Speech - Vice Chair for Supervision Michelle W. Bowman At A View from the Federal Reserve Board (virtual) 美东 6:30 p.m.。原名：Economic Outlook",
-   "previous": "",
-   "consensus": "",
-   "priority": "低"
   },
   {
    "date": "2026-11-12",
