@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-12T10:37:50+08:00",
+ "generated_at": "2026-11-13T10:18:40+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -387,17 +387,6 @@
    "priority": "高"
   },
   {
-   "date": "2026-11-12",
-   "time_bj": "23:00",
-   "category": "大事",
-   "title": "美联储讲话",
-   "url": "https://youtube.com/live/O2NvR1shSI0?feature=share",
-   "note": "Speech - Governor Michael S. Barr At A Conversation with Michael S. Barr (virtual) 美东 10:00 a.m.。原名：Artificial Intelligence and Inequality",
-   "previous": "",
-   "consensus": "",
-   "priority": "低"
-  },
-  {
    "date": "2026-11-13",
    "time_bj": "",
    "category": "宏观",
@@ -410,21 +399,43 @@
   },
   {
    "date": "2026-11-13",
-   "time_bj": "05:30",
-   "category": "宏观",
-   "title": "美联储 H.4.1（资产负债表）",
-   "url": "https://www.federalreserve.gov/releases/h41/",
-   "note": "页面写明每周四、通常美东 16:30；遇联邦假日顺延。这一条按周四生成，没有另核假日表",
-   "previous": "",
-   "consensus": "",
-   "priority": "高"
+   "time_bj": "",
+   "category": "财报",
+   "title": "Mitsubishi UFJ Financial Group Inc（MUFG）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$0.44",
+   "consensus": "$0.45",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-13",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Mizuho Financial Group, Inc.（MFG）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$0.20",
+   "consensus": "$0.21",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-13",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Sumitomo Mitsui Financial Group Inc（SMFG）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$0.59",
+   "consensus": "$0.24",
+   "priority": "中"
   },
   {
    "date": "2026-11-13",
    "time_bj": "23:50",
    "category": "大事",
    "title": "美联储讲话",
-   "url": "https://www.federalreserve.gov/newsevents/2026-november.htm",
+   "url": "https://us06web.zoom.us/j/81123215463",
    "note": "Discussion - Vice Chair for Supervision Michelle W. Bowman At the Connecticut Bankers Association Annual Meeting and Conference 2026 (virtual) 美东 10:50 a.m.。原名：Supervision and Regulation",
    "previous": "",
    "consensus": "",
@@ -453,6 +464,83 @@
    "priority": "中"
   },
   {
+   "date": "2026-11-16",
+   "time_bj": "18:00",
+   "category": "大事",
+   "title": "美联储讲话",
+   "url": "https://us06web.zoom.us/j/84433320946?pwd=zq5qHzI0IgCBc7QKytDbJ5X90yXZKC.1 ",
+   "note": "Speech - Governor Michael S. Barr At the 7th ACM International Conference on AI in Finance, Milan, Italy 美东 5:00 a.m.。原名：Artificial Intelligence and Financial Stability",
+   "previous": "",
+   "consensus": "",
+   "priority": "低"
+  },
+  {
+   "date": "2026-11-17",
+   "time_bj": "",
+   "category": "财报",
+   "title": "BHP Group Limited（BHP）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "N/A",
+   "consensus": "",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-17",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Home Depot, Inc. (The)（HD）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前。日期不一样：Nasdaq earnings calendar写的是 2026-11-17，Nasdaq earnings calendar写的是 2026-11-17，Nasdaq earnings calendar写的是 2026-11-18",
+   "previous": "$3.74",
+   "consensus": "$3.87",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-17",
+   "time_bj": "",
+   "category": "财报",
+   "title": "PDD Holdings Inc.（PDD）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "$2.77",
+   "consensus": "$2.61",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-17",
+   "time_bj": "",
+   "category": "财报",
+   "title": "英伟达（NVDA）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后。原名：NVIDIA Corporation",
+   "previous": "$1.24",
+   "consensus": "$2.49",
+   "priority": "高"
+  },
+  {
+   "date": "2026-11-17",
+   "time_bj": "01:00",
+   "category": "大事",
+   "title": "美联储讲话：开幕致辞",
+   "url": "https://www.frbsf.org/news-and-media/events/2026/11/productivity-and-jobs-task-force-conference/",
+   "note": "Speech - Chairman Kevin Warsh At the Federal Reserve’s Productivity and Jobs Task Force Conference, Federal Reserve Bank of San Francisco, San Francisco, Calif. 美东 12:00 p.m.。原名：Opening Remarks",
+   "previous": "",
+   "consensus": "",
+   "priority": "低"
+  },
+  {
+   "date": "2026-11-17",
+   "time_bj": "22:10",
+   "category": "大事",
+   "title": "美联储讲话：支付",
+   "url": "https://avdusa.zoom.us/j/81071533579",
+   "note": "Speech - Governor Christopher J. Waller At The Clearing House (TCH) Annual Conference, New York, N.Y. 美东 9:10 a.m.。原名：Payments",
+   "previous": "",
+   "consensus": "",
+   "priority": "低"
+  },
+  {
    "date": "2026-11-17",
    "time_bj": "23:00",
    "category": "宏观",
@@ -465,6 +553,28 @@
   },
   {
    "date": "2026-11-18",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Lowe's Companies, Inc.（LOW）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$3.06",
+   "consensus": "$2.86",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-18",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Palo Alto Networks, Inc.（PANW）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后",
+   "previous": "$0.53",
+   "consensus": "$0.52",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-18",
    "time_bj": "23:00",
    "category": "宏观",
    "title": "Outdoor Recreation Economic Statistics, U.S. and States, 2025",
@@ -473,6 +583,39 @@
    "previous": "",
    "consensus": "",
    "priority": "中"
+  },
+  {
+   "date": "2026-11-19",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Alibaba Group Holding Limited（BABA）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$0.44",
+   "consensus": "$1.56",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-19",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Walmart Inc.（WMT）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$0.62",
+   "consensus": "$0.64",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-19",
+   "time_bj": "02:35",
+   "category": "大事",
+   "title": "美联储讲话",
+   "url": "https://web.cvent.com/event/c6c9732e-65f1-42c9-8b92-fd955396ec06/register?rp=276284ef-6a44-4895-b452-f3b63709581b",
+   "note": "Speech - Governor Michael S. Barr At Making Missing Markets: Catalyzing Capital and Igniting Innovation, Federal Reserve Bank of New York, New York, N.Y. 美东 1:35 p.m.。原名：Community Development Investments",
+   "previous": "",
+   "consensus": "",
+   "priority": "低"
   },
   {
    "date": "2026-11-19",
@@ -509,6 +652,17 @@
   },
   {
    "date": "2026-11-20",
+   "time_bj": "21:25",
+   "category": "大事",
+   "title": "美联储讲话",
+   "url": "https://www.federalreserve.gov/newsevents/2026-november.htm",
+   "note": "Speech - Governor Christopher J. Waller At the College Fed Challenge Finals 美东 8:25 a.m.。原名：Welcoming Remarks",
+   "previous": "",
+   "consensus": "",
+   "priority": "低"
+  },
+  {
+   "date": "2026-11-20",
    "time_bj": "21:30",
    "category": "宏观",
    "title": "Activities of U.S. Multinational Enterprises, 2024",
@@ -516,6 +670,61 @@
    "note": "美东 8:30 AM。原名：Activities of U.S. Multinational Enterprises, 2024",
    "previous": "",
    "consensus": "",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-21",
+   "time_bj": "01:15",
+   "category": "大事",
+   "title": "美联储讲话",
+   "url": "https://www.federalreserve.gov/newsevents/2026-november.htm",
+   "note": "Speech - Governor Lisa D. Cook At the Annual Conference of the Central Bank of Chile, Santiago, Chile 美东 12:15 p.m.。原名：The U.S. Economy in Global Context",
+   "previous": "",
+   "consensus": "",
+   "priority": "低"
+  },
+  {
+   "date": "2026-11-24",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Analog Devices, Inc.（ADI）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$2.26",
+   "consensus": "$3.89",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-24",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Dell Technologies Inc.（DELL）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后",
+   "previous": "$2.35",
+   "consensus": "$6.41",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-24",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Medtronic plc（MDT）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$1.36",
+   "consensus": "$1.34",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-25",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Deere & Company（DE）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$3.93",
+   "consensus": "$4.07",
    "priority": "中"
   },
   {
