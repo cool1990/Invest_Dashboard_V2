@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-13T10:18:40+08:00",
+ "generated_at": "2026-11-14T09:55:49+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -387,61 +387,6 @@
    "priority": "高"
   },
   {
-   "date": "2026-11-13",
-   "time_bj": "",
-   "category": "宏观",
-   "title": "PPI 发布",
-   "url": "https://fred.stlouisfed.org/release?rid=46",
-   "note": "PPI",
-   "previous": "",
-   "consensus": "",
-   "priority": "高"
-  },
-  {
-   "date": "2026-11-13",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Mitsubishi UFJ Financial Group Inc（MUFG）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "",
-   "previous": "$0.44",
-   "consensus": "$0.45",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-13",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Mizuho Financial Group, Inc.（MFG）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$0.20",
-   "consensus": "$0.21",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-13",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Sumitomo Mitsui Financial Group Inc（SMFG）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$0.59",
-   "consensus": "$0.24",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-13",
-   "time_bj": "23:50",
-   "category": "大事",
-   "title": "美联储讲话",
-   "url": "https://us06web.zoom.us/j/81123215463",
-   "note": "Discussion - Vice Chair for Supervision Michelle W. Bowman At the Connecticut Bankers Association Annual Meeting and Conference 2026 (virtual) 美东 10:50 a.m.。原名：Supervision and Regulation",
-   "previous": "",
-   "consensus": "",
-   "priority": "低"
-  },
-  {
    "date": "2026-11-14",
    "time_bj": "08:00",
    "category": "大事",
@@ -494,17 +439,6 @@
    "note": "美东盘前。日期不一样：Nasdaq earnings calendar写的是 2026-11-17，Nasdaq earnings calendar写的是 2026-11-17，Nasdaq earnings calendar写的是 2026-11-18",
    "previous": "$3.74",
    "consensus": "$3.87",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-17",
-   "time_bj": "",
-   "category": "财报",
-   "title": "PDD Holdings Inc.（PDD）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "",
-   "previous": "$2.77",
-   "consensus": "$2.61",
    "priority": "中"
   },
   {
@@ -599,23 +533,23 @@
    "date": "2026-11-19",
    "time_bj": "",
    "category": "财报",
+   "title": "PDD Holdings Inc.（PDD）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$2.77",
+   "consensus": "$2.61",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-19",
+   "time_bj": "",
+   "category": "财报",
    "title": "Walmart Inc.（WMT）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$0.62",
    "consensus": "$0.64",
    "priority": "中"
-  },
-  {
-   "date": "2026-11-19",
-   "time_bj": "02:35",
-   "category": "大事",
-   "title": "美联储讲话",
-   "url": "https://web.cvent.com/event/c6c9732e-65f1-42c9-8b92-fd955396ec06/register?rp=276284ef-6a44-4895-b452-f3b63709581b",
-   "note": "Speech - Governor Michael S. Barr At Making Missing Markets: Catalyzing Capital and Igniting Innovation, Federal Reserve Bank of New York, New York, N.Y. 美东 1:35 p.m.。原名：Community Development Investments",
-   "previous": "",
-   "consensus": "",
-   "priority": "低"
   },
   {
    "date": "2026-11-19",
@@ -627,6 +561,17 @@
    "previous": "",
    "consensus": "",
    "priority": "高"
+  },
+  {
+   "date": "2026-11-19",
+   "time_bj": "22:25",
+   "category": "大事",
+   "title": "美联储讲话",
+   "url": "https://www.federalreserve.gov/newsevents/2026-november.htm",
+   "note": "Discussion - Vice Chair Philip N. Jefferson At the International Monetary Fund (IMF) and Central Bank of Brazil conference \"A Quarter Century of Inflation Targeting in Latin America: Progress, Challenges, and the Road Ahead\" (virtual) 美东 9:25 a.m.。原名：Economic Shocks",
+   "previous": "",
+   "consensus": "",
+   "priority": "低"
   },
   {
    "date": "2026-11-20",
