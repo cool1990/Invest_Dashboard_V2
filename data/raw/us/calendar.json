@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-14T09:55:49+08:00",
+ "generated_at": "2026-11-15T09:27:48+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -385,17 +385,6 @@
    "previous": "",
    "consensus": "",
    "priority": "高"
-  },
-  {
-   "date": "2026-11-14",
-   "time_bj": "08:00",
-   "category": "大事",
-   "title": "美联储讲话",
-   "url": "https://cvent.me/8AmwNV",
-   "note": "Speech - Vice Chair Philip N. Jefferson At the University of California San Diego Economics Roundtable, La Jolla, Calif. 美东 7:00 p.m.。原名：New Technology, Old Questions: Assessing Productivity Puzzles and Their Implications for Macroeconomic Activity",
-   "previous": "",
-   "consensus": "",
-   "priority": "低"
   },
   {
    "date": "2026-11-15",
