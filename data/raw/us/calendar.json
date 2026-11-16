@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-15T09:27:48+08:00",
+ "generated_at": "2026-11-16T09:30:26+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -737,6 +737,28 @@
    "previous": "",
    "consensus": "",
    "priority": "高"
+  },
+  {
+   "date": "2026-12-01",
+   "time_bj": "",
+   "category": "财报",
+   "title": "CrowdStrike Holdings, Inc.（CRWD）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后",
+   "previous": "N/A",
+   "consensus": "$0",
+   "priority": "中"
+  },
+  {
+   "date": "2026-12-01",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Marvell Technology, Inc.（MRVL）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后",
+   "previous": "$0.62",
+   "consensus": "$0.79",
+   "priority": "中"
   },
   {
    "date": "2026-12-02",
