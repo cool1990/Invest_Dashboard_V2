@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T09:30:26+08:00",
+ "generated_at": "2026-11-17T12:16:34+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -398,17 +398,6 @@
    "priority": "中"
   },
   {
-   "date": "2026-11-16",
-   "time_bj": "18:00",
-   "category": "大事",
-   "title": "美联储讲话",
-   "url": "https://us06web.zoom.us/j/84433320946?pwd=zq5qHzI0IgCBc7QKytDbJ5X90yXZKC.1 ",
-   "note": "Speech - Governor Michael S. Barr At the 7th ACM International Conference on AI in Finance, Milan, Italy 美东 5:00 a.m.。原名：Artificial Intelligence and Financial Stability",
-   "previous": "",
-   "consensus": "",
-   "priority": "低"
-  },
-  {
    "date": "2026-11-17",
    "time_bj": "",
    "category": "财报",
@@ -425,9 +414,9 @@
    "category": "财报",
    "title": "Home Depot, Inc. (The)（HD）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前。日期不一样：Nasdaq earnings calendar写的是 2026-11-17，Nasdaq earnings calendar写的是 2026-11-17，Nasdaq earnings calendar写的是 2026-11-18",
+   "note": "美东盘前。日期不一样：Nasdaq earnings calendar写的是 2026-11-17，Nasdaq earnings calendar写的是 2026-11-17，Nasdaq earnings calendar写的是 2026-11-18，Nasdaq earnings calendar写的是 2026-12-02",
    "previous": "$3.74",
-   "consensus": "$3.87",
+   "consensus": "$3.86",
    "priority": "中"
   },
   {
@@ -762,6 +751,39 @@
   },
   {
    "date": "2026-12-02",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Bank Of Montreal（BMO）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前",
+   "previous": "$2.36",
+   "consensus": "$2.76",
+   "priority": "中"
+  },
+  {
+   "date": "2026-12-02",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Salesforce, Inc.（CRM）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后",
+   "previous": "$2.66",
+   "consensus": "$2.41",
+   "priority": "中"
+  },
+  {
+   "date": "2026-12-02",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Snowflake Inc.（SNOW）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后",
+   "previous": "($0.84)",
+   "consensus": "($0.32)",
+   "priority": "中"
+  },
+  {
+   "date": "2026-12-02",
    "time_bj": "21:30",
    "category": "宏观",
    "title": "GDP",
@@ -905,6 +927,17 @@
   },
   {
    "date": "2026-12-25",
+   "time_bj": "05:30",
+   "category": "宏观",
+   "title": "美联储 H.4.1（资产负债表）",
+   "url": "https://www.federalreserve.gov/releases/h41/",
+   "note": "页面写明每周四、通常美东 16:30；遇联邦假日顺延。这一条按周四生成，没有另核假日表",
+   "previous": "",
+   "consensus": "",
+   "priority": "高"
+  },
+  {
+   "date": "2027-01-01",
    "time_bj": "05:30",
    "category": "宏观",
    "title": "美联储 H.4.1（资产负债表）",
