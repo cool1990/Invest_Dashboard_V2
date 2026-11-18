@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>个股 · 英伟达 · 版式示意</title>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <style>
+    .preview-banner {
+      margin: -8px 0 16px; padding: 8px 12px; border-radius: 8px;
+      background: var(--surface-2); color: var(--ink-2); font-size: 12.5px;
+    }
+    .co-switch { display: flex; flex-wrap: wrap; gap: 6px; }
+    .co-switch a, .co-switch span {
+      padding: 5px 12px; border-radius: 999px; background: var(--surface-2);
+      color: var(--ink-2); font-size: 13px;
+    }
+    .co-switch .on { background: var(--ink); color: var(--page); font-weight: 600; }
+    .beat { color: var(--st-ok); font-weight: 650; }
+    .miss { color: var(--st-alert); font-weight: 650; }
+    .split { color: var(--st-watch); font-weight: 650; }
+    .kpi { padding: 4px 0 2px; }
+    .kpi li { grid-template-columns: 92px minmax(0, 1fr) auto; }
+    .kpi .up-num { font-weight: 600; color: var(--ink); }
+    .peer { list-style: none; margin: 8px 0 0; padding: 0; }
+    .peer li {
+      display: grid; grid-template-columns: 1fr auto auto; gap: 8px;
+      padding: 7px 0; border-top: 1px solid var(--grid); font-size: 13px;
+      font-variant-numeric: tabular-nums;
+    }
+    .fin { padding: 6px 8px 10px; }
+    .fin table.data { font-size: 13px; }
+    .fin table.data th, .fin table.data td { padding: 8px 10px; }
+    .fin table.data th { color: var(--muted); font-weight: 500; }
+    .name-cell { text-align: left; font-weight: 500; }
+    .note-cell { text-align: left; color: var(--ink-2); white-space: normal; min-width: 180px; }
+    .qa { padding: 16px 20px; display: grid; gap: 0; }
+    .qa-item { padding: 14px 0; border-top: 1px solid var(--grid); }
+    .qa-item:first-child { border-top: 0; padding-top: 0; }
+    .qa-top { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+    .qa-top h3 { font-size: 15px; }
+    .qa-grid { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 6px 12px; margin-top: 8px; font-size: 13.5px; line-height: 1.55; }
+    .qa-k { color: var(--muted); }
+    .qa-grid p { margin: 0; color: var(--ink-2); }
+    .plot { display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 6px; margin-top: 12px; }
+    .yaxis { display: flex; flex-direction: column; justify-content: space-between; height: 150px; font-size: 11px; color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+    .plot-area { position: relative; height: 150px; display: grid; grid-template-columns: repeat(4, 1fr); align-items: end; border-bottom: 1px solid var(--grid); }
+    .col { position: relative; height: 100%; display: flex; align-items: flex-end; justify-content: center; }
+    .bar { width: 36px; background: var(--s1); border-radius: 3px 3px 0 0; }
+    .bar.now { box-shadow: inset 0 0 0 1.5px var(--ink); }
+    .est { position: absolute; left: 18%; right: 18%; height: 0; border-top: 2px dashed var(--s2); }
+    .xlab { position: absolute; top: calc(100% + 6px); left: 0; right: 0; text-align: center; font-size: 11.5px; color: var(--muted); font-variant-numeric: tabular-nums; line-height: 1.35; }
+    .chart .c-body.mock { height: auto; padding-bottom: 36px; }
+    .chart .c-body.mock { height: auto; }
+    .two { display: grid; grid-template-columns: 1.3fr .7fr; gap: 12px; }
+    @media (max-width: 860px) { .two { grid-template-columns: 1fr; } .qa-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../index.html">投资看板</a>
+      <nav class="nav" aria-label="板块">
+        <a href="../macro.html">宏观</a>
+        <a href="../semis.html">半导体与 AI</a>
+        <a href="../us.html">美股</a>
+        <a href="../crypto.html">加密货币</a>
+        <a href="stock-preview.html" class="active" aria-current="page">个股</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <p class="preview-banner">版式示意。公司、季度、数字和问答都是为了看页面怎么排，不是英伟达的真实财报，也不能当结论用。</p>
+
+    <div class="page-head">
+      <div>
+        <h1>英伟达 NVDA</h1>
+        <div class="sub">FY2027 Q2 · 财报与电话会同一天 <span class="muted small">示意发布日 2026-08-26</span></div>
+      </div>
+      <div class="co-switch" aria-label="观察名单">
+        <span class="on">NVDA</span>
+        <span>AVGO</span>
+        <span>TSM</span>
+        <span>ASML</span>
+        <span>AMAT</span>
+      </div>
+    </div>
+
+    <div class="section-nav">
+      <div class="chips">
+        <a href="#verdict">结论</a>
+        <a href="#pl">损益与需求</a>
+        <a href="#bs">资产负债</a>
+        <a href="#cf">现金流</a>
+        <a href="#guide">指引</a>
+        <a href="#call">电话会</a>
+        <a href="#peers">同业</a>
+      </div>
+    </div>
+
+    <div class="top">
+      <div class="top-main">
+        <section class="card verdict" id="verdict">
+          <div class="v-label">这份财报</div>
+          <div class="v-head">兑现强于预期，下季毛利率指引低于市场</div>
+          <p class="v-meaning">营收和利润都超过发布前的一致预期，经营现金流同比也在走。分歧在指引：下季营收中值高于市场，毛利率中值低于市场。两件方向相反，不平均成「中性」。</p>
+          <ul class="v-lines">
+            <li><span class="v-k">兑现</span><span>营收和 EPS 都高于一致预期，增量仍在数据中心。</span></li>
+            <li><span class="v-k">质量</span><span>毛利率、营业利润率、经营现金流同比都升，利润和现金没有背离。</span></li>
+            <li><span class="v-k">指引</span><span>下季营收高于市场，毛利率低于市场。</span></li>
+            <li><span class="v-k">电话会</span><span>问得最紧的是毛利率和中国许可。管理层把毛利率下修归因于产品组合，没有给许可恢复的时间。</span></li>
+          </ul>
+        </section>
+
+        <section class="card states" aria-label="四个判断">
+          <a class="st-row" href="#pl">
+            <div class="st-name">兑现</div>
+            <div class="st-body">
+              <div class="st-head">超预期 <span class="tag-state">营收与 EPS 同向</span></div>
+              <div class="st-why">营收比一致预期高 1.8%，EPS 高 4%。两个都过线，不叫分化。贴近的门槛是营收 ±1%、EPS ±2%。</div>
+            </div>
+          </a>
+          <a class="st-row" href="#pl">
+            <div class="st-name">质量</div>
+            <div class="st-body">
+              <div class="st-head">同向 <span class="tag-state">利润和现金一起走</span></div>
+              <div class="st-why">毛利率同比 +1.2 个百分点，营业利润率 +0.8 个百分点，经营现金流同比 +18%。三者同向才写同向。</div>
+            </div>
+          </a>
+          <a class="st-row" href="#guide">
+            <div class="st-name">指引</div>
+            <div class="st-body">
+              <div class="st-head">分歧 <span class="tag-state">营收与毛利率相反</span></div>
+              <div class="st-why">下季营收指引中值比发布前一致预期高 3%，毛利率中值低 1.5 个百分点。只在营收和利润率方向相反时用这个词。</div>
+            </div>
+          </a>
+          <a class="st-row" href="#pl">
+            <div class="st-name">需求</div>
+            <div class="st-body">
+              <div class="st-head">领先 <span class="tag tag-ref">订单口径来自新闻稿</span></div>
+              <div class="st-why">剩余履约义务同比 +28%，快于营收同比 +22%。订单慢于营收时，这里改成「在消化积压」。</div>
+            </div>
+          </a>
+        </section>
+
+        <section class="card watch-card" id="problems">
+          <h2 class="sub-h">现在的问题</h2>
+          <p class="small muted">从数字分歧和电话会里追问最紧的三件事写。电话会不改上面的名字，只解释问题从哪来。</p>
+          <ul class="wl">
+            <li>
+              <div><span class="w-name">毛利率指引低于市场</span></div>
+              <div class="w-sig">本季毛利率仍高于预期，所以不是「这季已经坏了」。要分清下季是高毛利产品占比下降，还是新芯片爬坡成本。</div>
+            </li>
+            <li>
+              <div><span class="w-name">中国收入依赖出口许可</span></div>
+              <div class="w-sig">指引按现有许可编制，没有把未批的算进去，也没有给时间。营收超预期不能当成这件事结束。</div>
+            </li>
+            <li>
+              <div><span class="w-name">资本开支高于预期，客户没有拆开</span></div>
+              <div class="w-sig">开支上去了，但一年内能确认的订单没有单列。需求领先还在，是因为剩余履约义务仍快于营收。</div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="card watch-card" id="watch">
+          <h2 class="sub-h">后续关注</h2>
+          <p class="small muted">下次财报只看会不会改上面四个词。条件写清，不写「继续跟踪」。</p>
+          <ul class="wl">
+            <li>
+              <div><span class="w-name">下季毛利率</span><span class="w-now">指引中值 73.5%</span></div>
+              <div class="w-sig"><b>低于 73.5%</b>，组合或成本的问题还在，质量从「同向」改看利润率。<b>回到 75% 以上</b>，这次指引分歧更像爬坡，而不是需求结构变了。</div>
+            </li>
+            <li>
+              <div><span class="w-name">数据中心同比</span><span class="w-now">本季 +28%，上季 +35%</span></div>
+              <div class="w-sig"><b>再掉 5 个百分点以上</b>，增速还在，但加速没有了。兑现可以仍是超预期，需求不再写成领先。</div>
+            </li>
+            <li>
+              <div><span class="w-name">剩余履约义务同比</span><span class="w-now">+28%，营收 +22%</span></div>
+              <div class="w-sig"><b>掉到营收同比下面</b>，需求从「领先」改成「在消化积压」。这时资本开支高于预期就变成压力，而不是为了交货。</div>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <aside class="card side">
+        <h2>与市场对照</h2>
+        <p class="small muted">预期是发布前的一致预期。开支高于预期不记成好。</p>
+        <ul class="reads kpi">
+          <li class="hi">
+            <span class="up-title">营收</span>
+            <span class="up-num">467 亿<small>预期 459 亿</small></span>
+            <span class="beat">+1.8%</span>
+          </li>
+          <li class="hi">
+            <span class="up-title">毛利率</span>
+            <span class="up-num">75.1%<small>预期 74.8%</small></span>
+            <span class="beat">+0.3ppt</span>
+          </li>
+          <li class="hi">
+            <span class="up-title">营业利润率</span>
+            <span class="up-num">62.4%<small>预期 61.9%</small></span>
+            <span class="beat">+0.5ppt</span>
+          </li>
+          <li class="hi">
+            <span class="up-title">EPS</span>
+            <span class="up-num">1.05<small>预期 1.01</small></span>
+            <span class="beat">+4.0%</span>
+          </li>
+          <li>
+            <span class="up-title">资本开支</span>
+            <span class="up-num">42 亿<small>预期 38 亿</small></span>
+            <span class="split">高于预期</span>
+          </li>
+          <li class="hi">
+            <span class="up-title">下季营收指引</span>
+            <span class="up-num">540 亿<small>市场 525 亿</small></span>
+            <span class="beat">高于市场</span>
+          </li>
+          <li class="hi">
+            <span class="up-title">下季毛利率指引</span>
+            <span class="up-num">73.5%<small>市场 75.0%</small></span>
+            <span class="miss">低于市场</span>
+          </li>
+        </ul>
+
+        <h2 class="side-h2">股价</h2>
+        <p class="small muted">财报后第一个交易日相对前收。只作对照，不改判断。</p>
+        <ul class="reads">
+          <li><span class="up-title">首日</span><span class="up-num">+2.1%</span></li>
+        </ul>
+
+        <h2 class="side-h2" id="peers">同业这一季</h2>
+        <p class="small muted">营收相对各自的一致预期。名单手工定。</p>
+        <ul class="peer">
+          <li><span>博通</span><span class="muted">营收</span><span class="beat">+3.1%</span></li>
+          <li><span>台积电</span><span class="muted">营收</span><span class="beat">+1.2%</span></li>
+          <li><span>超微</span><span class="muted">营收</span><span class="miss">−2.4%</span></li>
+        </ul>
+
+        <h2 class="side-h2">下一次</h2>
+        <ul class="up-list">
+          <li class="hi">
+            <span class="up-time">11-19</span>
+            <span class="up-title">FY2027 Q3 财报</span>
+            <span class="up-num">预计</span>
+          </li>
+        </ul>
+      </aside>
+    </div>
+
+    <h2 class="layer" id="pl">损益与需求</h2>
+    <p class="layer-sub">本期、环比、同比来自财报；一致预期是发布前的数。环比、同比看趋势，相对预期看这一季有没有惊喜。标「非 GAAP」的不从 XBRL 来。</p>
+
+    <div class="charts">
+      <article class="card chart">
+        <h3>单季营收</h3>
+        <div class="c-sub">纵轴从 0 起，单位亿美元。蓝柱是实际，本季加框。橙色虚线是这一季发布前的一致预期 459。</div>
+        <div class="c-body mock">
+          <div class="plot" aria-hidden="true">
+            <div class="yaxis"><span>500</span><span>250</span><span>0</span></div>
+            <div class="plot-area">
+              <div class="col"><div class="bar" style="height:64%"></div><span class="xlab">Q3<br>320</span></div>
+              <div class="col"><div class="bar" style="height:71%"></div><span class="xlab">Q4<br>355</span></div>
+              <div class="col"><div class="bar" style="height:78.6%"></div><span class="xlab">Q1<br>393</span></div>
+              <div class="col"><div class="bar now" style="height:93.4%"></div><i class="est" style="bottom:91.8%"></i><span class="xlab">Q2<br>467</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="c-note">同比 +22%。预期 459，实际高出一截，但比上季的同比 +31% 慢。</div>
+      </article>
+      <article class="card chart">
+        <h3>毛利率</h3>
+        <div class="c-sub">纵轴从 72% 到 76%，所以 1 个点的差别看得清。橙色虚线是下季指引中值 73.5%，不是这一季的预期。</div>
+        <div class="c-body mock">
+          <div class="plot" aria-hidden="true">
+            <div class="yaxis"><span>76%</span><span>74%</span><span>72%</span></div>
+            <div class="plot-area">
+              <div class="col"><div class="bar" style="height:47.5%"></div><span class="xlab">Q3<br>73.9%</span></div>
+              <div class="col"><div class="bar" style="height:65%"></div><span class="xlab">Q4<br>74.6%</span></div>
+              <div class="col"><div class="bar" style="height:85%"></div><span class="xlab">Q1<br>75.4%</span></div>
+              <div class="col"><div class="bar now" style="height:77.5%"></div><i class="est" style="bottom:37.5%"></i><span class="xlab">Q2<br>75.1%</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="c-note">本季仍高。下季指引 73.5% 落在最近四季下面，所以指引单独标分歧。</div>
+      </article>
+    </div>
+
+    <div class="card fin" style="margin-top:12px">
+      <div class="table-wrap">
+        <table class="data">
+          <thead>
+            <tr>
+              <th>指标</th><th>本期</th><th>环比</th><th>同比</th><th>一致预期</th><th>相对预期</th><th>备注</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="name-cell">营收</td><td>467 亿</td><td class="beat">+18.8%</td><td class="beat">+22%</td><td>459 亿</td><td class="beat">+1.8%</td>
+              <td class="note-cell">数据中心 412 亿，约占 88%</td>
+            </tr>
+            <tr>
+              <td class="name-cell">数据中心</td><td>412 亿</td><td class="beat">+20%</td><td>+28%</td><td>404 亿</td><td class="beat">+2.0%</td>
+              <td class="note-cell">同比上季是 +35%，还在增，加速没有了</td>
+            </tr>
+            <tr>
+              <td class="name-cell">毛利率</td><td>75.1%</td><td>−0.3ppt</td><td class="beat">+1.2ppt</td><td>74.8%</td><td class="beat">+0.3ppt</td>
+              <td class="note-cell">环比略降，同比仍升</td>
+            </tr>
+            <tr>
+              <td class="name-cell">营业利润率</td><td>62.4%</td><td>+0.2ppt</td><td class="beat">+0.8ppt</td><td>61.9%</td><td class="beat">+0.5ppt</td>
+              <td class="note-cell">费用率没有把毛利吃掉</td>
+            </tr>
+            <tr>
+              <td class="name-cell">摊薄 EPS</td><td>1.05</td><td class="beat">+16%</td><td>+24%</td><td>1.01</td><td class="beat">+4.0%</td>
+              <td class="note-cell">非 GAAP，来自新闻稿</td>
+            </tr>
+            <tr>
+              <td class="name-cell">资本开支</td><td>42 亿</td><td class="split">+24%</td><td class="split">+40%</td><td>38 亿</td><td class="split">高于预期</td>
+              <td class="note-cell">高于预期不记成好</td>
+            </tr>
+            <tr>
+              <td class="name-cell">剩余履约义务</td><td>980 亿</td><td>+6%</td><td class="beat">+28%</td><td>—</td><td class="muted">无一致预期</td>
+              <td class="note-cell">快于营收同比，需求写成领先</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h2 class="layer" id="bs">资产负债</h2>
+    <p class="layer-sub">看能不能支撑上面的利润。存货和合同负债一起看：存货升、合同负债不跟，是自己在备货。</p>
+    <div class="card fin">
+      <div class="table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>指标</th><th>期末</th><th>较上季</th><th>同比</th><th>对照</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="name-cell">现金及短期投资</td><td>380 亿</td><td>+12 亿</td><td>+18%</td>
+              <td class="note-cell">还在增加</td>
+            </tr>
+            <tr>
+              <td class="name-cell">有息负债</td><td>100 亿</td><td>持平</td><td>持平</td>
+              <td class="note-cell">净现金约 280 亿</td>
+            </tr>
+            <tr>
+              <td class="name-cell">存货</td><td>125 亿</td><td class="split">+15%</td><td>+22%</td>
+              <td class="note-cell">升幅接近营收同比</td>
+            </tr>
+            <tr>
+              <td class="name-cell">合同负债</td><td>98 亿</td><td class="beat">+9%</td><td>+30%</td>
+              <td class="note-cell">预收还在走，不是只靠存货堆出来</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h2 class="layer" id="cf">现金流</h2>
+    <p class="layer-sub">经营现金流要和营业利润同向。自由现金流 = 经营现金流 − 资本开支。回购只列出来，不进判断。</p>
+    <div class="card fin">
+      <div class="table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>指标</th><th>本期</th><th>环比</th><th>同比</th><th>对照</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="name-cell">经营现金流</td><td>210 亿</td><td>+8%</td><td class="beat">+18%</td>
+              <td class="note-cell">和营业利润同向</td>
+            </tr>
+            <tr>
+              <td class="name-cell">自由现金流</td><td>168 亿</td><td>+4%</td><td>+12%</td>
+              <td class="note-cell">被资本开支抬高吃掉一块，仍为正</td>
+            </tr>
+            <tr>
+              <td class="name-cell">回购</td><td>80 亿</td><td>—</td><td>—</td>
+              <td class="note-cell">参考，不改质量这个词</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h2 class="layer" id="guide">指引与一致预期</h2>
+    <p class="layer-sub">指引取管理层给的区间中值。和市场比的是发布前、还没被这次指引改写的一致预期。</p>
+    <div class="card fin">
+      <div class="table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>项目</th><th>指引</th><th>发布前一致预期</th><th>差</th><th>管理层原话在说什么</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="name-cell">下季营收</td><td>540 亿 ±2%</td><td>525 亿</td><td class="beat">+3%</td>
+              <td class="note-cell">按现有出口许可编制，不含未批许可</td>
+            </tr>
+            <tr>
+              <td class="name-cell">下季毛利率</td><td>73.5% ±0.5ppt</td><td>75.0%</td><td class="miss">−1.5ppt</td>
+              <td class="note-cell">归因于新产品组合，没说哪一季回到 75%</td>
+            </tr>
+            <tr>
+              <td class="name-cell">全年资本开支</td><td>上修到约 160 亿</td><td>150 亿</td><td class="split">高于市场</td>
+              <td class="note-cell">说是为了已有需求，没有按客户拆</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h2 class="layer" id="call">电话会</h2>
+    <p class="layer-sub">每条是一个被追问的主题：分析师在问什么，管理层答了什么，和上面哪一个数对得上。准备好的发言里没提、问答里被问出来的，单独标出来。</p>
+    <section class="card qa">
+      <article class="qa-item">
+        <div class="qa-top">
+          <h3>毛利率</h3>
+          <span class="tag">问答里才被问紧</span>
+          <span class="tag-state">对应：指引分歧</span>
+        </div>
+        <div class="qa-grid">
+          <div class="qa-k">问</div>
+          <p>下季毛利率中值 73.5%，低于本季 75.1%，也低于市场 75%。是数据中心占比下降，还是新芯片成本上去了？</p>
+          <div class="qa-k">答</div>
+          <p>主要是产品组合。新平台爬坡早期成本更高。没有承诺下季之后回到 75%。</p>
+          <div class="qa-k">对照</div>
+          <p>本季毛利率仍高于预期，所以质量这一季还是同向。会改判断的是下季实际值，不是这句话本身。</p>
+        </div>
+      </article>
+      <article class="qa-item">
+        <div class="qa-top">
+          <h3>中国与出口许可</h3>
+          <span class="tag">准备发言一笔带过</span>
+          <span class="tag-state">对应：现在的问题</span>
+        </div>
+        <div class="qa-grid">
+          <div class="qa-k">问</div>
+          <p>中国收入本季占多少？下季指引里，没批下来的许可扣掉了没有？</p>
+          <div class="qa-k">答</div>
+          <p>指引只假设已经拿到的许可。未批的没有放进去。没有给审批时间。</p>
+          <div class="qa-k">对照</div>
+          <p>营收超预期和这件事分开看。许可若下来，是指引之外的上档；若收紧，现有指引也要重看。</p>
+        </div>
+      </article>
+      <article class="qa-item">
+        <div class="qa-top">
+          <h3>资本开支和订单</h3>
+          <span class="tag-state">对应：需求领先</span>
+        </div>
+        <div class="qa-grid">
+          <div class="qa-k">问</div>
+          <p>资本开支高于预期，对应哪几家客户？剩余履约义务里有多少在一年内确认？</p>
+          <div class="qa-k">答</div>
+          <p>开支是为了支持已经看得到的需求。一年内确认的比例没有单列。</p>
+          <div class="qa-k">对照</div>
+          <p>现在仍把需求写成领先，因为剩余履约义务同比快于营收。这个比例一旦不披露、同时义务慢下来，这条就站不住。</p>
+        </div>
+      </article>
+    </section>
+
+    <div class="card notes">
+      <p>示意页只定版式和每个区域回答什么。真实页会读 <code>data/stock/</code> 里已经算好的数，规则和宏观、半导体一样写在代码里，不在页面上临时改。</p>
+      <p>数字来源会分开标：利润表、资产负债表、现金流优先用 SEC XBRL；非 GAAP、分部、订单、指引用 8-K 新闻稿；一致预期用盈利预期接口；电话会主题先按逐字稿整理，不自动改「这份财报」那一句。</p>
+    </div>
+  </main>
+  <footer>版式示意，不是投资建议。数字为布局而设。</footer>
+</body>
+</html>
