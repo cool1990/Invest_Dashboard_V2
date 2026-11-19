@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18T11:16:24+08:00",
+ "generated_at": "2026-11-19T10:54:43+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -398,50 +398,6 @@
    "priority": "中"
   },
   {
-   "date": "2026-11-18",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Lowe's Companies, Inc.（LOW）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$3.06",
-   "consensus": "$2.86",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-18",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Palo Alto Networks, Inc.（PANW）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "$0.53",
-   "consensus": "$0.52",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-18",
-   "time_bj": "",
-   "category": "财报",
-   "title": "TJX Companies, Inc. (The)（TJX）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前。日期不一样：Nasdaq earnings calendar写的是 2026-11-18，Nasdaq earnings calendar写的是 2026-12-02，Nasdaq earnings calendar写的是 2026-12-03",
-   "previous": "$1.28",
-   "consensus": "$1.33",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-18",
-   "time_bj": "23:00",
-   "category": "宏观",
-   "title": "Outdoor Recreation Economic Statistics, U.S. and States, 2025",
-   "url": "https://www.bea.gov/news/schedule",
-   "note": "美东 10:00 AM。原名：Outdoor Recreation Economic Statistics, U.S. and States, 2025",
-   "previous": "",
-   "consensus": "",
-   "priority": "中"
-  },
-  {
    "date": "2026-11-19",
    "time_bj": "",
    "category": "财报",
@@ -709,6 +665,17 @@
    "date": "2026-12-02",
    "time_bj": "",
    "category": "财报",
+   "title": "Bank of Nova Scotia (The)（BNS）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘前。日期不一样：Nasdaq earnings calendar写的是 2026-12-02，Nasdaq earnings calendar写的是 2026-12-03",
+   "previous": "$1.39",
+   "consensus": "$1.58",
+   "priority": "中"
+  },
+  {
+   "date": "2026-12-02",
+   "time_bj": "",
+   "category": "财报",
    "title": "Salesforce, Inc.（CRM）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
@@ -735,7 +702,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$1.57",
-   "consensus": "$1.77",
+   "consensus": "$1.72",
    "priority": "中"
   },
   {
