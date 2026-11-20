@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-19T10:54:43+08:00",
+ "generated_at": "2026-11-20T10:47:21+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -399,39 +399,6 @@
   },
   {
    "date": "2026-11-19",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Alibaba Group Holding Limited（BABA）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$0.44",
-   "consensus": "$1.56",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-19",
-   "time_bj": "",
-   "category": "财报",
-   "title": "PDD Holdings Inc.（PDD）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$2.77",
-   "consensus": "$2.61",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-19",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Walmart Inc.（WMT）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$0.62",
-   "consensus": "$0.64",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-19",
    "time_bj": "03:00",
    "category": "大事",
    "title": "FOMC 10月会议纪要",
@@ -440,17 +407,6 @@
    "previous": "",
    "consensus": "",
    "priority": "高"
-  },
-  {
-   "date": "2026-11-19",
-   "time_bj": "22:25",
-   "category": "大事",
-   "title": "美联储讲话",
-   "url": "https://teams.microsoft.com/meet/2130457444862160?p=ynp4cqfcaAtsBBBsTM",
-   "note": "Discussion - Vice Chair Philip N. Jefferson At the International Monetary Fund (IMF) and Central Bank of Brazil conference \"A Quarter Century of Inflation Targeting in Latin America: Progress, Challenges, and the Road Ahead\" (virtual) 美东 9:25 a.m.。原名：Economic Shocks",
-   "previous": "",
-   "consensus": "",
-   "priority": "低"
   },
   {
    "date": "2026-11-20",
@@ -462,17 +418,6 @@
    "previous": "",
    "consensus": "",
    "priority": "中"
-  },
-  {
-   "date": "2026-11-20",
-   "time_bj": "05:30",
-   "category": "宏观",
-   "title": "美联储 H.4.1（资产负债表）",
-   "url": "https://www.federalreserve.gov/releases/h41/",
-   "note": "页面写明每周四、通常美东 16:30；遇联邦假日顺延。这一条按周四生成，没有另核假日表",
-   "previous": "",
-   "consensus": "",
-   "priority": "高"
   },
   {
    "date": "2026-11-20",
@@ -526,7 +471,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$2.35",
-   "consensus": "$6.41",
+   "consensus": "$6.48",
    "priority": "中"
   },
   {
@@ -658,7 +603,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$2.36",
-   "consensus": "$2.76",
+   "consensus": "$2.69",
    "priority": "中"
   },
   {
@@ -669,7 +614,7 @@
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前。日期不一样：Nasdaq earnings calendar写的是 2026-12-02，Nasdaq earnings calendar写的是 2026-12-03",
    "previous": "$1.39",
-   "consensus": "$1.58",
+   "consensus": "$1.55",
    "priority": "中"
   },
   {
@@ -698,22 +643,11 @@
    "date": "2026-12-03",
    "time_bj": "",
    "category": "财报",
-   "title": "Canadian Imperial Bank of Commerce（CM）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$1.57",
-   "consensus": "$1.72",
-   "priority": "中"
-  },
-  {
-   "date": "2026-12-03",
-   "time_bj": "",
-   "category": "财报",
    "title": "Royal Bank Of Canada（RY）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘前",
    "previous": "$2.76",
-   "consensus": "$2.97",
+   "consensus": "$2.93",
    "priority": "中"
   },
   {
@@ -869,6 +803,17 @@
    "previous": "",
    "consensus": "",
    "priority": "高"
+  },
+  {
+   "date": "2027-01-04",
+   "time_bj": "23:00",
+   "category": "宏观",
+   "title": "2026年11月建筑支出",
+   "url": "https://www.census.gov/construction/c30/c30index.html",
+   "note": "美东 10:00 AM November 2026。原名：Construction Spending (Construction Put in Place)",
+   "previous": "",
+   "consensus": "",
+   "priority": "中"
   }
  ]
 }
