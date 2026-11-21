@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-20T10:47:21+08:00",
+ "generated_at": "2026-11-21T10:56:42+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -420,33 +420,11 @@
    "priority": "中"
   },
   {
-   "date": "2026-11-20",
-   "time_bj": "21:25",
-   "category": "大事",
-   "title": "美联储讲话",
-   "url": "https://www.federalreserve.gov/newsevents/2026-november.htm",
-   "note": "Speech - Governor Christopher J. Waller At the College Fed Challenge Finals 美东 8:25 a.m.。原名：Welcoming Remarks",
-   "previous": "",
-   "consensus": "",
-   "priority": "低"
-  },
-  {
-   "date": "2026-11-20",
-   "time_bj": "21:30",
-   "category": "宏观",
-   "title": "Activities of U.S. Multinational Enterprises, 2024",
-   "url": "https://www.bea.gov/news/schedule",
-   "note": "美东 8:30 AM。原名：Activities of U.S. Multinational Enterprises, 2024",
-   "previous": "",
-   "consensus": "",
-   "priority": "中"
-  },
-  {
    "date": "2026-11-21",
    "time_bj": "01:15",
    "category": "大事",
    "title": "美联储讲话",
-   "url": "https://www.federalreserve.gov/newsevents/2026-november.htm",
+   "url": "https://www.youtube.com/watch?v=v_WEWJgJdHw",
    "note": "Speech - Governor Lisa D. Cook At the Annual Conference of the Central Bank of Chile, Santiago, Chile 美东 12:15 p.m.。原名：The U.S. Economy in Global Context",
    "previous": "",
    "consensus": "",
@@ -467,11 +445,22 @@
    "date": "2026-11-24",
    "time_bj": "",
    "category": "财报",
+   "title": "BHP Group Limited（BHP）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "N/A",
+   "consensus": "",
+   "priority": "中"
+  },
+  {
+   "date": "2026-11-24",
+   "time_bj": "",
+   "category": "财报",
    "title": "Dell Technologies Inc.（DELL）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$2.35",
-   "consensus": "$6.48",
+   "consensus": "$6.55",
    "priority": "中"
   },
   {
