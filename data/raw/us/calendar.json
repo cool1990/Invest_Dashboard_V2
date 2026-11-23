@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-22T09:51:08+08:00",
+ "generated_at": "2026-11-23T10:06:36+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -789,6 +789,28 @@
    "title": "2026年11月建筑支出",
    "url": "https://www.census.gov/construction/c30/c30index.html",
    "note": "美东 10:00 AM November 2026。原名：Construction Spending (Construction Put in Place)",
+   "previous": "",
+   "consensus": "",
+   "priority": "中"
+  },
+  {
+   "date": "2027-01-07",
+   "time_bj": "21:30",
+   "category": "宏观",
+   "title": "2026年11月国际贸易（商品和服务）",
+   "url": "https://www.census.gov/foreign-trade/",
+   "note": "美东 8:30 AM November 2026。原名：U.S. International Trade in Goods and Services",
+   "previous": "",
+   "consensus": "",
+   "priority": "中"
+  },
+  {
+   "date": "2027-01-07",
+   "time_bj": "23:00",
+   "category": "宏观",
+   "title": "2026年11月制造业出货、库存和订单",
+   "url": "https://www.census.gov/manufacturing/m3/",
+   "note": "美东 10:00 AM November 2026。原名：Full Report - Manufacturers' Shipments, Inventories and Orders",
    "previous": "",
    "consensus": "",
    "priority": "中"
