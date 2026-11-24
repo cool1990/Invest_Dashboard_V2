@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-23T10:06:36+08:00",
+ "generated_at": "2026-11-24T13:42:07+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -673,6 +673,17 @@
    "priority": "高"
   },
   {
+   "date": "2026-12-09",
+   "time_bj": "",
+   "category": "财报",
+   "title": "博通（AVGO）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后。原名：Broadcom Inc.",
+   "previous": "$1.61",
+   "consensus": "$3.45",
+   "priority": "高"
+  },
+  {
    "date": "2026-12-10",
    "time_bj": "",
    "category": "宏观",
@@ -814,6 +825,28 @@
    "previous": "",
    "consensus": "",
    "priority": "中"
+  },
+  {
+   "date": "2027-01-08",
+   "time_bj": "05:30",
+   "category": "宏观",
+   "title": "美联储 H.4.1（资产负债表）",
+   "url": "https://www.federalreserve.gov/releases/h41/",
+   "note": "页面写明每周四、通常美东 16:30；遇联邦假日顺延。这一条按周四生成，没有另核假日表",
+   "previous": "",
+   "consensus": "",
+   "priority": "高"
+  },
+  {
+   "date": "2027-01-08",
+   "time_bj": "23:00",
+   "category": "宏观",
+   "title": "2026年11月批发贸易",
+   "url": "https://www.census.gov/wholesale/index.html",
+   "note": "美东 10:00 AM November 2026。原名：Monthly Wholesale Trade: Sales and Inventories",
+   "previous": "",
+   "consensus": "",
+   "priority": "低"
   }
  ]
 }
