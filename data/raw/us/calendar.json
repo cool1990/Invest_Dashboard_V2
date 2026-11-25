@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24T13:42:07+08:00",
+ "generated_at": "2026-11-25T12:44:16+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -420,50 +420,6 @@
    "priority": "中"
   },
   {
-   "date": "2026-11-24",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Analog Devices, Inc.（ADI）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$2.26",
-   "consensus": "$3.89",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-24",
-   "time_bj": "",
-   "category": "财报",
-   "title": "BHP Group Limited（BHP）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "",
-   "previous": "N/A",
-   "consensus": "",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-24",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Dell Technologies Inc.（DELL）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "$2.35",
-   "consensus": "$6.55",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-24",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Medtronic plc（MDT）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$1.36",
-   "consensus": "$1.34",
-   "priority": "中"
-  },
-  {
    "date": "2026-11-25",
    "time_bj": "",
    "category": "财报",
@@ -473,6 +429,17 @@
    "previous": "$3.93",
    "consensus": "$4.07",
    "priority": "中"
+  },
+  {
+   "date": "2026-11-25",
+   "time_bj": "20:25",
+   "category": "大事",
+   "title": "美联储讲话",
+   "url": "https://www.federalreserve.gov/newsevents/2026-november.htm",
+   "note": "Speech - Vice Chair for Supervision Michelle W. Bowman At a meeting with the Association of Supervisors of Banks of the Americas, Basel Committee on Banking Supervision, and Financial Stability Institute 美东 7:25 a.m.。原名：Modernizing Banking Supervision: A Shared Agenda for the Americas (via pre-recorded video)",
+   "previous": "",
+   "consensus": "",
+   "priority": "低"
   },
   {
    "date": "2026-11-25",
@@ -550,17 +517,6 @@
    "previous": "",
    "consensus": "",
    "priority": "高"
-  },
-  {
-   "date": "2026-12-01",
-   "time_bj": "",
-   "category": "财报",
-   "title": "CrowdStrike Holdings, Inc.（CRWD）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘后",
-   "previous": "N/A",
-   "consensus": "$0",
-   "priority": "中"
   },
   {
    "date": "2026-12-01",
@@ -693,6 +649,17 @@
    "previous": "",
    "consensus": "",
    "priority": "高"
+  },
+  {
+   "date": "2026-12-10",
+   "time_bj": "",
+   "category": "财报",
+   "title": "Costco Wholesale Corporation（COST）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "美东盘后",
+   "previous": "$4.34",
+   "consensus": "$4.89",
+   "priority": "中"
   },
   {
    "date": "2026-12-10",
