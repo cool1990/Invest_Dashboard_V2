@@ -34,6 +34,7 @@ ADI,cogs,2025-11-01,1134300000.0,CostOfGoodsAndServicesSold
 ADI,cogs,2026-01-31,1115287000.0,CostOfGoodsAndServicesSold
 ADI,cogs,2026-05-02,1183667000.0,CostOfGoodsAndServicesSold
 ADI,cogs,2026-08-01,1314355000.0,CostOfGoodsAndServicesSold
+ADI,cogs,2026-10-31,1340700000.0,CostOfGoodsAndServicesSold
 ADI,inventory,2015-01-31,367238000.0,InventoryNet
 ADI,inventory,2015-05-02,394494000.0,InventoryNet
 ADI,inventory,2015-08-01,424475000.0,InventoryNet
@@ -81,6 +82,7 @@ ADI,inventory,2025-11-01,1656323000.0,InventoryNet
 ADI,inventory,2026-01-31,1767104000.0,InventoryNet
 ADI,inventory,2026-05-02,1848405000.0,InventoryNet
 ADI,inventory,2026-08-01,1931496000.0,InventoryNet
+ADI,inventory,2026-10-31,2083908000.0,InventoryNet
 ADI,revenue,2018-02-03,1566870000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 ADI,revenue,2018-05-05,1563502000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 ADI,revenue,2018-08-04,1558189000.0,RevenueFromContractWithCustomerExcludingAssessedTax
@@ -116,6 +118,7 @@ ADI,revenue,2025-11-01,3076117000.0,RevenueFromContractWithCustomerExcludingAsse
 ADI,revenue,2026-01-31,3160263000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 ADI,revenue,2026-05-02,3623465000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 ADI,revenue,2026-08-01,4021899000.0,RevenueFromContractWithCustomerExcludingAssessedTax
+ADI,revenue,2026-10-31,4373420000.0,RevenueFromContractWithCustomerExcludingAssessedTax
 AMAT,cogs,2015-01-25,1400000000.0,CostOfGoodsAndServicesSold
 AMAT,cogs,2015-04-26,1426000000.0,CostOfGoodsAndServicesSold
 AMAT,cogs,2015-07-26,1472000000.0,CostOfGoodsAndServicesSold
