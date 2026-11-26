@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-25T12:44:16+08:00",
+ "generated_at": "2026-11-26T11:52:20+08:00",
  "events": [
   {
    "date": "2026-10-01",
@@ -420,50 +420,6 @@
    "priority": "中"
   },
   {
-   "date": "2026-11-25",
-   "time_bj": "",
-   "category": "财报",
-   "title": "Deere & Company（DE）财报",
-   "url": "https://www.nasdaq.com/market-activity/earnings",
-   "note": "美东盘前",
-   "previous": "$3.93",
-   "consensus": "$4.07",
-   "priority": "中"
-  },
-  {
-   "date": "2026-11-25",
-   "time_bj": "20:25",
-   "category": "大事",
-   "title": "美联储讲话",
-   "url": "https://www.federalreserve.gov/newsevents/2026-november.htm",
-   "note": "Speech - Vice Chair for Supervision Michelle W. Bowman At a meeting with the Association of Supervisors of Banks of the Americas, Basel Committee on Banking Supervision, and Financial Stability Institute 美东 7:25 a.m.。原名：Modernizing Banking Supervision: A Shared Agenda for the Americas (via pre-recorded video)",
-   "previous": "",
-   "consensus": "",
-   "priority": "低"
-  },
-  {
-   "date": "2026-11-25",
-   "time_bj": "21:30",
-   "category": "宏观",
-   "title": "2026年10月个人收入与支出",
-   "url": "https://www.bea.gov/news/schedule",
-   "note": "美东 8:30 AM。原名：Personal Income and Outlays, October 2026",
-   "previous": "",
-   "consensus": "",
-   "priority": "高"
-  },
-  {
-   "date": "2026-11-25",
-   "time_bj": "21:30",
-   "category": "宏观",
-   "title": "2026年三季度 GDP 第二次估计",
-   "url": "https://www.bea.gov/news/schedule",
-   "note": "美东 8:30 AM。原名：GDP (Second Estimate) and Corporate Profits, 3rd Quarter 2026",
-   "previous": "",
-   "consensus": "",
-   "priority": "高"
-  },
-  {
    "date": "2026-11-26",
    "time_bj": "03:00",
    "category": "大事",
@@ -522,12 +478,34 @@
    "date": "2026-12-01",
    "time_bj": "",
    "category": "财报",
+   "title": "BHP Group Limited（BHP）财报",
+   "url": "https://www.nasdaq.com/market-activity/earnings",
+   "note": "",
+   "previous": "N/A",
+   "consensus": "",
+   "priority": "中"
+  },
+  {
+   "date": "2026-12-01",
+   "time_bj": "",
+   "category": "财报",
    "title": "Marvell Technology, Inc.（MRVL）财报",
    "url": "https://www.nasdaq.com/market-activity/earnings",
    "note": "美东盘后",
    "previous": "$0.62",
    "consensus": "$0.79",
    "priority": "中"
+  },
+  {
+   "date": "2026-12-01",
+   "time_bj": "23:00",
+   "category": "大事",
+   "title": "美联储讲话",
+   "url": "https://financialservices.house.gov/",
+   "note": "美东 10:00 a.m.。原名：Hearing on Oversight of Prudential Regulators",
+   "previous": "",
+   "consensus": "",
+   "priority": "低"
   },
   {
    "date": "2026-12-02",
